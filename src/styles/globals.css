@@ -1,0 +1,106 @@
+@import "tailwindcss";
+
+/* Fraunces: self-hosted editorial serif for headline/quote/stat moments.
+   Two weight cuts are enough — we never need the full variable range. */
+@import "@fontsource/fraunces/500.css";
+@import "@fontsource/fraunces/600-italic.css";
+@import "@fontsource/fraunces/700.css";
+
+@theme {
+  /* Direction A "Systems Architect" base, with Direction C's metric-callout
+     emphasis layered on top via --color-amber. Single committed dark theme —
+     intentionally no light-mode variant. */
+  --color-ink: #0f1720;
+  --color-surface: #16212c;
+  --color-surface-raised: #1b2833;
+  --color-teal: #4fd1c5;
+  --color-teal-dim: #2f6b64;
+  --color-amber: #f0b860;
+  --color-fg: #e8edf2;
+  --color-muted: #9fb0bf;
+  --color-muted-dim: #6f8394;
+  --color-rule: #26343f;
+
+  --font-mono: ui-monospace, "SF Mono", "SFMono-Regular", Menlo, Consolas, monospace;
+  --font-serif: "Fraunces", "Noto Serif TC", Georgia, serif;
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang TC", "Noto Sans TC", sans-serif;
+}
+
+@layer base {
+  html {
+    color-scheme: dark;
+  }
+  body {
+    background-color: var(--color-ink);
+    color: var(--color-fg);
+    font-family: var(--font-sans);
+    font-feature-settings: "tnum" 1;
+  }
+  ::selection {
+    background: var(--color-teal-dim);
+    color: var(--color-fg);
+  }
+}
+
+@layer utilities {
+  .font-mono-num {
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* Subtle cyan schematic grid — used as a section/page backdrop. */
+  .grid-backdrop {
+    background-image:
+      linear-gradient(rgba(79, 209, 197, 0.06) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(79, 209, 197, 0.06) 1px, transparent 1px);
+    background-size: 32px 32px;
+  }
+  .grid-backdrop::before {
+    content: "";
+  }
+
+  /* Terminal/schematic panel: a card with corner-bracket accents instead of
+     a plain border, matching the "systems dashboard" visual language. */
+  .corner-bracket {
+    position: relative;
+  }
+  .corner-bracket::before,
+  .corner-bracket::after {
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    border-color: var(--color-teal);
+    opacity: 0.7;
+    pointer-events: none;
+  }
+  .corner-bracket::before {
+    top: -1px;
+    left: -1px;
+    border-top: 2px solid;
+    border-left: 2px solid;
+  }
+  .corner-bracket::after {
+    bottom: -1px;
+    right: -1px;
+    border-bottom: 2px solid;
+    border-right: 2px solid;
+  }
+
+  /* Scroll-reveal: toggled by useInView via [data-inview]. */
+  [data-reveal] {
+    opacity: 0;
+    transform: translateY(14px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  [data-reveal][data-inview="true"] {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  @media (prefers-reduced-motion: reduce) {
+    [data-reveal] {
+      opacity: 1;
+      transform: none;
+      transition: none;
+    }
+  }
+}
