@@ -1,7 +1,7 @@
 export function StatBlock({ value, label }: { value: string; label: string }) {
   return (
     <div className="flex flex-col gap-1">
-      <div className="font-serif font-semibold text-[26px] sm:text-[32px] text-amber font-mono-num leading-none">
+      <div className="font-serif font-semibold text-[26px] sm:text-[32px] text-accent font-mono-num leading-none">
         {value}
       </div>
       <div className="font-mono text-[10.5px] uppercase tracking-[0.06em] text-muted-dim">{label}</div>

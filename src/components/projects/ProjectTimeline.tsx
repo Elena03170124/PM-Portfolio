@@ -23,7 +23,7 @@ export function ProjectTimeline({ activeCompetencyId }: { activeCompetencyId: Co
       {activeCompetency && (
         <div className="mt-6 font-mono text-[12px] text-muted flex items-center gap-2">
           <span>{strings.projects.filteredBy}</span>
-          <span className="text-teal">
+          <span className="text-accent">
             {String(activeCompetency.index).padStart(2, '0')} · {t(activeCompetency.name)}
           </span>
         </div>

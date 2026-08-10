@@ -11,7 +11,7 @@ export function CornerBracketCard({
 }) {
   return (
     <div
-      className={`corner-bracket border border-rule rounded-lg ${
+      className={`border border-rule rounded-[3px] ${
         raised ? 'bg-surface-raised' : 'bg-surface'
       } ${className}`}
     >

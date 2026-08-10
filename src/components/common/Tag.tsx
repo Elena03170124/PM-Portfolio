@@ -17,8 +17,8 @@ export function Tag({
       : 'text-[12.5px] px-3 py-1'
 
   const className = `font-mono rounded-full border transition-colors ${base} ${
-    active ? 'bg-teal/15 border-teal text-teal' : 'bg-surface border-rule text-muted'
-  } ${onClick ? 'cursor-pointer hover:border-teal hover:text-teal' : ''}`
+    active ? 'bg-accent/15 border-accent text-accent' : 'bg-surface border-rule text-muted'
+  } ${onClick ? 'cursor-pointer hover:border-accent hover:text-accent' : ''}`
 
   if (onClick) {
     return (

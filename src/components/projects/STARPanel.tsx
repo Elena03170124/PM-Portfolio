@@ -4,8 +4,8 @@ import type { StarNarrative } from '../../content/types'
 function StarRow({ label, text }: { label: string; text: string }) {
   return (
     <div className="grid sm:grid-cols-[88px_1fr] gap-2 sm:gap-5 py-4 border-b border-rule last:border-b-0">
-      <div className="font-mono text-[11px] uppercase tracking-[0.08em] text-teal pt-0.5">{label}</div>
-      <p className="text-[13.5px] leading-relaxed text-fg/85 whitespace-pre-line">{text}</p>
+      <div className="font-mono text-[11px] uppercase tracking-[0.08em] text-accent pt-0.5">{label}</div>
+      <p className="text-[13.5px] leading-relaxed text-ink/85 whitespace-pre-line">{text}</p>
     </div>
   )
 }

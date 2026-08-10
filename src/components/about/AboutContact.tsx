@@ -17,7 +17,7 @@ export function AboutContact() {
 
       <Reveal delayMs={80}>
         <CornerBracketCard className="mt-10 p-6 sm:p-10 max-w-2xl">
-          <p className="font-serif text-[20px] sm:text-[24px] leading-snug text-fg text-balance">
+          <p className="font-serif text-[20px] sm:text-[24px] leading-snug text-ink text-balance">
             {t(selfDescription)}
           </p>
           <div className="mt-6 pt-6 border-t border-rule">
@@ -28,7 +28,7 @@ export function AboutContact() {
           </div>
           <a
             href={`mailto:${CONTACT_EMAIL}`}
-            className="mt-8 inline-flex items-center gap-2 font-mono text-[13px] px-5 py-2.5 rounded-md bg-teal text-ink font-semibold hover:opacity-90 transition-opacity"
+            className="mt-8 inline-flex items-center gap-2 font-mono text-[13px] px-5 py-2.5 rounded-md bg-accent text-on-accent font-semibold hover:opacity-90 transition-opacity"
           >
             {strings.about.contactCta} · {CONTACT_EMAIL}
           </a>

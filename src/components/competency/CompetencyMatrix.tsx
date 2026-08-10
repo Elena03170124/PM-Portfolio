@@ -37,7 +37,7 @@ export function CompetencyMatrix({
         <div className="mt-6 flex items-center gap-3">
           <button
             onClick={() => onSelect(null)}
-            className="font-mono text-[12px] text-teal hover:underline underline-offset-4"
+            className="font-mono text-[12px] text-accent hover:underline underline-offset-4"
           >
             {strings.competencyMatrix.resetFilter}
           </button>

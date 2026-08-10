@@ -16,7 +16,7 @@ export function GrowthNarrative() {
       <Reveal delayMs={80}>
         <div className="mt-10 flex flex-col sm:flex-row items-stretch gap-4 sm:gap-2">
           <EraComparisonColumn label={hotaiEra.label} title={hotaiEra.title} description={hotaiEra.description} />
-          <div className="hidden sm:flex items-center justify-center px-2 text-teal font-mono text-xl" aria-hidden="true">
+          <div className="hidden sm:flex items-center justify-center px-2 text-accent font-mono text-xl" aria-hidden="true">
             →
           </div>
           <EraComparisonColumn

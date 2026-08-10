@@ -24,7 +24,7 @@ export function ProjectCard({ project, dimmed }: { project: Project; dimmed: boo
           <span className="font-mono text-[11px] text-muted-dim">{t(project.period)}</span>
         </div>
 
-        <h3 className="font-serif text-[19px] sm:text-[21px] font-semibold text-fg leading-snug text-balance">
+        <h3 className="font-serif text-[19px] sm:text-[21px] font-semibold text-ink leading-snug text-balance">
           {t(project.title)}
         </h3>
         <p className="mt-2.5 text-[13.5px] leading-relaxed text-muted max-w-2xl">{t(project.summary)}</p>
@@ -62,7 +62,7 @@ export function ProjectCard({ project, dimmed }: { project: Project; dimmed: boo
             <button
               onClick={() => setOpen((v) => !v)}
               aria-expanded={open}
-              className="mt-6 font-mono text-[12.5px] text-teal hover:underline underline-offset-4 flex items-center gap-1.5"
+              className="mt-6 font-mono text-[12.5px] text-accent hover:underline underline-offset-4 flex items-center gap-1.5"
             >
               <span className={`inline-block transition-transform duration-300 ${open ? 'rotate-90' : ''}`}>›</span>
               {open ? strings.projects.collapse : strings.projects.expand}

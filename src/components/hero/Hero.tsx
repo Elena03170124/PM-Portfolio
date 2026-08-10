@@ -18,12 +18,12 @@ export function Hero() {
   return (
     <section className="pt-16 pb-24 sm:pt-24 sm:pb-32">
       <Reveal>
-        <div className="font-mono text-[11px] tracking-[0.16em] uppercase text-teal mb-6 flex items-center gap-2">
-          <span className="inline-block w-1.5 h-1.5 rounded-full bg-teal animate-pulse" aria-hidden="true" />
+        <div className="font-mono text-[11px] tracking-[0.16em] uppercase text-accent mb-6 flex items-center gap-2">
+          <span className="inline-block w-1.5 h-1.5 rounded-full bg-accent animate-pulse" aria-hidden="true" />
           {strings.hero.eyebrow}
         </div>
 
-        <h1 className="font-mono font-bold text-[26px] sm:text-[36px] md:text-[44px] leading-[1.3] text-fg max-w-3xl text-balance break-words">
+        <h1 className="font-serif font-semibold text-[26px] sm:text-[36px] md:text-[44px] leading-[1.3] text-ink max-w-3xl text-balance break-words">
           {t(positioningStatement)}
         </h1>
 
@@ -40,13 +40,13 @@ export function Hero() {
         <div className="mt-12 flex flex-wrap gap-4">
           <a
             href="#projects"
-            className="font-mono text-[13px] px-5 py-2.5 rounded-md bg-teal text-ink font-semibold hover:opacity-90 transition-opacity"
+            className="font-mono text-[13px] px-5 py-2.5 rounded-md bg-accent text-on-accent font-semibold hover:opacity-90 transition-opacity"
           >
             {strings.hero.ctaProjects}
           </a>
           <a
             href="#about"
-            className="font-mono text-[13px] px-5 py-2.5 rounded-md border border-rule text-fg hover:border-teal hover:text-teal transition-colors"
+            className="font-mono text-[13px] px-5 py-2.5 rounded-md border border-rule text-ink hover:border-accent hover:text-accent transition-colors"
           >
             {strings.hero.ctaContact}
           </a>
