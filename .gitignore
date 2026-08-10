@@ -12,8 +12,8 @@ dist
 dist-ssr
 *.local
 
-# Personal notes unrelated to this site
-Claude Code*.md
+# Personal notes/quiz files unrelated to this site
+Claude Code*
 
 # Editor directories and files
 .vscode/*

@@ -7,19 +7,19 @@
 @import "@fontsource/fraunces/700.css";
 
 @theme {
-  /* Direction C "Bone Paper & Mauve" — warm paper ground, deep mauve accent,
-     editorial/annual-report feel. Single committed light theme —
-     intentionally no dark-mode variant. */
+  /* Direction C "Bone Paper & Raspberry" — warm paper ground, deep raspberry
+     accent (V6 from the palette comparison), editorial/annual-report feel.
+     Single committed light theme — intentionally no dark-mode variant. */
   --color-paper: #f5f0ec;
-  --color-surface: #faf6f3;
-  --color-surface-raised: #fdfbf8;
-  --color-accent: #8a4a58;
-  --color-accent-dim: #b98a94;
+  --color-surface: #faf5f4;
+  --color-surface-raised: #fdfaf9;
+  --color-accent: #9c2f52;
+  --color-accent-dim: #c2748f;
   --color-on-accent: #faf6f3;
-  --color-ink: #231c1e;
-  --color-muted: #85786d;
-  --color-muted-dim: #a89a8d;
-  --color-rule: #e0d3d1;
+  --color-ink: #26161c;
+  --color-muted: #85746b;
+  --color-muted-dim: #a89890;
+  --color-rule: #e3d0d5;
 
   --font-mono: ui-monospace, "SF Mono", "SFMono-Regular", Menlo, Consolas, monospace;
   --font-serif: "Fraunces", "Noto Serif TC", Georgia, serif;
