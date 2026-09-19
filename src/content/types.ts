@@ -100,5 +100,7 @@ export interface AboutChapter {
   /** Bulleted list rendered after the paragraphs. Each item carries a bold
    *  lead-in, split into `lead` and `text`. */
   bullets?: { lead: Bilingual; text: Bilingual }[]
+  /** Paragraphs rendered after the bullets. */
+  closing?: Bilingual[]
   cta?: AboutCta
 }

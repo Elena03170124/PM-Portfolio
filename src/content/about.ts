@@ -14,8 +14,8 @@ export const aboutChapters: AboutChapter[] = [
     years: { zh: '2022 – 2023', en: '2022 – 2023' },
     tag: { zh: '確立方向', en: 'Finding direction' },
     title: {
-      zh: '建立「優秀 PM 能力框架」，自我檢核專業能力',
-      en: 'Building an “Excellent PM Competency Framework” to self-assess my skills',
+      zh: '建立「優秀 PM 能力框架」與自我專業檢核標準',
+      en: 'Building an “Excellent PM Competency Framework” and my own standards for professional self-assessment',
     },
     paras: [
       {
@@ -40,13 +40,19 @@ export const aboutChapters: AboutChapter[] = [
         },
       },
     ],
+    closing: [
+      {
+        zh: '幾年來隨著專案經驗累積，這套能力框架開展為 9 大核心能力矩陣，至今仍以此梳理每次的專案經驗教訓與能力累積、盤點專業缺口，以此定義下一階段職涯目標。',
+        en: 'Over the years, as my project experience has grown, this framework has expanded into a matrix of nine core competencies. I still use it to sort out the lessons and skills from every project, take stock of my professional gaps, and define my next career goal.',
+      },
+    ],
     // Destination not decided yet (no href) — renders as a disabled placeholder.
-    cta: { kind: 'link', label: { zh: '查看專案經驗', en: 'View my project experience' } },
+    cta: { kind: 'link', label: { zh: '查看新版本 PM 能力矩陣', en: 'View the new PM competency matrix' } },
   },
   {
     id: 'breakout',
     years: { zh: '2023 – 2024', en: '2023 – 2024' },
-    tag: { zh: '拒絕平穩', en: 'Refusing the comfortable' },
+    tag: { zh: '自我鞭策', en: 'Driving myself' },
     title: {
       zh: '主動破局，追求真正具影響力的舞台',
       en: 'Breaking out on my own to find a stage with real influence',
@@ -57,12 +63,16 @@ export const aboutChapters: AboutChapter[] = [
         en: 'My first job was as a product assistant at Hotai Motor’s digital division, where I quickly put these methods to work — improving test-and-acceptance processes, standardizing QA documents, and organizing requirements interviews.',
       },
       {
-        zh: '但我知道，這份職務的專業天花板與成長速度難以滿足我對卓越的追求，因此在 2024 年選擇主動離開。',
-        en: 'But I knew the ceiling on expertise and the pace of growth in that role could not satisfy my pursuit of excellence, so in 2024 I chose to leave.',
+        zh: '並以入職前建立的 PM 專業標準框架，審視個人實務能力與進步幅度是否達標。',
+        en: 'I also used the PM standards framework I had built before joining to check whether my practical skills and my progress measured up.',
       },
       {
-        zh: '我清楚自己追求的是能真正深入決策、承擔責任，且充滿多重挑戰的實戰舞台。',
-        en: 'I knew what I was after: a demanding, real-world stage where I could be deeply involved in decisions and take on responsibility.',
+        zh: '因此意識到這份職務的專業天花板與成長速度，難以達成我對卓越的追求，因此在 2024 年選擇主動離開。',
+        en: 'That made me realize the ceiling on expertise and the pace of growth in this role could not meet my pursuit of excellence, so in 2024 I chose to leave.',
+      },
+      {
+        zh: '我清楚自己要的是能真正深入決策、充滿多重挑戰且能一展長才的實戰舞台。',
+        en: 'I knew what I wanted: a real-world stage, full of challenges, where I could be deeply involved in decisions and make full use of my abilities.',
       },
     ],
   },
