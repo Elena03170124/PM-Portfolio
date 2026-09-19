@@ -11,9 +11,9 @@ const strings: AppStrings = {
     srAnnounce: 'Switch to Traditional Chinese',
   },
   hero: {
-    eyebrow: 'PM PORTFOLIO · SYSTEM & INFRASTRUCTURE',
-    ctaProjects: 'View case studies',
-    ctaContact: 'Get in touch',
+    eyebrow: 'PM · SYSTEMS & INFRASTRUCTURE · 2.5 YRS',
+    ctaProjects: 'See project experience',
+    ctaAbout: 'More about me',
   },
   competencyMatrix: {
     title: 'The Nine-Competency Matrix',

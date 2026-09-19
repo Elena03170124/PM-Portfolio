@@ -15,7 +15,7 @@ export interface AppStrings {
   hero: {
     eyebrow: string
     ctaProjects: string
-    ctaContact: string
+    ctaAbout: string
   }
   competencyMatrix: {
     title: string
