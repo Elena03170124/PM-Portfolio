@@ -40,8 +40,8 @@ export const aboutChapters: AboutChapter[] = [
         },
       },
     ],
-    // No download target decided yet — renders as a disabled placeholder.
-    cta: { kind: 'button', label: { zh: '一鍵下載專業能力框架', en: 'Download the competency framework' } },
+    // Destination not decided yet (no href) — renders as a disabled placeholder.
+    cta: { kind: 'link', label: { zh: '查看專案經驗', en: 'View my project experience' } },
   },
   {
     id: 'breakout',
@@ -77,7 +77,7 @@ export const aboutChapters: AboutChapter[] = [
     paras: [
       {
         zh: '進入南一集團任職產品經理後，我承接了多個系統重構與跨服務整合專案。',
-        en: 'After joining South One Group as a Product Manager, I took on several system-rebuild and cross-service integration projects.',
+        en: 'After joining Nani as a Product Manager, I took on several system-rebuild and cross-service integration projects.',
       },
       {
         zh: '面對陌生知識的吸收轉譯、資料結構的相依性釐清、多方利害關係人的需求平衡，以及在資訊模糊下推進專案落地等多重挑戰。',
