@@ -1,15 +1,9 @@
 import type { AboutChapter, Bilingual } from './types'
 
-/** Headline of the "About me" page, one sentence split so the middle part can be
- *  set larger. `emphasis` is large; `lead` and `tail` are normal size. Include any
- *  space between words in the strings themselves. */
-export const aboutThesis: Bilingual<{ lead: string; emphasis: string; tail: string }> = {
-  zh: { lead: '一切經歷，皆因', emphasis: '不甘平庸的韌性', tail: '而生' },
-  en: {
-    lead: 'Every step I have taken comes from ',
-    emphasis: 'a resilience that refuses to settle for the ordinary',
-    tail: '',
-  },
+/** Headline of the "About me" page: one string per line, all set at the same size. */
+export const aboutThesis: Bilingual<string[]> = {
+  zh: ['一切經歷', '皆因「不甘平庸的韌性」而生'],
+  en: ['Every step I have taken', 'comes from a resilience that refuses to settle for the ordinary'],
 }
 
 /** The four stages of the story, in chronological order. Chinese is the
