@@ -40,8 +40,29 @@ function HeroStat({ prefix, value, suffix, label }: HeroStatProps) {
   )
 }
 
+/** From the `sm` breakpoint up, let a line wrap only after a full-width comma, so a clause is
+ *  never split mid-way. On a phone the line is too narrow for that and wraps evenly instead. */
+function breakAfterCommas(line: string) {
+  const parts = line.split(/(?<=，)/)
+  if (parts.length < 2) return line
+  return parts.map((part, i) => (
+    <span key={i} className="sm:inline-block">
+      {part}
+    </span>
+  ))
+}
+
 export function Hero() {
   const { t, strings } = useLocale()
+
+  // One string per line.
+  const story = t({
+    zh: ['從複雜與混亂中梳理脈絡將模糊需求轉成落地成果', '是我做PM最有投入感的部分'],
+    en: [
+      'Making sense of complexity and chaos, and turning vague requirements into results that ship',
+      'is the part of PM work I feel most engaged in',
+    ],
+  })
 
   const stats: HeroStatProps[] = [
     { value: '2.5', suffix: t({ zh: '年', en: 'yrs' }), label: t({ zh: 'PM經驗', en: 'PM experience' }) },
@@ -74,12 +95,12 @@ export function Hero() {
           {strings.hero.eyebrow}
         </div>
 
-        {/* PLACEHOLDER: the author's own story goes here — two or three sentences, the largest text on the page. */}
-        <h1 className="font-serif font-semibold text-[28px] sm:text-[40px] md:text-[52px] leading-[1.3] text-ink max-w-4xl text-balance break-words">
-          {t({
-            zh: '【示意文字】這裡放你自己寫的故事，兩到三句話，是首頁最大的字。',
-            en: '[Placeholder] Your own story goes here — two or three sentences, the largest type on the page.',
-          })}
+        <h1 className="font-serif font-semibold text-[26px] sm:text-[34px] md:text-[44px] leading-[1.4] text-ink max-w-4xl break-words">
+          {story.map((line, i) => (
+            <span key={i} className="block text-balance">
+              {breakAfterCommas(line)}
+            </span>
+          ))}
         </h1>
 
         <p className="mt-6 max-w-2xl text-[16px] sm:text-[17px] leading-[1.8] text-muted">
