@@ -67,8 +67,8 @@ export const aboutChapters: AboutChapter[] = [
         en: 'I also used the PM standards framework I had built before joining to check whether my practical skills and my progress measured up.',
       },
       {
-        zh: '因此意識到這份職務的專業天花板與成長速度，難以達成我對卓越的追求，因此在 2024 年選擇主動離開。',
-        en: 'That made me realize the ceiling on expertise and the pace of growth in this role could not meet my pursuit of excellence, so in 2024 I chose to leave.',
+        zh: '在意識到這份職務的專業天花板與成長速度，難以達成我對卓越的追求後，我在 2024 年選擇主動離開。',
+        en: 'After realizing that the ceiling on expertise and the pace of growth in this role could not meet my pursuit of excellence, I chose to leave in 2024.',
       },
       {
         zh: '我清楚自己要的是能真正深入決策、充滿多重挑戰且能一展長才的實戰舞台。',
