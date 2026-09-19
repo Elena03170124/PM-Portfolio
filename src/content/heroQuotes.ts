@@ -30,8 +30,3 @@ export const positioningStatement = {
   zh: '偏向「系統與架構型 PM（System / Infrastructure PM）」——強項在跨系統整併、資料結構重構與身份治理架構，而非前台流量成長。',
   en: 'A systems/infrastructure-leaning PM — strongest at cross-system integration, data restructuring, and identity architecture, rather than front-of-funnel growth.',
 }
-
-export const selfDescription = {
-  zh: '持續成長、有韌性、可靠。',
-  en: 'Always growing, resilient, reliable.',
-}

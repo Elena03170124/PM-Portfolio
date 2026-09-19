@@ -37,11 +37,6 @@ const strings: AppStrings = {
     confidentialNote: 'Some source documents are confidential — full originals available on request at interview stage.',
     filteredBy: 'Filtered by:',
   },
-  about: {
-    title: 'About',
-    positioningLabel: 'Career Positioning',
-    contactCta: 'Get in touch',
-  },
   footer: {
     note: 'Content curated from my own Notion project documentation — reach out for corrections or to go deeper on any case study.',
   },

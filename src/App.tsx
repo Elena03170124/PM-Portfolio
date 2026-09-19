@@ -3,7 +3,6 @@ import { SiteShell } from './components/layout/SiteShell'
 import { Hero } from './components/hero/Hero'
 import { CompetencyMatrix } from './components/competency/CompetencyMatrix'
 import { ProjectTimeline } from './components/projects/ProjectTimeline'
-import { AboutContact } from './components/about/AboutContact'
 import type { CompetencyId } from './content/types'
 
 function App() {
@@ -23,7 +22,6 @@ function App() {
       <Hero />
       <CompetencyMatrix activeId={activeCompetencyId} onSelect={setActiveCompetencyId} />
       <ProjectTimeline activeCompetencyId={activeCompetencyId} />
-      <AboutContact />
     </SiteShell>
   )
 }

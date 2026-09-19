@@ -1,12 +1,12 @@
 import { competencies } from './competencies'
 import { southoneProjects } from './projects.southone'
 import { hotaiProjects } from './projects.hotai'
-import { heroQuotes, positioningStatement, selfDescription } from './heroQuotes'
+import { heroQuotes, positioningStatement } from './heroQuotes'
 import type { Competency, CompetencyId, Project } from './types'
 
 export * from './types'
 export { aboutThesis, aboutChapters } from './about'
-export { competencies, southoneProjects, hotaiProjects, heroQuotes, positioningStatement, selfDescription }
+export { competencies, southoneProjects, hotaiProjects, heroQuotes, positioningStatement }
 
 /** All projects, chronological (南一集團 first since it's the current,
  *  deeper body of work; 和泰聯網 appended as the earlier chapter). Consumers
