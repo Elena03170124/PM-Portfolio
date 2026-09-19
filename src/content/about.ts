@@ -48,6 +48,7 @@ export const aboutChapters: AboutChapter[] = [
       {
         zh: '至今仍以此梳理每次的專案經驗教訓與能力累積、盤點專業缺口，以此定義下一階段職涯目標。',
         en: 'I still use it to sort out the lessons and skills from every project, take stock of my professional gaps, and define my next career goal.',
+        emphasis: true,
       },
     ],
     cta: {
