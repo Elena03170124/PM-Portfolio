@@ -1,33 +1,47 @@
 import { useLocale } from '../../i18n/LocaleContext'
 import { LanguageToggle } from './LanguageToggle'
 
-const sections: { id: string; key: 'competencies' | 'projects' | 'growth' | 'future' | 'about' }[] = [
-  { id: 'competencies', key: 'competencies' },
-  { id: 'projects', key: 'projects' },
-  { id: 'growth', key: 'growth' },
-  { id: 'future', key: 'future' },
-  { id: 'about', key: 'about' },
+const BASE = import.meta.env.BASE_URL
+
+export type PageId = 'home' | 'about'
+
+type NavKey = 'competencies' | 'projects' | 'growth' | 'future' | 'about'
+
+// Sections live on the home page, so their links go through BASE + hash:
+// clicking one on the home page just scrolls, on another page it navigates home first.
+const nav: { key: NavKey; href: string; page?: PageId }[] = [
+  { key: 'competencies', href: `${BASE}#competencies` },
+  { key: 'projects', href: `${BASE}#projects` },
+  { key: 'growth', href: `${BASE}#growth` },
+  { key: 'future', href: `${BASE}#future` },
+  { key: 'about', href: `${BASE}about/`, page: 'about' },
 ]
 
-export function Header() {
+export function Header({ current = 'home' }: { current?: PageId }) {
   const { strings } = useLocale()
 
   return (
     <header className="sticky top-0 z-40 border-b border-rule/70 bg-paper/90 backdrop-blur">
       <div className="mx-auto max-w-6xl px-5 sm:px-8 h-16 flex items-center justify-between">
-        <a href="#top" className="font-serif text-[15px] tracking-wide text-ink">
+        <a href={BASE} className="font-serif text-[15px] tracking-wide text-ink">
           Elena Zhuang <span className="text-muted-dim">｜</span> 莊詒安<span className="text-accent">.</span>
         </a>
         <nav className="hidden md:flex items-center gap-7">
-          {sections.map((s) => (
-            <a
-              key={s.id}
-              href={`#${s.id}`}
-              className="font-sans text-[12.5px] tracking-wide text-muted hover:text-accent transition-colors"
-            >
-              {strings.nav[s.key]}
-            </a>
-          ))}
+          {nav.map((item) => {
+            const isCurrent = item.page === current
+            return (
+              <a
+                key={item.key}
+                href={item.href}
+                aria-current={isCurrent ? 'page' : undefined}
+                className={`font-sans text-[12.5px] tracking-wide transition-colors hover:text-accent ${
+                  isCurrent ? 'text-accent' : 'text-muted'
+                }`}
+              >
+                {strings.nav[item.key]}
+              </a>
+            )
+          })}
         </nav>
         <LanguageToggle />
       </div>

@@ -1,4 +1,4 @@
-import { createContext, useContext, useMemo, useState, type ReactNode } from 'react'
+import { createContext, useContext, useEffect, useMemo, useState, type ReactNode } from 'react'
 import zh from './strings.zh'
 import en from './strings.en'
 import type { AppStrings } from './types'
@@ -32,13 +32,16 @@ function readInitialLocale(): Locale {
 export function LocaleProvider({ children }: { children: ReactNode }) {
   const [locale, setLocaleState] = useState<Locale>(readInitialLocale)
 
+  // Keep <html lang> in step with the locale, including on first load — a page
+  // that opens in English (stored choice) would otherwise stay lang="zh-Hant".
+  useEffect(() => {
+    document.documentElement.lang = locale === 'zh' ? 'zh-Hant' : 'en'
+  }, [locale])
+
   const setLocale = (next: Locale) => {
     setLocaleState(next)
     if (typeof window !== 'undefined') {
       window.localStorage.setItem(STORAGE_KEY, next)
-    }
-    if (typeof document !== 'undefined') {
-      document.documentElement.lang = next === 'zh' ? 'zh-Hant' : 'en'
     }
   }
 

@@ -6,6 +6,7 @@ import { heroQuotes, positioningStatement, selfDescription } from './heroQuotes'
 import type { Competency, CompetencyId, Project } from './types'
 
 export * from './types'
+export { aboutThesis, aboutChapters } from './about'
 export { competencies, southoneProjects, hotaiProjects, futurePillars, heroQuotes, positioningStatement, selfDescription }
 
 /** All projects, chronological (南一集團 first since it's the current,

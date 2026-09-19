@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { SiteShell } from './components/layout/SiteShell'
 import { Hero } from './components/hero/Hero'
 import { CompetencyMatrix } from './components/competency/CompetencyMatrix'
@@ -12,6 +12,13 @@ function App() {
   // Single source of truth for the competency <-> project filter, shared
   // between CompetencyMatrix (sets it) and ProjectTimeline (reads it).
   const [activeCompetencyId, setActiveCompetencyId] = useState<CompetencyId | null>(null)
+
+  // Arriving from another page via "/#projects": the sections are rendered by
+  // React after load, so the browser's own anchor scroll finds nothing. Do it here.
+  useEffect(() => {
+    const id = decodeURIComponent(window.location.hash.slice(1))
+    if (id) document.getElementById(id)?.scrollIntoView()
+  }, [])
 
   return (
     <SiteShell>

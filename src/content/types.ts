@@ -78,3 +78,27 @@ export interface HeroQuote {
   id: string
   text: Bilingual
 }
+
+/** A call-to-action under an About chapter. With no `href` the CTA renders
+ *  as a disabled placeholder until its destination is decided.
+ *  `href` may be site-relative ("#projects"); the UI prefixes the base URL. */
+export interface AboutCta {
+  kind: 'button' | 'link'
+  label: Bilingual
+  href?: string
+}
+
+/** One stage of the "About me" story, shown as a timeline item. */
+export interface AboutChapter {
+  id: string
+  /** Display string, e.g. "2022 – 2023" */
+  years: Bilingual
+  /** Short stage name, e.g. "確立方向" */
+  tag: Bilingual
+  title: Bilingual
+  paras: Bilingual[]
+  /** Bulleted list rendered after the paragraphs. Each item carries a bold
+   *  lead-in, split into `lead` and `text`. */
+  bullets?: { lead: Bilingual; text: Bilingual }[]
+  cta?: AboutCta
+}
