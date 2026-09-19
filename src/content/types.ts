@@ -81,6 +81,9 @@ export interface AboutCta {
   href?: string
 }
 
+/** A paragraph of an About chapter. `emphasis` sets it in bold as a key point. */
+export type AboutPara = Bilingual & { emphasis?: boolean }
+
 /** One stage of the "About me" story, shown as a timeline item. */
 export interface AboutChapter {
   id: string
@@ -88,12 +91,13 @@ export interface AboutChapter {
   years: Bilingual
   /** Short stage name, e.g. "確立方向" */
   tag: Bilingual
+  /** A "|" marks the only place the title may wrap (it is not shown). */
   title: Bilingual
-  paras: Bilingual[]
+  paras: AboutPara[]
   /** Bulleted list rendered after the paragraphs. Each item carries a bold
    *  lead-in, split into `lead` and `text`. */
   bullets?: { lead: Bilingual; text: Bilingual }[]
   /** Paragraphs rendered after the bullets. */
-  closing?: Bilingual[]
+  closing?: AboutPara[]
   cta?: AboutCta
 }

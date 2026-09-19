@@ -42,8 +42,12 @@ export const aboutChapters: AboutChapter[] = [
     ],
     closing: [
       {
-        zh: '幾年來隨著專案經驗累積，這套能力框架開展為 9 大核心能力矩陣，至今仍以此梳理每次的專案經驗教訓與能力累積、盤點專業缺口，以此定義下一階段職涯目標。',
-        en: 'Over the years, as my project experience has grown, this framework has expanded into a matrix of nine core competencies. I still use it to sort out the lessons and skills from every project, take stock of my professional gaps, and define my next career goal.',
+        zh: '幾年來隨著專案經驗累積，這套能力框架開展為 9 大核心能力矩陣。',
+        en: 'Over the years, as my project experience has grown, this framework has expanded into a matrix of nine core competencies.',
+      },
+      {
+        zh: '至今仍以此梳理每次的專案經驗教訓與能力累積、盤點專業缺口，以此定義下一階段職涯目標。',
+        en: 'I still use it to sort out the lessons and skills from every project, take stock of my professional gaps, and define my next career goal.',
       },
     ],
     cta: {
@@ -76,6 +80,7 @@ export const aboutChapters: AboutChapter[] = [
       {
         zh: '我清楚自己要的是能真正深入決策、充滿多重挑戰且能一展長才的實戰舞台。',
         en: 'I knew what I wanted: a real-world stage, full of challenges, where I could be deeply involved in decisions and make full use of my abilities.',
+        emphasis: true,
       },
     ],
   },
@@ -84,7 +89,7 @@ export const aboutChapters: AboutChapter[] = [
     years: { zh: '2024 – 2026', en: '2024 – 2026' },
     tag: { zh: '逆境磨練', en: 'Forged by adversity' },
     title: {
-      zh: '越是混亂，越要鋪出一條讓專案平穩落地的路',
+      zh: '越是混亂，越要鋪出一條|讓專案平穩落地的路',
       en: 'The more chaotic it gets, the more I lay a path for projects to land smoothly',
     },
     paras: [
@@ -99,6 +104,7 @@ export const aboutChapters: AboutChapter[] = [
       {
         zh: '憑著一貫不服輸的韌性，我除了累積多個複雜專案經驗，更磨練出需求整合梳理、資料規格釐清、跨域溝通轉譯與風險識別管理等可複用的進階專業能力。',
         en: 'With my usual refusal to back down, I gained experience across several complex projects and, more importantly, honed reusable advanced skills: consolidating and structuring requirements, clarifying data specifications, translating across disciplines, and identifying and managing risk.',
+        emphasis: true,
       },
     ],
     cta: { kind: 'link', label: { zh: '查看專案經驗', en: 'View my project experience' }, href: '#projects' },

@@ -1,5 +1,5 @@
 import { aboutChapters } from '../../content'
-import type { AboutChapter, AboutCta } from '../../content/types'
+import type { AboutChapter, AboutCta, AboutPara } from '../../content/types'
 import { useLocale } from '../../i18n/LocaleContext'
 import { Reveal } from '../common/Reveal'
 
@@ -20,6 +20,17 @@ function keepQuotesTogether(text: string) {
       part
     ),
   )
+}
+
+/** Titles may carry a "|" as the only allowed wrap point: each side becomes an
+ *  atomic inline block, so on a narrow screen the line breaks there and nowhere else. */
+function renderTitle(text: string) {
+  if (!text.includes('|')) return keepQuotesTogether(text)
+  return text.split('|').map((part, i) => (
+    <span key={i} className="inline-block">
+      {part}
+    </span>
+  ))
 }
 
 function Cta({ cta }: { cta: AboutCta }) {
@@ -49,6 +60,15 @@ function Cta({ cta }: { cta: AboutCta }) {
   )
 }
 
+function Para({ para }: { para: AboutPara }) {
+  const { t } = useLocale()
+  return (
+    <p className={`mb-3 text-[15.5px] leading-[1.8] ${para.emphasis ? 'font-semibold text-ink' : 'text-ink/90'}`}>
+      {t(para)}
+    </p>
+  )
+}
+
 function TimelineItem({ chapter }: { chapter: AboutChapter }) {
   const { t } = useLocale()
 
@@ -71,13 +91,11 @@ function TimelineItem({ chapter }: { chapter: AboutChapter }) {
 
         <div className="col-start-2 row-start-2 max-w-[620px] pb-12 sm:col-start-3 sm:row-start-1 sm:pl-4">
           <h3 className="mb-3.5 font-serif text-[20px] sm:text-[22px] font-semibold leading-[1.45] text-ink text-balance">
-            {keepQuotesTogether(t(chapter.title))}
+            {renderTitle(t(chapter.title))}
           </h3>
 
           {chapter.paras.map((p, i) => (
-            <p key={i} className="mb-3 text-[15.5px] leading-[1.8] text-ink/90">
-              {t(p)}
-            </p>
+            <Para key={i} para={p} />
           ))}
 
           {chapter.bullets && (
@@ -95,9 +113,7 @@ function TimelineItem({ chapter }: { chapter: AboutChapter }) {
           )}
 
           {chapter.closing?.map((p, i) => (
-            <p key={i} className="mb-3 text-[15.5px] leading-[1.8] text-ink/90">
-              {t(p)}
-            </p>
+            <Para key={i} para={p} />
           ))}
 
           {chapter.cta && (
