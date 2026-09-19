@@ -23,7 +23,7 @@ const strings: AppStrings = {
     projectCount: (n: number) => `${n} 個專案`,
   },
   projects: {
-    title: '專案時間軸',
+    title: '專案經驗',
     subtitle: '南一集團的 6 個完整案例，加上和泰聯網早期的產品助理經歷。',
     southoneLabel: '南一集團・系統與架構型 PM',
     hotaiLabel: '和泰聯網・產品助理起點',

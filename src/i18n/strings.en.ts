@@ -23,7 +23,7 @@ const strings: AppStrings = {
     projectCount: (n: number) => `${n} project${n === 1 ? '' : 's'}`,
   },
   projects: {
-    title: 'Project Timeline',
+    title: 'Project Experience',
     subtitle: 'Six full case studies from Nani, plus earlier product-assistant work at Hotai.',
     southoneLabel: 'Nani · Systems & Infrastructure PM',
     hotaiLabel: 'Hotai Motor · Product-Assistant Origins',
