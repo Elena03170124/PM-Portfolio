@@ -8,6 +8,20 @@ const BASE = import.meta.env.BASE_URL
 /** Site-relative anchors like "#projects" point at the home page. */
 const resolveHref = (href: string) => (href.startsWith('#') ? `${BASE}${href}` : href)
 
+/** Keep a short quoted phrase (「…」 or “…”) on one line so a title never breaks
+ *  inside it. Long quotes are left alone: no-wrap would overflow a phone screen. */
+function keepQuotesTogether(text: string) {
+  return text.split(/(「[^」]*」|“[^”]*”)/).map((part, i) =>
+    i % 2 === 1 && part.length <= 16 ? (
+      <span key={i} className="whitespace-nowrap">
+        {part}
+      </span>
+    ) : (
+      part
+    ),
+  )
+}
+
 function Cta({ cta }: { cta: AboutCta }) {
   const { t } = useLocale()
   const label = t(cta.label)
@@ -57,7 +71,7 @@ function TimelineItem({ chapter }: { chapter: AboutChapter }) {
 
         <div className="col-start-2 row-start-2 max-w-[620px] pb-12 sm:col-start-3 sm:row-start-1 sm:pl-4">
           <h3 className="mb-3.5 font-serif text-[20px] sm:text-[22px] font-semibold leading-[1.45] text-ink text-balance">
-            {t(chapter.title)}
+            {keepQuotesTogether(t(chapter.title))}
           </h3>
 
           {chapter.paras.map((p, i) => (
