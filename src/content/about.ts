@@ -1,9 +1,14 @@
 import type { AboutChapter, Bilingual } from './types'
 
-/** Headline of the "About me" page. */
-export const aboutThesis: Bilingual = {
-  zh: '一切經歷，皆因「不甘平庸的韌性」而生',
-  en: 'Every step I have taken comes from a resilience that refuses to settle for the ordinary',
+/** Headline of the "About me" page, split so the middle part can be set larger.
+ *  `lead` and `emphasis` sit on their own lines. */
+export const aboutThesis: Bilingual<{ lead: string; emphasis: string; tail: string }> = {
+  zh: { lead: '一切經歷，皆因', emphasis: '「不甘平庸的韌性」', tail: '而生' },
+  en: {
+    lead: 'Every step I have taken comes from',
+    emphasis: 'a resilience that refuses to settle for the ordinary',
+    tail: '',
+  },
 }
 
 /** The four stages of the story, in chronological order. Chinese is the

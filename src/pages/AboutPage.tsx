@@ -4,20 +4,9 @@ import { SiteShell } from '../components/layout/SiteShell'
 import { Reveal } from '../components/common/Reveal'
 import { AboutTimeline } from '../components/about/AboutTimeline'
 
-/** Let a headline wrap only after a comma, so a quoted phrase isn't split
- *  mid-way. Text with no comma is returned as-is and wraps normally. */
-function breakAtCommas(text: string) {
-  const parts = text.split(/(?<=[，,])/)
-  if (parts.length < 2) return text
-  return parts.map((part, i) => (
-    <span key={i} className="inline-block">
-      {part}
-    </span>
-  ))
-}
-
 export function AboutPage() {
   const { t } = useLocale()
+  const thesis = t(aboutThesis)
 
   return (
     <SiteShell current="about">
@@ -25,10 +14,17 @@ export function AboutPage() {
         <Reveal>
           <div className="mb-6 flex items-center gap-2 font-mono text-[11px] uppercase tracking-[0.16em] text-accent">
             <span className="inline-block h-1.5 w-1.5 rounded-full bg-accent" aria-hidden="true" />
-            about
+            {t({ zh: '關於我 · about', en: 'about' })}
           </div>
-          <h1 className="max-w-3xl break-words font-serif text-[28px] font-semibold leading-[1.35] text-ink text-balance sm:text-[36px] md:text-[44px]">
-            {breakAtCommas(t(aboutThesis))}
+          <h1 className="max-w-4xl break-words font-serif font-semibold text-ink text-balance">
+            <span className="block text-[22px] leading-[1.4] sm:text-[28px] md:text-[36px]">{thesis.lead}</span>
+            {/* 「 is drawn in the right half of its box; pull it left so the glyph lines up with the line above. */}
+            <span
+              className={`mt-1 block text-[28px] leading-[1.25] sm:text-[44px] md:text-[52px] ${thesis.emphasis.startsWith('「') ? '-ml-[0.5em]' : ''}`}
+            >
+              {thesis.emphasis}
+              {thesis.tail}
+            </span>
           </h1>
         </Reveal>
       </section>
