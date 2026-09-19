@@ -46,8 +46,11 @@ export const aboutChapters: AboutChapter[] = [
         en: 'Over the years, as my project experience has grown, this framework has expanded into a matrix of nine core competencies. I still use it to sort out the lessons and skills from every project, take stock of my professional gaps, and define my next career goal.',
       },
     ],
-    // Destination not decided yet (no href) — renders as a disabled placeholder.
-    cta: { kind: 'link', label: { zh: '查看新版本 PM 能力矩陣', en: 'View the new PM competency matrix' } },
+    cta: {
+      kind: 'link',
+      label: { zh: '查看新版本 PM 能力矩陣', en: 'View the new PM competency matrix' },
+      href: '#competencies',
+    },
   },
   {
     id: 'breakout',

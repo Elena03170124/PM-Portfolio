@@ -67,13 +67,6 @@ export interface Project {
   quote?: Bilingual
 }
 
-export interface FuturePillar {
-  id: string
-  index: number
-  name: Bilingual
-  description: Bilingual
-}
-
 export interface HeroQuote {
   id: string
   text: Bilingual

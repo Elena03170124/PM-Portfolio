@@ -4,11 +4,9 @@
  *  narrower string-literal types. */
 export interface AppStrings {
   nav: {
-    competencies: string
-    projects: string
-    growth: string
-    future: string
     about: string
+    projects: string
+    competencies: string
   }
   languageToggle: {
     label: string
@@ -40,16 +38,6 @@ export interface AppStrings {
     reflection: string
     confidentialNote: string
     filteredBy: string
-  }
-  growth: {
-    title: string
-    subtitle: string
-    hotaiEra: { label: string; title: string; description: string }
-    southoneEra: { label: string; title: string; description: string }
-  }
-  future: {
-    title: string
-    subtitle: string
   }
   about: {
     title: string

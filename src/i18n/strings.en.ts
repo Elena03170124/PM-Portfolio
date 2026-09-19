@@ -2,11 +2,9 @@ import type { AppStrings } from './types'
 
 const strings: AppStrings = {
   nav: {
-    competencies: 'Competencies',
-    projects: 'Projects',
-    growth: 'Growth',
-    future: 'Future Direction',
     about: 'About',
+    projects: 'Project Experience',
+    competencies: 'PM Competency Matrix',
   },
   languageToggle: {
     label: '中',
@@ -38,24 +36,6 @@ const strings: AppStrings = {
     reflection: 'Reflection',
     confidentialNote: 'Some source documents are confidential — full originals available on request at interview stage.',
     filteredBy: 'Filtered by:',
-  },
-  growth: {
-    title: 'From Executor to Decision-Maker',
-    subtitle: "Across my body of work you can trace the arc from 'task executor' to 'systems-level decision-maker.'",
-    hotaiEra: {
-      label: '2023 · Hotai Motor',
-      title: 'Task Executor',
-      description: 'On the front line doing QA sign-off, synthesizing user interviews, and writing specs — executing every handoff solidly.',
-    },
-    southoneEra: {
-      label: '2024–2026 · Nani',
-      title: 'Systems-Level Decision-Maker',
-      description: 'Leading cross-system integration, data governance, and identity architecture — balancing technical limits, business goals, and risk.',
-    },
-  },
-  future: {
-    title: 'Strategy TPM · Next Chapter',
-    subtitle: "The target framework I've set for my next stage — leaning toward a Strategy TPM role at a platform or SaaS company.",
   },
   about: {
     title: 'About',

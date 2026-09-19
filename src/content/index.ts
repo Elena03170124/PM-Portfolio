@@ -1,18 +1,16 @@
 import { competencies } from './competencies'
 import { southoneProjects } from './projects.southone'
 import { hotaiProjects } from './projects.hotai'
-import { futurePillars } from './futurePillars'
 import { heroQuotes, positioningStatement, selfDescription } from './heroQuotes'
 import type { Competency, CompetencyId, Project } from './types'
 
 export * from './types'
 export { aboutThesis, aboutChapters } from './about'
-export { competencies, southoneProjects, hotaiProjects, futurePillars, heroQuotes, positioningStatement, selfDescription }
+export { competencies, southoneProjects, hotaiProjects, heroQuotes, positioningStatement, selfDescription }
 
 /** All projects, chronological (南一集團 first since it's the current,
  *  deeper body of work; 和泰聯網 appended as the earlier chapter). Consumers
- *  that want a strict timeline should sort by `period` themselves — this
- *  order is the "which era" grouping used by the growth narrative. */
+ *  that want a strict timeline should sort by `period` themselves. */
 export const allProjects: Project[] = [...southoneProjects, ...hotaiProjects]
 
 const competencyById = new Map<CompetencyId, Competency>(competencies.map((c) => [c.id, c]))

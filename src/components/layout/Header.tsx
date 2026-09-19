@@ -5,16 +5,14 @@ const BASE = import.meta.env.BASE_URL
 
 export type PageId = 'home' | 'about'
 
-type NavKey = 'competencies' | 'projects' | 'growth' | 'future' | 'about'
+type NavKey = 'about' | 'projects' | 'competencies'
 
 // Sections live on the home page, so their links go through BASE + hash:
 // clicking one on the home page just scrolls, on another page it navigates home first.
 const nav: { key: NavKey; href: string; page?: PageId }[] = [
-  { key: 'competencies', href: `${BASE}#competencies` },
-  { key: 'projects', href: `${BASE}#projects` },
-  { key: 'growth', href: `${BASE}#growth` },
-  { key: 'future', href: `${BASE}#future` },
   { key: 'about', href: `${BASE}about/`, page: 'about' },
+  { key: 'projects', href: `${BASE}#projects` },
+  { key: 'competencies', href: `${BASE}#competencies` },
 ]
 
 export function Header({ current = 'home' }: { current?: PageId }) {
