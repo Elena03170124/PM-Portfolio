@@ -18,12 +18,10 @@ export function AboutPage() {
           </div>
           <h1 className="max-w-4xl break-words font-serif font-semibold text-ink text-balance">
             <span className="block text-[22px] leading-[1.4] sm:text-[28px] md:text-[36px]">{thesis.lead}</span>
-            {/* 「 is drawn in the right half of its box; pull it left so the glyph lines up with the line above. */}
-            <span
-              className={`mt-1 block text-[28px] leading-[1.25] sm:text-[44px] md:text-[52px] ${thesis.emphasis.startsWith('「') ? '-ml-[0.5em]' : ''}`}
-            >
-              {thesis.emphasis}
-              {thesis.tail}
+            <span className="mt-1 block leading-[1.25]">
+              <span className="text-[28px] sm:text-[44px] md:text-[52px]">{thesis.emphasis}</span>
+              {/* Same size as the lead line, so only the key phrase is enlarged. */}
+              <span className="text-[22px] sm:text-[28px] md:text-[36px]">{thesis.tail}</span>
             </span>
           </h1>
         </Reveal>

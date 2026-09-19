@@ -1,9 +1,9 @@
 import type { AboutChapter, Bilingual } from './types'
 
 /** Headline of the "About me" page, split so the middle part can be set larger.
- *  `lead` and `emphasis` sit on their own lines. */
+ *  `lead` sits on its own line; `emphasis` (large) and `tail` (normal size) share the next. */
 export const aboutThesis: Bilingual<{ lead: string; emphasis: string; tail: string }> = {
-  zh: { lead: '一切經歷，皆因', emphasis: '「不甘平庸的韌性」', tail: '而生' },
+  zh: { lead: '一切經歷，皆因', emphasis: '不甘平庸的韌性', tail: '而生' },
   en: {
     lead: 'Every step I have taken comes from',
     emphasis: 'a resilience that refuses to settle for the ordinary',
