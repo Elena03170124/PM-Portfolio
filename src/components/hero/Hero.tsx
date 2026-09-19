@@ -10,7 +10,7 @@ export function Hero() {
   const { t, strings } = useLocale()
 
   const stats = [
-    { value: String(southoneProjects.length), label: t({ zh: '南一集團核心專案', en: 'core projects at South One' }) },
+    { value: String(southoneProjects.length), label: t({ zh: '南一集團核心專案', en: 'core projects at Nani' }) },
     { value: String(competencies.length), label: t({ zh: '核心能力矩陣', en: 'core competencies' }) },
     { value: t({ zh: '2.5 年', en: '2.5 yrs' }), label: t({ zh: 'PM 相關經驗', en: 'PM experience' }) },
   ]

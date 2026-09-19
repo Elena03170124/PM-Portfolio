@@ -26,8 +26,8 @@ const strings: AppStrings = {
   },
   projects: {
     title: 'Project Timeline',
-    subtitle: 'Six full case studies from South One Group, plus earlier product-assistant work at Hotai.',
-    southoneLabel: 'South One Group · Systems & Infrastructure PM',
+    subtitle: 'Six full case studies from Nani, plus earlier product-assistant work at Hotai.',
+    southoneLabel: 'Nani · Systems & Infrastructure PM',
     hotaiLabel: 'Hotai Motor · Product-Assistant Origins',
     expand: 'Expand full case study',
     collapse: 'Collapse',
@@ -48,7 +48,7 @@ const strings: AppStrings = {
       description: 'On the front line doing QA sign-off, synthesizing user interviews, and writing specs — executing every handoff solidly.',
     },
     southoneEra: {
-      label: '2024–2026 · South One Group',
+      label: '2024–2026 · Nani',
       title: 'Systems-Level Decision-Maker',
       description: 'Leading cross-system integration, data governance, and identity architecture — balancing technical limits, business goals, and risk.',
     },

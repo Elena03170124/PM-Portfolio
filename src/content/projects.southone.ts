@@ -1,13 +1,13 @@
 import type { Project } from './types'
 
 /** The six full case studies from Cassandra's current role across
- *  南一集團 (South One Group) — 南一書局 (parent) and 萬通教育 (subsidiary).
+ *  南一集團 (Nani) — 南一書局 (parent) and 萬通教育 (subsidiary).
  *  Ordered chronologically by start date. */
 export const southoneProjects: Project[] = [
   {
     id: 'leave-flow-rebuild',
     company: 'southone',
-    companyLabel: { zh: '南一集團子公司【萬通教育】', en: 'South One Group — Wantong Education (subsidiary)' },
+    companyLabel: { zh: '南一集團子公司【萬通教育】', en: 'Nani — OneClass (subsidiary)' },
     period: { zh: '2024.08 – 2024.10', en: '2024.08 – 2024.10' },
     title: {
       zh: 'Live App 學生請假新流程｜補課機制重構',
@@ -58,7 +58,7 @@ export const southoneProjects: Project[] = [
   {
     id: 'dual-system-merge',
     company: 'southone',
-    companyLabel: { zh: '南一集團子公司【萬通教育】', en: 'South One Group — Wantong Education (subsidiary)' },
+    companyLabel: { zh: '南一集團子公司【萬通教育】', en: 'Nani — OneClass (subsidiary)' },
     period: { zh: '2024.11 – 2025.04', en: '2024.11 – 2025.04' },
     title: {
       zh: '補教 × 家教雙系統合併｜跨服務資料對齊與流程重構',
@@ -110,7 +110,7 @@ export const southoneProjects: Project[] = [
   {
     id: 'edu-service-integration',
     company: 'southone',
-    companyLabel: { zh: '南一集團母公司【南一書局】', en: 'South One Group — Nan I Book (parent company)' },
+    companyLabel: { zh: '南一集團母公司【南一書局】', en: 'Nani (parent company)' },
     period: { zh: '2025.08 – 2026.01', en: '2025.08 – 2026.01' },
     title: {
       zh: '各大教用服務整合｜由公部門合規性反推服務定位',
@@ -123,7 +123,7 @@ export const southoneProjects: Project[] = [
     star: {
       situation: {
         zh: '南一旗下多個教用產品（電子書、雲端出題等）逐步整合至會員中心作為統一入口，公司希望支援教育部「教育雲」帳號登入以降低使用門檻——教育雲帳號之於教育體系使用者，相當於 Google 帳號之於一般網路服務。',
-        en: "South One's teaching products (e-books, cloud test-authoring, etc.) were consolidating behind a single member center, and the company wanted to support login via Taiwan's national EduCloud account — the education-sector equivalent of 'Sign in with Google' for teachers and students.",
+        en: "Nani's teaching products (e-books, cloud test-authoring, etc.) were consolidating behind a single member center, and the company wanted to support login via Taiwan's national EduCloud account — the education-sector equivalent of 'Sign in with Google' for teachers and students.",
       },
       task: {
         zh: '作為跨組織溝通與推進的窗口，負責推動會員中心完成教育部「教育雲身份認證服務」介接，同時在教育部規範資訊不完整、公司內部行政流程不透明、系統架構與資安弱掃要求相衝突的三重限制下持續推進。',
@@ -135,7 +135,7 @@ export const southoneProjects: Project[] = [
       },
       result: {
         zh: '2025/09/18 通過教育部複審取得測試資料介接資格；2026/01/16 提交合規弱掃報告，取得正式資料介接資格；2026 年 2 月初完成南一服務的教育雲登入流程實作。',
-        en: 'Passed the ministry\'s second-round review and earned test-integration approval on 2025-09-18; submitted a compliant security-scan report and earned full production approval on 2026-01-16; shipped the EduCloud login flow across South One\'s services in early February 2026.',
+        en: 'Passed the ministry\'s second-round review and earned test-integration approval on 2025-09-18; submitted a compliant security-scan report and earned full production approval on 2026-01-16; shipped the EduCloud login flow across Nani\'s services in early February 2026.',
       },
       reflection: {
         zh: '累積了第三方平台整合的風險管理能力，也強化了跨部門、跨組織之間的資訊轉譯能力——把教育部的條款轉譯給研發，把技術限制轉譯給教育部；同時也累積了把合規需求轉化為產品建設機會的經驗，藉審查壓力順勢規劃出「產品中心」模組。',
@@ -161,7 +161,7 @@ export const southoneProjects: Project[] = [
   {
     id: 'teacher-auth',
     company: 'southone',
-    companyLabel: { zh: '南一集團母公司【南一書局】', en: 'South One Group — Nan I Book (parent company)' },
+    companyLabel: { zh: '南一集團母公司【南一書局】', en: 'Nani (parent company)' },
     period: { zh: '2025.09 – 2025.11', en: '2025.09 – 2025.11' },
     title: {
       zh: '教師身份驗證機制建構｜跨系統資料整合與驗證流程簡化',
@@ -208,7 +208,7 @@ export const southoneProjects: Project[] = [
   {
     id: 'member-auth-unification',
     company: 'southone',
-    companyLabel: { zh: '南一集團母公司【南一書局】', en: 'South One Group — Nan I Book (parent company)' },
+    companyLabel: { zh: '南一集團母公司【南一書局】', en: 'Nani (parent company)' },
     period: { zh: '2025.11 – 2026.01', en: '2025.11 – 2026.01' },
     title: {
       zh: '會員身份驗證模式統一化｜跨系統登入整併與身份治理',
@@ -259,7 +259,7 @@ export const southoneProjects: Project[] = [
   {
     id: 'edu-cloud-integration',
     company: 'southone',
-    companyLabel: { zh: '南一集團母公司【南一書局】', en: 'South One Group — Nan I Book (parent company)' },
+    companyLabel: { zh: '南一集團母公司【南一書局】', en: 'Nani (parent company)' },
     period: { zh: '2025.11 – 2026.01', en: '2025.11 – 2026.01' },
     title: {
       zh: '教育部雲端資料介接｜既有系統限制下推動平衡決策',
