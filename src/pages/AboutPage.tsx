@@ -16,11 +16,12 @@ export function AboutPage() {
             <span className="inline-block h-1.5 w-1.5 rounded-full bg-accent" aria-hidden="true" />
             {t({ zh: '關於我 · about', en: 'about' })}
           </div>
-          <h1 className="max-w-4xl break-words font-serif font-semibold text-ink text-balance">
-            <span className="block text-[22px] leading-[1.4] sm:text-[28px] md:text-[36px]">{thesis.lead}</span>
-            <span className="mt-1 block leading-[1.25]">
+          {/* One sentence: only the key phrase is enlarged, lead and tail share the smaller size.
+              A short phrase (+ tail) stays together when the line has to wrap. */}
+          <h1 className="max-w-4xl break-words font-serif font-semibold leading-[1.35] text-ink">
+            <span className="text-[22px] sm:text-[28px] md:text-[36px]">{thesis.lead}</span>
+            <span className={thesis.emphasis.length <= 12 ? 'whitespace-nowrap' : ''}>
               <span className="text-[28px] sm:text-[44px] md:text-[52px]">{thesis.emphasis}</span>
-              {/* Same size as the lead line, so only the key phrase is enlarged. */}
               <span className="text-[22px] sm:text-[28px] md:text-[36px]">{thesis.tail}</span>
             </span>
           </h1>
