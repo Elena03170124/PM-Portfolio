@@ -1,5 +1,5 @@
 import { useLocale } from '../../i18n/LocaleContext'
-import { CONTACT_EMAIL } from '../../content/contact'
+import { ContactButton } from './ContactButton'
 import { LanguageToggle } from './LanguageToggle'
 
 const BASE = import.meta.env.BASE_URL
@@ -43,12 +43,7 @@ export function Header({ current = 'home' }: { current?: PageId }) {
           })}
         </nav>
         <div className="flex items-center gap-2">
-          <a
-            href={`mailto:${CONTACT_EMAIL}`}
-            className="font-sans text-[12.5px] tracking-wide px-3.5 py-1.5 rounded-full border border-accent/40 text-accent transition-colors hover:bg-accent hover:text-on-accent"
-          >
-            {strings.contact.cta}
-          </a>
+          <ContactButton />
           <LanguageToggle />
         </div>
       </div>

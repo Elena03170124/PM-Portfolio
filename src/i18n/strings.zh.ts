@@ -39,6 +39,7 @@ const strings: AppStrings = {
   },
   contact: {
     cta: '聯絡我',
+    copied: '已複製email',
   },
   footer: {
     note: '內容整理自個人 Notion 專案文件，如有錯誤或想進一步了解案例細節，歡迎聯繫。',

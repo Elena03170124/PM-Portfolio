@@ -41,6 +41,7 @@ export interface AppStrings {
   }
   contact: {
     cta: string
+    copied: string
   }
   footer: {
     note: string

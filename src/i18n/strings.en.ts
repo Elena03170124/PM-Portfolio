@@ -39,6 +39,7 @@ const strings: AppStrings = {
   },
   contact: {
     cta: 'Contact',
+    copied: 'Email copied',
   },
   footer: {
     note: 'Content curated from my own Notion project documentation — reach out for corrections or to go deeper on any case study.',
