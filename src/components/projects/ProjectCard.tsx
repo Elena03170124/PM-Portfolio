@@ -18,7 +18,7 @@ export function ProjectCard({ project, dimmed }: { project: Project; dimmed: boo
     <CornerBracketCard
       className={`p-5 sm:p-7 transition-opacity duration-300 ${dimmed ? 'opacity-35' : 'opacity-100'}`}
     >
-      <div id={`project-${project.id}`} className="scroll-mt-24">
+      <div id={`project-${project.id}`} className="scroll-mt-32 md:scroll-mt-24">
         <div className="flex flex-wrap items-center gap-2 mb-3">
           <CompanyBadge company={project.company} label={t(project.companyLabel)} />
           <span className="font-mono text-[11px] text-muted-dim">{t(project.period)}</span>

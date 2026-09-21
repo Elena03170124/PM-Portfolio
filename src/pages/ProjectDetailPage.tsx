@@ -79,7 +79,7 @@ function SectionBody({ section }: { section: DetailSection }) {
   }
 
   return (
-    <section id={section.id} className="scroll-mt-24 border-t border-rule pt-10">
+    <section id={section.id} className="scroll-mt-32 md:scroll-mt-24 border-t border-rule pt-10">
       <div className="mb-6 flex flex-wrap items-baseline justify-between gap-x-6 gap-y-2">
         <h2 className="flex items-baseline gap-3 font-serif text-[22px] font-semibold leading-snug text-ink sm:text-[26px]">
           {section.num && <span className="font-mono text-[12px] font-normal text-accent">{section.num.padStart(2, '0')}</span>}

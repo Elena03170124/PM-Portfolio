@@ -15,7 +15,7 @@ export function ProjectTimeline({ activeCompetencyId }: { activeCompetencyId: Co
     activeCompetencyId !== null && !competencyIds.includes(activeCompetencyId)
 
   return (
-    <section id="projects" className="py-20 sm:py-28 scroll-mt-16">
+    <section id="projects" className="py-20 sm:py-28 scroll-mt-28 md:scroll-mt-16">
       <Reveal>
         <SectionHeading eyebrow="02 / case studies" title={strings.projects.title} subtitle={strings.projects.subtitle} />
       </Reveal>
