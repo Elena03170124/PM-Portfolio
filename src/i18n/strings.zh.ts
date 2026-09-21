@@ -37,6 +37,9 @@ const strings: AppStrings = {
     confidentialNote: '部分文件涉及商業機密，完整原稿可於面談階段提供查核。',
     filteredBy: '目前篩選：',
   },
+  contact: {
+    cta: '聯絡我',
+  },
   footer: {
     note: '內容整理自個人 Notion 專案文件，如有錯誤或想進一步了解案例細節，歡迎聯繫。',
   },

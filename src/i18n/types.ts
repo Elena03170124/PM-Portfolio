@@ -39,6 +39,9 @@ export interface AppStrings {
     confidentialNote: string
     filteredBy: string
   }
+  contact: {
+    cta: string
+  }
   footer: {
     note: string
   }
