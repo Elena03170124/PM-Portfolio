@@ -39,6 +39,10 @@ export interface AppStrings {
     confidentialNote: string
     filteredBy: string
   }
+  menu: {
+    open: string
+    close: string
+  }
   contact: {
     cta: string
     copied: string

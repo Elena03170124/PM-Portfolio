@@ -37,6 +37,10 @@ const strings: AppStrings = {
     confidentialNote: '部分文件涉及商業機密，完整原稿可於面談階段提供查核。',
     filteredBy: '目前篩選：',
   },
+  menu: {
+    open: '開啟選單',
+    close: '關閉選單',
+  },
   contact: {
     cta: '聯絡我',
     copied: '已複製email',

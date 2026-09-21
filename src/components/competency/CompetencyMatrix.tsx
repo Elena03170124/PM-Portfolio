@@ -15,7 +15,7 @@ export function CompetencyMatrix({
   const { strings } = useLocale()
 
   return (
-    <section id="competencies" className="py-20 sm:py-28 scroll-mt-28 md:scroll-mt-16">
+    <section id="competencies" className="py-20 sm:py-28 scroll-mt-16">
       <Reveal>
         <SectionHeading eyebrow="01 / capability map" title={strings.competencyMatrix.title} subtitle={strings.competencyMatrix.subtitle} />
       </Reveal>

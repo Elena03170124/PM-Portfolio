@@ -37,6 +37,10 @@ const strings: AppStrings = {
     confidentialNote: 'Some source documents are confidential — full originals available on request at interview stage.',
     filteredBy: 'Filtered by:',
   },
+  menu: {
+    open: 'Open menu',
+    close: 'Close menu',
+  },
   contact: {
     cta: 'Contact',
     copied: 'Email copied',
