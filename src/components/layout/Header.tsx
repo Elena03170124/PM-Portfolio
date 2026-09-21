@@ -4,7 +4,7 @@ import { LanguageToggle } from './LanguageToggle'
 
 const BASE = import.meta.env.BASE_URL
 
-export type PageId = 'home' | 'about'
+export type PageId = 'home' | 'about' | 'projects'
 
 type NavKey = 'about' | 'projects' | 'competencies'
 
@@ -12,7 +12,7 @@ type NavKey = 'about' | 'projects' | 'competencies'
 // clicking one on the home page just scrolls, on another page it navigates home first.
 const nav: { key: NavKey; href: string; page?: PageId }[] = [
   { key: 'about', href: `${BASE}about/`, page: 'about' },
-  { key: 'projects', href: `${BASE}#projects` },
+  { key: 'projects', href: `${BASE}projects/`, page: 'projects' },
   { key: 'competencies', href: `${BASE}#competencies` },
 ]
 

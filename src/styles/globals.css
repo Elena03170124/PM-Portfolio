@@ -65,3 +65,116 @@
     }
   }
 }
+
+/* Long-form project write-ups imported from Notion (scripts/notion_import.py).
+   The HTML carries no styling of its own; everything is set here. */
+.nb {
+  font-size: 15.5px;
+  line-height: 1.9;
+  color: color-mix(in srgb, var(--color-ink) 92%, var(--color-paper));
+}
+.nb > :first-child { margin-top: 0; }
+.nb p { margin: 0 0 0.85em; }
+.nb strong { font-weight: 700; color: var(--color-ink); }
+.nb em { font-style: italic; }
+.nb a { color: var(--color-accent); text-decoration: underline; text-underline-offset: 3px; }
+.nb u { text-underline-offset: 3px; text-decoration-color: var(--color-accent-dim); }
+.nb code {
+  font-family: var(--font-mono);
+  font-size: 0.86em;
+  padding: 0.1em 0.4em;
+  background: var(--color-surface);
+  border: 1px solid var(--color-rule);
+  border-radius: 3px;
+  overflow-wrap: anywhere;
+}
+.nb h2 { font-size: 20px; font-weight: 600; line-height: 1.5; color: var(--color-ink); margin: 1.6em 0 0.6em; }
+.nb h3 { font-size: 17.5px; font-weight: 600; line-height: 1.55; color: var(--color-ink); margin: 1.5em 0 0.5em; }
+.nb h4 { font-size: 16px; font-weight: 600; margin: 1.2em 0 0.4em; }
+.nb hr { border: 0; border-top: 1px solid var(--color-rule); margin: 1.8em 0; }
+.nb ul, .nb ol { margin: 0.3em 0 0.9em; padding-left: 1.45em; }
+.nb ul { list-style: disc; }
+.nb ol { list-style: decimal; }
+.nb li { margin: 0.4em 0; padding-left: 0.2em; }
+.nb li::marker { color: var(--color-accent); }
+.nb li > ul, .nb li > ol { margin-top: 0.2em; margin-bottom: 0.3em; }
+.nb li > p { margin: 0.2em 0 0.4em; }
+.nb blockquote {
+  margin: 0 0 1.1em;
+  padding: 0.9em 1.1em;
+  background: var(--color-surface);
+  border: 1px solid var(--color-rule);
+  color: var(--color-muted);
+}
+.nb .nb-sub { margin: 0 0 0.9em 1.1em; }
+.nb .nc-gray { color: var(--color-muted); }
+.nb .nc-blue { color: var(--color-accent); }
+
+.nb .nb-callout {
+  margin: 0 0 1.4em;
+  padding: 1.1em 1.3em;
+  background: var(--color-surface);
+  border: 1px solid var(--color-rule);
+}
+.nb .nb-callout > :last-child { margin-bottom: 0; }
+
+.nb .nb-card {
+  margin: 0 0 1.1em;
+  padding: 1.3em 1.5em 0.6em;
+  background: var(--color-surface);
+  border: 1px solid var(--color-rule);
+}
+.nb .nb-card > h3 { margin: 0 0 0.6em; color: var(--color-accent); }
+.nb .nb-card > h3 strong { color: inherit; }
+
+.nb details { margin: 0 0 0.9em; }
+.nb summary { cursor: pointer; }
+.nb .nb-fold { border: 1px solid var(--color-rule); background: var(--color-surface); }
+.nb .nb-fold > summary {
+  list-style: none;
+  padding: 0.9em 1.2em;
+  font-size: 17.5px;
+  font-weight: 600;
+  line-height: 1.5;
+  color: var(--color-ink);
+  display: flex;
+  align-items: baseline;
+  gap: 0.6em;
+}
+.nb .nb-fold > summary::-webkit-details-marker { display: none; }
+.nb .nb-fold > summary::after {
+  content: "+";
+  margin-left: auto;
+  font-family: var(--font-mono);
+  font-weight: 400;
+  color: var(--color-accent);
+}
+.nb .nb-fold[open] > summary::after { content: "–"; }
+.nb .nb-fold[open] > summary { border-bottom: 1px solid var(--color-rule); }
+.nb .nb-fold-body { padding: 1.2em 1.4em 0.4em; background: var(--color-paper); }
+.nb .nb-fold-body > h3:first-child { margin-top: 0; }
+
+.nb .nb-toggle { border: 1px dashed var(--color-rule); padding: 0.7em 1em; margin: 1.2em 0; }
+.nb .nb-toggle > summary { font-size: 14.5px; color: var(--color-muted); }
+.nb .nb-toggle[open] > summary { margin-bottom: 0.8em; }
+
+.nb .nb-shots {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  margin: 0.7em 0 1.2em;
+}
+.nb .nb-shots img, .nb-cover img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--color-rule);
+  background: var(--color-surface);
+  cursor: zoom-in;
+}
+.nb-cover figcaption {
+  margin-top: 0.6em;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--color-muted-dim);
+}
