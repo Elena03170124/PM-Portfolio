@@ -78,12 +78,12 @@ export function Header({ current = 'home' }: { current?: PageId }) {
   }, [menuOpen])
 
   return (
-    <header ref={headerRef} className="sticky top-0 z-40 border-b border-rule/70 bg-paper/90 backdrop-blur">
+    <header ref={headerRef} className="sticky top-0 z-40 border-b border-rule/70 bg-paper">
       <div className="mx-auto max-w-6xl px-5 sm:px-8 h-16 flex items-center justify-between">
         <a href={BASE} className="font-serif text-[15px] tracking-wide text-ink">
           Elena Zhuang <span className="text-muted-dim">｜</span> 莊詒安<span className="text-accent">.</span>
         </a>
-        <nav className="hidden md:flex items-center gap-7">
+        <nav className="hidden lg:flex items-center gap-7">
           {nav.map((item) => (
             <NavLink key={item.key} item={item} current={current} label={strings.nav[item.key]} className="text-[12.5px]" />
           ))}
@@ -99,7 +99,7 @@ export function Header({ current = 'home' }: { current?: PageId }) {
             aria-expanded={menuOpen}
             aria-controls="mobile-menu"
             aria-label={menuOpen ? strings.menu.close : strings.menu.open}
-            className="md:hidden flex h-8 w-10 items-center justify-center rounded-full border border-rule text-muted transition-colors hover:border-accent hover:text-accent"
+            className="lg:hidden flex h-8 w-10 items-center justify-center rounded-full border border-rule text-muted transition-colors hover:border-accent hover:text-accent"
           >
             <MenuIcon open={menuOpen} />
           </button>
@@ -107,7 +107,7 @@ export function Header({ current = 'home' }: { current?: PageId }) {
       </div>
 
       {menuOpen && (
-        <div id="mobile-menu" className="md:hidden absolute inset-x-0 top-full border-b border-rule bg-paper">
+        <div id="mobile-menu" className="lg:hidden absolute inset-x-0 top-full border-b border-rule bg-paper">
           <nav aria-label="主選單" className="mx-auto max-w-6xl px-5 py-1 sm:px-8">
             <ul>
               {nav.map((item) => (
