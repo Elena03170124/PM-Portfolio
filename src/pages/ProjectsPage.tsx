@@ -7,15 +7,16 @@ import { Reveal } from '../components/common/Reveal'
 
 const BASE = import.meta.env.BASE_URL
 
-/** Break a "before → after" subtitle only at the arrow, so the two phrases each
- *  keep their own line instead of wrapping wherever they happen to run out of room. */
+/** On a phone, break a "before → after" subtitle only at the arrow, so the two
+ *  phrases each keep their own line instead of wrapping wherever they run out of
+ *  room. From the sm breakpoint up there's space for the whole thing on one line. */
 function ArrowSubtitle({ text }: { text: string }) {
   const [before, after] = text.split(' → ')
   if (!after) return <>{text}</>
   return (
     <>
-      <span className="block">{before}</span>
-      <span className="block">→ {after}</span>
+      <span className="block sm:inline">{before}</span>{' '}
+      <span className="block sm:inline">→ {after}</span>
     </>
   )
 }
