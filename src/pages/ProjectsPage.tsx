@@ -174,10 +174,10 @@ function GrowthCompare() {
                   <p className="mt-1.5 text-[14.5px] leading-[1.8] text-muted">{t(row.before)}</p>
                 </div>
 
-                {/* Always horizontal — the subtitle above already reads left-to-right with its own
-                    "→", so this arrow stays the same direction rather than turning downward when
-                    the blocks stack, which read as two conflicting arrows. */}
-                <div aria-hidden="true" className="flex items-center justify-center py-2 text-accent sm:px-4 sm:py-0">
+                {/* Stacked on a phone, the accent border on the "after" block is enough to mark
+                    the change — no arrow needed there. From sm up, it sits between the two side
+                    by side, matching the subtitle's own horizontal "→" above. */}
+                <div aria-hidden="true" className="hidden items-center justify-center text-accent sm:flex sm:px-4">
                   <svg
                     viewBox="0 0 16 16"
                     className="size-4"
