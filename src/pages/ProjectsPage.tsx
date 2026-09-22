@@ -1,3 +1,4 @@
+import type { ReactNode } from 'react'
 import { hotaiProjects, southoneProjects } from '../content'
 import type { Project } from '../content/types'
 import { useLocale } from '../i18n/LocaleContext'
@@ -155,37 +156,48 @@ function GrowthCompare() {
       </Reveal>
 
       <Reveal delayMs={80}>
-        <div className="mt-10 hidden grid-cols-[150px_minmax(0,1fr)_minmax(0,1fr)] gap-x-8 border-b border-rule pb-3 font-mono text-[12px] text-muted sm:grid">
-          <span />
-          <span>{t({ zh: '和泰聯網・任務執行者', en: 'Hotai Motor · task executor' })}</span>
-          <span className="text-accent">{t({ zh: '南一集團・系統層級決策者', en: 'Nani · system-level decision-maker' })}</span>
-        </div>
-        <ul>
-          {growthRows.map((row) => (
-            <li
-              key={row.dimension.zh}
-              className="grid gap-x-8 gap-y-3 border-b border-rule py-7 sm:grid-cols-[150px_minmax(0,1fr)_minmax(0,1fr)]"
-            >
-              <div>
-                <span className="font-serif text-[16px] font-semibold leading-snug text-ink">{t(row.dimension)}</span>
-                <p className="mt-1.5 text-[12.5px] leading-[1.6] text-muted">
-                  <ArrowSubtitle text={t(row.subtitle)} />
-                </p>
+        <ul className="mt-10">
+          {growthRows.map((row, i) => (
+            <li key={row.dimension.zh} className="border-b border-rule py-8 first:pt-2 last:border-b-0">
+              <div className="flex items-baseline gap-3">
+                <span className="font-mono text-[11px] text-muted-dim">{String(i + 1).padStart(2, '0')}</span>
+                <h3 className="font-serif text-[18px] font-semibold leading-snug text-ink sm:text-[19px]">{t(row.dimension)}</h3>
               </div>
-              <p className="text-[14.5px] leading-[1.8] text-muted">
-                <span className="mb-1 block font-mono text-[11px] text-muted-dim sm:hidden">{t({ zh: '和泰聯網', en: 'Hotai Motor' })}</span>
-                {t(row.before)}
+              <p className="mt-1.5 text-[13px] leading-[1.6] text-muted">
+                <ArrowSubtitle text={t(row.subtitle)} />
               </p>
-              <div className="text-[14.5px] leading-[1.8] text-ink">
-                <span className="mb-1 block font-mono text-[11px] text-accent sm:hidden">{t({ zh: '南一集團', en: 'Nani' })}</span>
-                <p>{t(row.after)}</p>
-                <GrowthCitation citation={row.citation} />
+
+              <div className="mt-5 flex flex-col gap-4 sm:flex-row sm:items-stretch sm:gap-0">
+                <div className="sm:flex-1">
+                  <SideLabel tone="plain">{t({ zh: '和泰聯網', en: 'Hotai Motor' })}</SideLabel>
+                  <p className="mt-1.5 text-[14.5px] leading-[1.8] text-muted">{t(row.before)}</p>
+                </div>
+
+                <div aria-hidden="true" className="flex items-center justify-center py-1 text-accent sm:px-4">
+                  <span className="inline-block rotate-90 text-[16px] sm:rotate-0">→</span>
+                </div>
+
+                <div className="border-l-2 border-accent-dim/70 pl-4 sm:flex-1 sm:pl-5">
+                  <SideLabel tone="accent">{t({ zh: '南一集團', en: 'Nani' })}</SideLabel>
+                  <p className="mt-1.5 text-[14.5px] font-medium leading-[1.8] text-ink">{t(row.after)}</p>
+                  <GrowthCitation citation={row.citation} />
+                </div>
               </div>
             </li>
           ))}
         </ul>
       </Reveal>
     </section>
+  )
+}
+
+function SideLabel({ children, tone }: { children: ReactNode; tone: 'plain' | 'accent' }) {
+  return (
+    <span
+      className={`font-mono text-[10.5px] uppercase tracking-[0.08em] ${tone === 'accent' ? 'text-accent' : 'text-muted-dim'}`}
+    >
+      {children}
+    </span>
   )
 }
 
