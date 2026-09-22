@@ -38,7 +38,7 @@ const growthRows: GrowthRow[] = [
   {
     dimension: { zh: '需求拆解層級', en: 'Requirement breakdown' },
     subtitle: {
-      zh: '單純梳理產品規格 → 規劃出令商業價值最大化的階段目標',
+      zh: '從單純梳理產品規格 → 到規劃商業價值最大化的階段目標',
       en: 'Sorting out product specs → scoping a phase that maximizes business value',
     },
     before: {
@@ -57,8 +57,8 @@ const growthRows: GrowthRow[] = [
   {
     dimension: { zh: '系統理解深度', en: 'System understanding' },
     subtitle: {
-      zh: '功能異常的成因理解 → 分析跨服務資料庫間的相依協作流程',
-      en: 'Tracing why a feature broke → reading how databases depend on each other across services',
+      zh: '從單一功能異常的成因理解 → 到分析跨服務間的資料相依協作流程',
+      en: 'Tracing why a single feature broke → reading how data dependencies work together across services',
     },
     before: {
       zh: '聚焦在 App 前端功能異常問題的理解與修復追蹤。',
@@ -76,8 +76,8 @@ const growthRows: GrowthRow[] = [
   {
     dimension: { zh: '決策衡量維度', en: 'Decision criteria' },
     subtitle: {
-      zh: '他人評價回饋的單一管道 → 站在資源成本、用戶影響範圍、系統長期維運這類維度思考解決方案',
-      en: 'Feedback from others as the only input → weighing resource cost, user impact and long-term upkeep',
+      zh: '從他人評價回饋這類單一管道 → 到站在資源成本、影響範圍、長期維運等多重維度思考解決方案',
+      en: 'Feedback from others as the only channel → weighing cost, impact and long-term upkeep together',
     },
     before: {
       zh: '由需求訪談、使用者評價回饋、競品分析，提出功能流程優化建議。',
@@ -95,8 +95,8 @@ const growthRows: GrowthRow[] = [
   {
     dimension: { zh: '風險管理範圍', en: 'Risk management' },
     subtitle: {
-      zh: '避免規格疏漏而影響功能正常運作 → 跨單位、跨系統協作的風險預防與管理',
-      en: 'Catching spec gaps that would break a feature → managing risk across teams and systems',
+      zh: '從單純避免規格疏漏而影響功能正常運作 → 到跨域協作資訊同步與跨系統相依風險預防',
+      en: 'Simply catching spec gaps that would break a feature → syncing information across teams and preventing cross-system dependency risk',
     },
     before: {
       zh: '盤點未定義明確的功能規格，或補齊尚未納入的應測試驗收項目。',
@@ -114,7 +114,7 @@ const growthRows: GrowthRow[] = [
   {
     dimension: { zh: '溝通轉譯難度', en: 'Communication & translation' },
     subtitle: {
-      zh: '只需教一般使用者如何操作 → 用轉化後的共通語言，讓不同角色理解為何以及如何開發運作',
+      zh: '從只需教一般使用者如何操作 → 到用轉化後的共通語言，讓不同角色理解為何以及如何開發運作',
       en: 'Teaching end users how to click through → a shared language that lets every role understand why and how',
     },
     before: {
@@ -163,7 +163,7 @@ function GrowthCompare() {
                 <span className="font-mono text-[11px] text-muted-dim">{String(i + 1).padStart(2, '0')}</span>
                 <h3 className="font-serif text-[18px] font-semibold leading-snug text-ink sm:text-[19px]">{t(row.dimension)}</h3>
               </div>
-              <p className="mt-1.5 text-[13px] leading-[1.6] text-muted">
+              <p className="mt-1.5 text-[13px] leading-[1.6] text-ink/75">
                 <ArrowSubtitle text={t(row.subtitle)} />
               </p>
 
