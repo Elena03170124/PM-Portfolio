@@ -170,7 +170,7 @@ function GrowthCompare() {
 
               <div className="mt-5 flex flex-col gap-4 sm:flex-row sm:items-stretch sm:gap-0">
                 <div className="sm:flex-1">
-                  <SideLabel tone="plain">{t({ zh: '和泰聯網', en: 'Hotai Motor' })}</SideLabel>
+                  <SideLabel tone="plain">{t({ zh: '和泰產品助理', en: 'Hotai · Product Assistant' })}</SideLabel>
                   <p className="mt-1.5 text-[14.5px] leading-[1.8] text-muted">{t(row.before)}</p>
                 </div>
 
@@ -179,7 +179,7 @@ function GrowthCompare() {
                 </div>
 
                 <div className="border-l-2 border-accent-dim/70 pl-4 sm:flex-1 sm:pl-5">
-                  <SideLabel tone="accent">{t({ zh: '南一集團', en: 'Nani' })}</SideLabel>
+                  <SideLabel tone="accent">{t({ zh: '南一產品經理', en: 'Nani · Product Manager' })}</SideLabel>
                   <p className="mt-1.5 text-[14.5px] font-medium leading-[1.8] text-ink">{t(row.after)}</p>
                   <GrowthCitation citation={row.citation} />
                 </div>
