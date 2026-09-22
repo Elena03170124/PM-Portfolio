@@ -174,12 +174,13 @@ function GrowthCompare() {
                   <p className="mt-1.5 text-[14.5px] leading-[1.8] text-muted">{t(row.before)}</p>
                 </div>
 
-                <div aria-hidden="true" className="flex items-center justify-center py-1 text-accent sm:px-4">
-                  {/* A drawn chevron in a square viewBox stays visually centred when rotated —
-                      a rotated arrow character doesn't, because its glyph box is wider than tall. */}
+                {/* Always horizontal — the subtitle above already reads left-to-right with its own
+                    "→", so this arrow stays the same direction rather than turning downward when
+                    the blocks stack, which read as two conflicting arrows. */}
+                <div aria-hidden="true" className="flex items-center justify-center py-2 text-accent sm:px-4 sm:py-0">
                   <svg
                     viewBox="0 0 16 16"
-                    className="size-4 rotate-90 sm:rotate-0"
+                    className="size-4"
                     fill="none"
                     stroke="currentColor"
                     strokeWidth="1.5"
