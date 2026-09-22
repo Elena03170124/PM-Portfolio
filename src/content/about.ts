@@ -108,7 +108,7 @@ export const aboutChapters: AboutChapter[] = [
         emphasis: true,
       },
     ],
-    cta: { kind: 'link', label: { zh: '查看專案經驗', en: 'View my project experience' }, href: '#projects' },
+    cta: { kind: 'link', label: { zh: '查看專案經驗', en: 'View my project experience' }, href: 'projects/' },
   },
   {
     id: 'elevate',

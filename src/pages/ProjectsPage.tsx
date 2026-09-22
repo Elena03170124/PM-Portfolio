@@ -13,43 +13,110 @@ const detailSlugs = new Set(
 
 interface GrowthRow {
   dimension: { zh: string; en: string }
+  subtitle: { zh: string; en: string }
   before: { zh: string; en: string }
   after: { zh: string; en: string }
+  /** The 南一集團 example names a specific project; cited here as evidence. */
+  citation: { projectId: string; label: { zh: string; en: string } }
 }
 
-// DRAFT: written from the project case studies; to be reviewed and reworded by the author.
 const growthRows: GrowthRow[] = [
   {
-    dimension: { zh: '問題拆解', en: 'Breaking problems down' },
+    dimension: { zh: '需求拆解層級', en: 'Requirement breakdown' },
+    subtitle: {
+      zh: '由單純梳理產品規格，到能規劃出令商業價值最大化的階段目標',
+      en: 'From sorting out product specs to scoping a phase that maximizes business value',
+    },
     before: {
-      zh: '依 SPEC 與流程圖，把功能需求拆成可驗收的測試項目。',
-      en: 'Turned feature requirements into testable acceptance items, working from the spec and flow diagrams.',
+      zh: '根據設計稿拆出需求規格與驗收標準。',
+      en: 'Broke design mockups down into requirement specs and acceptance criteria.',
     },
     after: {
-      zh: '把「一人一班」約 5,000 個班的分散結構，重構為以年級為核心的 60 個班級模型。',
-      en: 'Restructured roughly 5,000 one-teacher-one-class groups into a grade-centred model of 60 classes.',
+      zh: '結合商業、營運、技術可行、系統穩定等因素，拆解階段 MVP 範疇。',
+      en: 'Scoped a phased MVP by weighing business, operations, technical feasibility and system stability together.',
+    },
+    citation: {
+      projectId: 'dual-system-merge',
+      label: { zh: '補教 × 家教雙系統合併｜以使用者功能平穩移轉為優先', en: 'Tutoring–classroom system merge · users moved over with no disruption' },
     },
   },
   {
-    dimension: { zh: '系統理解', en: 'Understanding the system' },
+    dimension: { zh: '系統理解深度', en: 'System understanding' },
+    subtitle: {
+      zh: '由功能異常的成因理解，深化到能分析跨服務資料庫間的相依協作流程',
+      en: 'From tracing why a feature broke to reading how databases depend on each other across services',
+    },
     before: {
-      zh: '用 Figma 繪製 Logic Flow，協助 RD 評估串接第三方租車 App 的技術限制。',
-      en: 'Drew logic flows in Figma so engineers could judge the technical limits of integrating a third-party car-rental app.',
+      zh: '聚焦在 App 前端功能異常問題的理解與修復追蹤。',
+      en: 'Focused on understanding and tracking front-end bugs in the app.',
     },
     after: {
-      zh: '盤點跨系統的推版順序、前置條件與相依關係，整理成完整的上線檢核指引。',
-      en: 'Mapped release order, prerequisites and cross-system dependencies into a full go-live checklist.',
+      zh: '理解前後端 API 溝通協作機制、跨資料庫資料比對方式、跨服務資料欄位差異與解決方案，以及統一化關鍵處理流程有利減省系統維護成本等。',
+      en: 'Understood how front and back end talk over the API, how to reconcile data across databases, how field differences between services get resolved, and how standardizing key processes cuts maintenance cost.',
+    },
+    citation: {
+      projectId: 'teacher-auth',
+      label: { zh: '教師身份驗證機制建構｜橫跨業務、研發雙部門資料庫比對驗證資料', en: 'Teacher identity verification · reconciling data across business and engineering databases' },
     },
   },
   {
-    dimension: { zh: '決策思考', en: 'Decision-making' },
+    dimension: { zh: '決策衡量維度', en: 'Decision criteria' },
+    subtitle: {
+      zh: '從他人評價回饋的單一管道，拓展到能站在資源成本、用戶影響範圍、系統長期維運這類維度思考解決方案',
+      en: 'From a single channel — feedback from others — to weighing resource cost, user impact and long-term upkeep',
+    },
     before: {
-      zh: '訪談使用者、提出 App 優化建議，並維護團隊溝通文件。',
-      en: 'Interviewed users, proposed app improvements and kept the team’s communication documents up to date.',
+      zh: '由需求訪談、使用者評價回饋、競品分析，提出功能流程優化建議。',
+      en: 'Proposed flow improvements based on requirement interviews, user feedback and competitor analysis.',
     },
     after: {
-      zh: '在弱掃合規、既有架構與維運成本之間，與團隊商議 UA 分流方案，避開 6–8 個月的架構重構。',
-      en: 'Weighed scan compliance, legacy architecture and upkeep cost with the team, and chose UA-based routing to avoid a 6–8 month rebuild.',
+      zh: '在開發成本限制、外部合規考量、服務穩定性維護等多重條件下，協助管理層做出平衡決策。',
+      en: 'Helped management weigh a decision under development-cost limits, external compliance and service stability all at once.',
+    },
+    citation: {
+      projectId: 'edu-cloud-integration',
+      label: { zh: '教育部雲端資料介接專案｜於合規、時程、成本、技術可行性等多重限制下推動折衷方案落地', en: 'EduCloud data integration · landing a compromise under compliance, schedule, cost and feasibility limits' },
+    },
+  },
+  {
+    dimension: { zh: '風險管理範圍', en: 'Risk management' },
+    subtitle: {
+      zh: '從避免規格疏漏而影響功能正常運作，進階到跨單位、跨系統協作的風險預防與管理',
+      en: 'From catching spec gaps that would break a feature to managing risk across teams and systems',
+    },
+    before: {
+      zh: '盤點未定義明確的功能規格，或補齊尚未納入的應測試驗收項目。',
+      en: 'Flagged loosely defined specs and filled in acceptance-test items that had been missed.',
+    },
+    after: {
+      zh: '需考量跨部門資訊同步落實方法、階段性成果上線前的作業流程面可能風險與備援處理方案。',
+      en: 'Planned how information stays in sync across departments, and what could go wrong — with a fallback — before each phase went live.',
+    },
+    citation: {
+      projectId: 'dual-system-merge',
+      label: { zh: '補教 × 家教雙系統合併｜上線前跨部門教育訓練與推版風險檢核盤點', en: 'Tutoring–classroom system merge · cross-department training and a go-live risk checklist' },
+    },
+  },
+  {
+    dimension: { zh: '溝通轉譯難度', en: 'Communication & translation' },
+    subtitle: {
+      zh: '從只需教一般使用者如何操作，提升到能用轉化後的共通語言，讓不同角色理解為何以及如何開發運作',
+      en: 'From teaching end users how to click through, to a shared language that lets every role understand why and how',
+    },
+    before: {
+      zh: '以使用者操作辦法調整為出發點，單純傳達「做什麼」能解決眼前的產品功能問題。',
+      en: 'Started from how users operate the product, communicating only "what to do" to fix the issue in front of them.',
+    },
+    after: {
+      zh: '需自行快速吸收陌生專業，並轉化為跨部門間的共通語言，促進團隊達成共識。',
+      en: 'Absorbed unfamiliar expertise fast and translated it into a shared language across departments to build consensus.',
+    },
+    citation: {
+      projectId: 'member-auth-unification',
+      label: {
+        zh: '會員身份驗證模式統一化｜將身份驗證模式 OIDC 繪製為作業流程圖，協助 QA、設計等非技術角色理解重要節點',
+        en: 'Unifying member authentication · drew the OIDC flow as a diagram so QA, design and other non-technical roles could follow it',
+      },
     },
   },
 ]
@@ -68,40 +135,56 @@ function GrowthCompare() {
         </h2>
         <p className="mt-4 max-w-3xl text-[15px] leading-[1.85] text-muted">
           {t({
-            zh: '結合整體作品脈絡，可以明顯感受我由「任務執行者」蛻變為「系統層級決策者」，在問題拆解深度、系統理解程度與決策思考上都有顯著的成長幅度。',
-            en: 'Read across the whole portfolio, the shift from task executor to system-level decision-maker shows in three places: how deeply I break a problem down, how well I understand the system, and how I decide.',
+            zh: '結合整體作品脈絡，可以明顯感受我由「任務執行者」蛻變為「系統層級決策者」，在需求拆解、系統理解、決策衡量、風險管理與溝通轉譯上都有顯著的成長幅度。',
+            en: 'Read across the whole portfolio, the shift from task executor to system-level decision-maker shows up in five places: how I break down requirements, understand the system, weigh a decision, manage risk, and communicate across roles.',
           })}
         </p>
       </Reveal>
 
       <Reveal delayMs={80}>
-        <div className="mt-10 hidden grid-cols-[120px_minmax(0,1fr)_minmax(0,1fr)] gap-x-8 border-b border-rule pb-3 font-mono text-[12px] text-muted sm:grid">
+        <div className="mt-10 hidden grid-cols-[150px_minmax(0,1fr)_minmax(0,1fr)] gap-x-8 border-b border-rule pb-3 font-mono text-[12px] text-muted sm:grid">
           <span />
-          <span>
-            {t({ zh: '和泰聯網・任務執行者', en: 'Hotai Motor · task executor' })}
-          </span>
+          <span>{t({ zh: '和泰聯網・任務執行者', en: 'Hotai Motor · task executor' })}</span>
           <span className="text-accent">{t({ zh: '南一集團・系統層級決策者', en: 'Nani · system-level decision-maker' })}</span>
         </div>
         <ul>
           {growthRows.map((row) => (
             <li
               key={row.dimension.zh}
-              className="grid gap-x-8 gap-y-3 border-b border-rule py-6 sm:grid-cols-[120px_minmax(0,1fr)_minmax(0,1fr)]"
+              className="grid gap-x-8 gap-y-3 border-b border-rule py-7 sm:grid-cols-[150px_minmax(0,1fr)_minmax(0,1fr)]"
             >
-              <span className="font-serif text-[16px] font-semibold text-ink">{t(row.dimension)}</span>
+              <div>
+                <span className="font-serif text-[16px] font-semibold leading-snug text-ink">{t(row.dimension)}</span>
+                <p className="mt-1.5 text-[12.5px] leading-[1.6] text-muted-dim">{t(row.subtitle)}</p>
+              </div>
               <p className="text-[14.5px] leading-[1.8] text-muted">
                 <span className="mb-1 block font-mono text-[11px] text-muted-dim sm:hidden">{t({ zh: '和泰聯網', en: 'Hotai Motor' })}</span>
                 {t(row.before)}
               </p>
-              <p className="text-[14.5px] leading-[1.8] text-ink">
+              <div className="text-[14.5px] leading-[1.8] text-ink">
                 <span className="mb-1 block font-mono text-[11px] text-accent sm:hidden">{t({ zh: '南一集團', en: 'Nani' })}</span>
-                {t(row.after)}
-              </p>
+                <p>{t(row.after)}</p>
+                <GrowthCitation citation={row.citation} />
+              </div>
             </li>
           ))}
         </ul>
       </Reveal>
     </section>
+  )
+}
+
+/** Names the project the 南一集團 example is drawn from — links to its detail page
+ *  when one exists, otherwise to its card further down this same page. */
+function GrowthCitation({ citation }: { citation: GrowthRow['citation'] }) {
+  const { t } = useLocale()
+  const hasDetail = detailSlugs.has(citation.projectId)
+  const href = hasDetail ? `${BASE}projects/${citation.projectId}/` : `#project-${citation.projectId}`
+
+  return (
+    <a href={href} className="mt-2 block font-mono text-[11.5px] leading-[1.6] text-muted transition-colors hover:text-accent">
+      （{t(citation.label)}）
+    </a>
   )
 }
 
@@ -112,7 +195,8 @@ function ProjectCard({ project }: { project: Project }) {
 
   return (
     <article
-      className={`relative flex flex-col border border-rule bg-surface p-5 sm:p-6 ${
+      id={`project-${project.id}`}
+      className={`relative scroll-mt-24 flex flex-col border border-rule bg-surface p-5 sm:p-6 ${
         hasDetail ? 'transition-colors hover:border-accent-dim' : ''
       }`}
     >

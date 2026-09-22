@@ -5,8 +5,9 @@ import { Reveal } from '../common/Reveal'
 
 const BASE = import.meta.env.BASE_URL
 
-/** Site-relative anchors like "#projects" point at the home page. */
-const resolveHref = (href: string) => (href.startsWith('#') ? `${BASE}${href}` : href)
+/** Site-relative paths — "#projects" (a home-page anchor) or "projects/" (another
+ *  page) — get the deploy base prefixed. An absolute URL is left alone. */
+const resolveHref = (href: string) => (/^https?:\/\//.test(href) ? href : `${BASE}${href.replace(/^\//, '')}`)
 
 /** Keep a short quoted phrase (「…」 or “…”) on one line so a title never breaks
  *  inside it. Long quotes are left alone: no-wrap would overflow a phone screen. */

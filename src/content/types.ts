@@ -74,7 +74,7 @@ export interface HeroQuote {
 
 /** A call-to-action under an About chapter. With no `href` the CTA renders
  *  as a disabled placeholder until its destination is decided.
- *  `href` may be site-relative ("#projects"); the UI prefixes the base URL. */
+ *  `href` may be site-relative ("#competencies" or "projects/"); the UI prefixes the base URL. */
 export interface AboutCta {
   kind: 'button' | 'link'
   label: Bilingual
