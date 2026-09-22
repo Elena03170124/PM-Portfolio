@@ -6,6 +6,19 @@ import { Reveal } from '../components/common/Reveal'
 
 const BASE = import.meta.env.BASE_URL
 
+/** Break a "before → after" subtitle only at the arrow, so the two phrases each
+ *  keep their own line instead of wrapping wherever they happen to run out of room. */
+function ArrowSubtitle({ text }: { text: string }) {
+  const [before, after] = text.split(' → ')
+  if (!after) return <>{text}</>
+  return (
+    <>
+      <span className="block">{before}</span>
+      <span className="block">→ {after}</span>
+    </>
+  )
+}
+
 // A project has a full write-up when src/content/projectDetails/<project id>.json exists.
 const detailSlugs = new Set(
   Object.keys(import.meta.glob('../content/projectDetails/*.json')).map((path) => path.split('/').pop()!.replace('.json', '')),
@@ -155,7 +168,9 @@ function GrowthCompare() {
             >
               <div>
                 <span className="font-serif text-[16px] font-semibold leading-snug text-ink">{t(row.dimension)}</span>
-                <p className="mt-1.5 text-[12.5px] leading-[1.6] text-muted">{t(row.subtitle)}</p>
+                <p className="mt-1.5 text-[12.5px] leading-[1.6] text-muted">
+                  <ArrowSubtitle text={t(row.subtitle)} />
+                </p>
               </div>
               <p className="text-[14.5px] leading-[1.8] text-muted">
                 <span className="mb-1 block font-mono text-[11px] text-muted-dim sm:hidden">{t({ zh: '和泰聯網', en: 'Hotai Motor' })}</span>
