@@ -175,7 +175,19 @@ function GrowthCompare() {
                 </div>
 
                 <div aria-hidden="true" className="flex items-center justify-center py-1 text-accent sm:px-4">
-                  <span className="inline-block rotate-90 text-[16px] sm:rotate-0">→</span>
+                  {/* A drawn chevron in a square viewBox stays visually centred when rotated —
+                      a rotated arrow character doesn't, because its glyph box is wider than tall. */}
+                  <svg
+                    viewBox="0 0 16 16"
+                    className="size-4 rotate-90 sm:rotate-0"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <path d="M3 8h10M9 4l4 4-4 4" />
+                  </svg>
                 </div>
 
                 <div className="border-l-2 border-accent-dim/70 pl-4 sm:flex-1 sm:pl-5">
