@@ -203,8 +203,18 @@ export function ProjectDetailPage({ slug }: { slug: string }) {
               ['關聯平台', detail.platforms, 'plain'],
             ] as const
           ).map(([label, items, tone]) => (
-            <div key={label} className="grid gap-2 md:grid-cols-[110px_minmax(0,1fr)] md:gap-x-10">
-              <span className="pt-1 font-mono text-[11px] uppercase tracking-[0.1em] text-muted-dim">{label}</span>
+            <div key={label} className="grid items-start gap-2 md:grid-cols-[110px_minmax(0,1fr)] md:gap-x-10">
+              <span className="pt-1 font-mono text-[11px] uppercase tracking-[0.1em] text-muted-dim">
+                {label.includes('｜') ? (
+                  <>
+                    {label.split('｜')[0]}｜
+                    <br className="hidden md:block" />
+                    {label.split('｜')[1]}
+                  </>
+                ) : (
+                  label
+                )}
+              </span>
               <Chips items={items} tone={tone} />
             </div>
           ))}
