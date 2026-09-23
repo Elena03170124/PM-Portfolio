@@ -18,6 +18,15 @@
   "NaniBox備課教材系統",
   "教育部雲端資料平台"
  ],
+ "scope": {
+  "time": "2025.11 – 2026.01",
+  "duration": "3個月",
+  "stakeholders": [
+   { "dept": "研發部", "roles": "前端工程師、DevOps工程師、其他專案負責PM、QA" },
+   { "dept": "資訊部", "roles": "資訊部工程師" },
+   { "dept": "教育部（外部單位）", "roles": "行政單位聯繫窗口、工程技術單位" }
+  ]
+ },
  "cover": {
   "src": "%BASE%projects/edu-cloud-integration/01.png",
   "caption": "上圖為專案封面圖：將技術作法轉成3個解決方案，協助管理層決策"

@@ -14,6 +14,12 @@ interface DetailSection {
   html: string
 }
 
+interface ProjectScope {
+  time: string
+  duration: string
+  stakeholders: { dept: string; roles: string }[]
+}
+
 interface ProjectDetail {
   slug: string
   projectId?: string
@@ -22,6 +28,8 @@ interface ProjectDetail {
   period: string
   competencies: string[]
   platforms: string[]
+  /** Optional: basic scope facts (time / duration / key stakeholders). Skipped when absent. */
+  scope?: ProjectScope
   cover: { src: string; caption: string } | null
   sections: DetailSection[]
 }
@@ -46,6 +54,57 @@ function Chips({ items, tone }: { items: string[]; tone: 'accent' | 'plain' }) {
         </li>
       ))}
     </ul>
+  )
+}
+
+/** A label + content row. A "｜"-joined label always breaks at the separator on the
+ *  narrow desktop label column, never mid-word; the row aligns to the top so a
+ *  two-line label never stretches the content next to it. */
+function LabelRow({ label, children }: { label: string; children: React.ReactNode }) {
+  return (
+    <div className="grid items-start gap-2 md:grid-cols-[110px_minmax(0,1fr)] md:gap-x-10">
+      <span className="pt-1 font-mono text-[11px] uppercase tracking-[0.1em] text-muted-dim">
+        {label.includes('｜') ? (
+          <>
+            {label.split('｜')[0]}｜
+            <br className="hidden md:block" />
+            {label.split('｜')[1]}
+          </>
+        ) : (
+          label
+        )}
+      </span>
+      {children}
+    </div>
+  )
+}
+
+function ProjectScopeBlock({ scope }: { scope: ProjectScope }) {
+  return (
+    <div className="space-y-2.5">
+      <div className="flex flex-wrap gap-x-6 gap-y-1 text-[13.5px] leading-relaxed text-ink/90">
+        <span>
+          <span className="text-muted-dim">時間　</span>
+          {scope.time}
+        </span>
+        <span>
+          <span className="text-muted-dim">時長　</span>
+          {scope.duration}
+        </span>
+      </div>
+      <div>
+        <p className="mb-1.5 text-[11px] text-muted-dim">主要利害關係人</p>
+        <ul className="space-y-1 text-[13.5px] leading-relaxed text-ink/90">
+          {scope.stakeholders.map((s) => (
+            <li key={s.dept}>
+              <span className="font-semibold text-ink">{s.dept}</span>
+              <span className="text-muted-dim">｜</span>
+              {s.roles}
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
   )
 }
 
@@ -197,27 +256,17 @@ export function ProjectDetailPage({ slug }: { slug: string }) {
         )}
 
         <div className="mt-8 space-y-5">
-          {(
-            [
-              ['PM能力應用｜專案中扮演角色', detail.competencies, 'accent'],
-              ['關聯平台', detail.platforms, 'plain'],
-            ] as const
-          ).map(([label, items, tone]) => (
-            <div key={label} className="grid items-start gap-2 md:grid-cols-[110px_minmax(0,1fr)] md:gap-x-10">
-              <span className="pt-1 font-mono text-[11px] uppercase tracking-[0.1em] text-muted-dim">
-                {label.includes('｜') ? (
-                  <>
-                    {label.split('｜')[0]}｜
-                    <br className="hidden md:block" />
-                    {label.split('｜')[1]}
-                  </>
-                ) : (
-                  label
-                )}
-              </span>
-              <Chips items={items} tone={tone} />
-            </div>
-          ))}
+          <LabelRow label="PM能力應用｜專案中扮演角色">
+            <Chips items={detail.competencies} tone="accent" />
+          </LabelRow>
+          {detail.scope && (
+            <LabelRow label="專案範疇">
+              <ProjectScopeBlock scope={detail.scope} />
+            </LabelRow>
+          )}
+          <LabelRow label="關聯平台">
+            <Chips items={detail.platforms} tone="plain" />
+          </LabelRow>
         </div>
 
         <div className="mt-12 grid gap-12 lg:grid-cols-[minmax(0,1fr)_190px]">
