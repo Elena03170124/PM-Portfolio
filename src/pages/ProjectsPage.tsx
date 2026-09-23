@@ -47,8 +47,8 @@ const growthRows: GrowthRow[] = [
       en: 'Broke design mockups down into requirement specs and acceptance criteria.',
     },
     after: {
-      zh: '結合商業、營運、技術可行、系統穩定等因素，拆解階段 MVP 範疇。',
-      en: 'Scoped a phased MVP by weighing business, operations, technical feasibility and system stability together.',
+      zh: '將模糊需求拆解成具體 MVP 範疇，階段性交付工項。',
+      en: 'Broke down vague requirements into a concrete MVP scope, delivered as phased work items.',
     },
     citation: {
       projectId: 'dual-system-merge',
@@ -66,8 +66,8 @@ const growthRows: GrowthRow[] = [
       en: 'Focused on understanding and tracking front-end bugs in the app.',
     },
     after: {
-      zh: '理解前後端 API 溝通協作機制、跨資料庫資料比對方式、跨服務資料欄位差異與解決方案，以及統一化關鍵處理流程有利減省系統維護成本等。',
-      en: 'Understood how front and back end talk over the API, how to reconcile data across databases, how field differences between services get resolved, and how standardizing key processes cuts maintenance cost.',
+      zh: '理解前後端 API 溝通協作機制、跨資料庫比對方式、跨服務資料欄位差異與整併方案。',
+      en: 'Understood how front and back end talk over the API, how to reconcile data across databases, and how to resolve and merge field differences between services.',
     },
     citation: {
       projectId: 'teacher-auth',
@@ -77,35 +77,35 @@ const growthRows: GrowthRow[] = [
   {
     dimension: { zh: '決策衡量維度', en: 'Decision criteria' },
     subtitle: {
-      zh: '從他人評價回饋這類單一管道 → 到站在資源成本、影響範圍、長期維運等多重維度思考解決方案',
-      en: 'Feedback from others as the only channel → weighing cost, impact and long-term upkeep together',
+      zh: '從功能異常排除或優化方法 → 到結合商業、營運、技術可行、系統穩定等因素評估解決方案',
+      en: 'Fixing or optimizing a single malfunction → weighing business, operations, feasibility and stability together',
     },
     before: {
       zh: '由需求訪談、使用者評價回饋、競品分析，提出功能流程優化建議。',
       en: 'Proposed flow improvements based on requirement interviews, user feedback and competitor analysis.',
     },
     after: {
-      zh: '在開發成本限制、外部合規考量、服務穩定性維護等多重條件下，協助管理層做出平衡決策。',
-      en: 'Helped management weigh a decision under development-cost limits, external compliance and service stability all at once.',
+      zh: '站在開發成本、技術可行、長期維運、時程壓力、外部合規等多重限制下權衡解法。',
+      en: 'Weighed a solution under development cost, technical feasibility, long-term upkeep, schedule pressure and external compliance all at once.',
     },
     citation: {
       projectId: 'edu-cloud-integration',
-      label: { zh: '教育部雲端資料介接專案｜於合規、時程、成本、技術可行性等多重限制下推動折衷方案落地', en: 'EduCloud data integration · landing a compromise under compliance, schedule, cost and feasibility limits' },
+      label: { zh: '教育部雲端資料介接專案｜在多重條件下推動折衷方案落地', en: 'EduCloud data integration · landing a compromise under multiple constraints' },
     },
   },
   {
     dimension: { zh: '風險管理範圍', en: 'Risk management' },
     subtitle: {
-      zh: '從單純避免規格疏漏而影響功能正常運作 → 到跨域協作資訊同步與跨系統相依風險預防',
-      en: 'Simply catching spec gaps that would break a feature → syncing information across teams and preventing cross-system dependency risk',
+      zh: '從單純避免規格疏漏而影響功能正常運作 → 到跨域資訊同步與跨系統相依風險預防',
+      en: 'Simply catching spec gaps that would break a feature → syncing information across domains and preventing cross-system dependency risk',
     },
     before: {
       zh: '盤點未定義明確的功能規格，或補齊尚未納入的應測試驗收項目。',
       en: 'Flagged loosely defined specs and filled in acceptance-test items that had been missed.',
     },
     after: {
-      zh: '需考量跨部門資訊同步落實方法、階段性成果上線前的作業流程面可能風險與備援處理方案。',
-      en: 'Planned how information stays in sync across departments, and what could go wrong — with a fallback — before each phase went live.',
+      zh: '考量跨部門資訊同步落實方法、上線作業流程可能風險與備援處理方案。',
+      en: 'Weighed how information stays in sync across departments, and the process risks — with a fallback — of going live.',
     },
     citation: {
       projectId: 'dual-system-merge',
@@ -119,18 +119,18 @@ const growthRows: GrowthRow[] = [
       en: 'Teaching end users how to click through → a shared language that lets every role understand why and how',
     },
     before: {
-      zh: '以使用者操作辦法調整為出發點，單純傳達「做什麼」能解決眼前的產品功能問題。',
+      zh: '以使用者操作方法為出發點，單純傳達「做什麼」能解決眼前的產品功能問題。',
       en: 'Started from how users operate the product, communicating only "what to do" to fix the issue in front of them.',
     },
     after: {
-      zh: '需自行快速吸收陌生專業，並轉化為跨部門間的共通語言，促進團隊達成共識。',
-      en: 'Absorbed unfamiliar expertise fast and translated it into a shared language across departments to build consensus.',
+      zh: '快速吸收陌生專業（如：OIDC 身份識別、UA 分流部署流程），並轉化為跨域共通語言，促進團隊達成共識。',
+      en: 'Absorbed unfamiliar expertise fast (OIDC identity verification, UA-based routing deployment) and translated it into a shared language across domains to build consensus.',
     },
     citation: {
       projectId: 'member-auth-unification',
       label: {
-        zh: '會員身份驗證模式統一化｜將身份驗證模式 OIDC 繪製為作業流程圖，協助 QA、設計等非技術角色理解重要節點',
-        en: 'Unifying member authentication · drew the OIDC flow as a diagram so QA, design and other non-technical roles could follow it',
+        zh: '會員身份驗證模式統一化｜將 OIDC 流程繪製為流程圖，協助非技術角色理解重要處理節點、對齊認知',
+        en: 'Unifying member authentication · drew the OIDC flow as a diagram so non-technical roles could follow the key steps and align understanding',
       },
     },
   },
@@ -224,7 +224,8 @@ function GrowthCitation({ citation }: { citation: GrowthRow['citation'] }) {
 
   return (
     <a href={href} className="mt-2 block font-mono text-[11.5px] leading-[1.6] text-muted transition-colors hover:text-accent">
-      （{t(citation.label)}）
+      {t({ zh: '代表案例：', en: 'Example: ' })}
+      {t(citation.label)}
     </a>
   )
 }
