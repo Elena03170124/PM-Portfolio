@@ -28,6 +28,12 @@ ROOT = Path(__file__).resolve().parent.parent
 # "fold" wraps it in a <details> that starts closed.
 SECTION_MODES = {1: ("card", 3), 2: ("card", 3), 3: ("card", 3), 4: ("fold", 2), 5: ("fold", 3)}
 
+# Convention (not automated here, apply by hand after import):
+# - No "highlights" chip row on the detail page — it's dropped from the output above.
+# - Each section's intro line, and each STAR sub-heading (一/二/三/四/五) inside the
+#   full write-up, gets a one-line "what this part covers" caption:
+#   <p class="nb-purpose">...</p> right after the section/fold-body opens.
+
 ALLOWED_COLORS = {"gray", "blue", "red", "orange", "yellow", "green", "purple", "pink", "brown"}
 
 
@@ -335,7 +341,6 @@ def main():
         "company": props.get("企業", ""),
         "period": period,
         "competencies": props.get("PM能力面向", []),
-        "highlights": props.get("專案亮點", []),
         "platforms": props.get("專案關聯平台", []),
         "cover": cover,
         "sections": sections,

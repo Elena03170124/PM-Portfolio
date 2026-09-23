@@ -21,7 +21,6 @@ interface ProjectDetail {
   company: string
   period: string
   competencies: string[]
-  highlights: string[]
   platforms: string[]
   cover: { src: string; caption: string } | null
   sections: DetailSection[]
@@ -200,8 +199,7 @@ export function ProjectDetailPage({ slug }: { slug: string }) {
         <div className="mt-8 space-y-5">
           {(
             [
-              ['PM 能力', detail.competencies, 'accent'],
-              ['專案亮點', detail.highlights, 'plain'],
+              ['PM能力應用', detail.competencies, 'accent'],
               ['關聯平台', detail.platforms, 'plain'],
             ] as const
           ).map(([label, items, tone]) => (

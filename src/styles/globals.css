@@ -110,6 +110,17 @@
 .nb .nc-gray { color: var(--color-muted); }
 .nb .nc-blue { color: var(--color-accent); }
 
+/* A short line stating what a section (or a STAR sub-section) is for. */
+.nb .nb-purpose {
+  margin: 0 0 1.1em;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--color-accent);
+}
+.nb .nb-fold-body > .nb-purpose:first-child { margin-top: 0; }
+
 .nb .nb-callout {
   margin: 0 0 1.4em;
   padding: 1.1em 1.3em;
