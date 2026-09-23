@@ -316,18 +316,18 @@ function ArchivalNote() {
   return (
     <div className="border border-rule bg-surface px-5 py-4">
       <p className="font-mono text-[10.5px] uppercase tracking-[0.08em] text-accent">
-        {t({ zh: '刻意保留・未重新設計', en: 'Left as-is, on purpose' })}
+        {t({ zh: '刻意保留當年作品原貌・未重新優化', en: 'Kept exactly as it was, on purpose — not reworked' })}
       </p>
       <p className="mt-2 text-[14px] leading-relaxed text-muted">
         {t({
-          zh: '以下是幾年前的早期作品，保留原始呈現方式，不安排重新優化。',
-          en: 'These are early projects from a few years ago, kept in their original form and not reworked.',
+          zh: '以下是早期作品集，保留原始呈現方式，不做調整優化。',
+          en: 'These are early projects, kept in their original form with no touch-ups.',
         })}
       </p>
-      <p className="mt-1.5 text-[14px] font-medium leading-relaxed text-ink">
+      <p className="mt-1.5 text-[14.5px] font-semibold leading-relaxed text-ink">
         {t({
-          zh: '藉此真實呈現我在兩份 PM 工作之間的能力演進。',
-          en: 'The point is to show the growth between my two PM roles honestly, without touching up the earlier work.',
+          zh: '藉此真實呈現我在兩份 PM 工作間的能力演進。',
+          en: 'The point is to show the growth between my two PM roles honestly.',
         })}
       </p>
     </div>
