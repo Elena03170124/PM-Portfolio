@@ -81,24 +81,18 @@ function LabelRow({ label, children }: { label: string; children: React.ReactNod
 
 function ProjectScopeBlock({ scope }: { scope: ProjectScope }) {
   return (
-    <div className="space-y-2.5">
-      <div className="flex flex-wrap gap-x-6 gap-y-1 text-[13.5px] leading-relaxed text-ink/90">
-        <span>
-          <span className="text-muted-dim">時間　</span>
-          {scope.time}
-        </span>
-        <span>
-          <span className="text-muted-dim">時長　</span>
-          {scope.duration}
-        </span>
-      </div>
+    <div className="space-y-3">
+      <Chips items={[scope.time, scope.duration]} tone="plain" />
       <div>
-        <p className="mb-1.5 text-[11px] text-muted-dim">主要利害關係人</p>
-        <ul className="space-y-1 text-[13.5px] leading-relaxed text-ink/90">
+        <p className="mb-2 font-mono text-[11px] uppercase tracking-[0.1em] text-muted-dim">主要利害關係人</p>
+        <ul className="flex flex-wrap gap-2">
           {scope.stakeholders.map((s) => (
-            <li key={s.dept}>
+            <li
+              key={s.dept}
+              className="rounded-lg border border-rule px-3 py-1.5 text-[12.5px] leading-snug text-muted"
+            >
               <span className="font-semibold text-ink">{s.dept}</span>
-              <span className="text-muted-dim">｜</span>
+              <span className="mx-1 text-muted-dim">｜</span>
               {s.roles}
             </li>
           ))}
