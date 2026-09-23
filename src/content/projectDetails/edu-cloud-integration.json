@@ -21,6 +21,7 @@
  "scope": {
   "time": "2025.11 – 2026.01",
   "duration": "3個月",
+  "headcount": "4人",
   "stakeholders": [
    { "dept": "研發部", "roles": "前端工程師、DevOps工程師、其他專案負責PM、QA" },
    { "dept": "資訊部", "roles": "資訊部工程師" },

@@ -29,9 +29,10 @@ ROOT = Path(__file__).resolve().parent.parent
 SECTION_MODES = {1: ("card", 3), 2: ("card", 3), 3: ("card", 3), 4: ("fold", 2), 5: ("fold", 3)}
 
 # Convention (not automated here, apply by hand after import):
-# - Optional "scope" object — {time, duration, stakeholders: [{dept, roles}]} — renders
-#   as a "專案範疇" row under the PM-能力 chips when present; add it by hand if the
-#   source project has this info, otherwise leave it out.
+# - Optional "scope" object — {time, duration, headcount, stakeholders: [{dept, roles}]}
+#   — renders as two rows under the PM-能力 chips (專案範疇 chips, then a 利害關係人
+#   tag row) when present; add it by hand if the source project has this info,
+#   otherwise leave it out.
 # - No "highlights" chip row on the detail page — it's dropped from the output above.
 # - Each section's intro line gets a one-line "what this part covers" caption:
 #   <p class="nb-purpose">...</p> right after the section opens.

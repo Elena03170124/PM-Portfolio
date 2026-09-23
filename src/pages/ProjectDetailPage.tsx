@@ -17,6 +17,7 @@ interface DetailSection {
 interface ProjectScope {
   time: string
   duration: string
+  headcount: string
   stakeholders: { dept: string; roles: string }[]
 }
 
@@ -28,7 +29,7 @@ interface ProjectDetail {
   period: string
   competencies: string[]
   platforms: string[]
-  /** Optional: basic scope facts (time / duration / key stakeholders). Skipped when absent. */
+  /** Optional: basic scope facts (time / duration / headcount / stakeholders). Skipped when absent. */
   scope?: ProjectScope
   cover: { src: string; caption: string } | null
   sections: DetailSection[]
@@ -79,26 +80,17 @@ function LabelRow({ label, children }: { label: string; children: React.ReactNod
   )
 }
 
-function ProjectScopeBlock({ scope }: { scope: ProjectScope }) {
+function StakeholderTags({ stakeholders }: { stakeholders: ProjectScope['stakeholders'] }) {
   return (
-    <div className="space-y-3">
-      <Chips items={[scope.time, scope.duration]} tone="plain" />
-      <div>
-        <p className="mb-2 font-mono text-[11px] uppercase tracking-[0.1em] text-muted-dim">主要利害關係人</p>
-        <ul className="flex flex-wrap gap-2">
-          {scope.stakeholders.map((s) => (
-            <li
-              key={s.dept}
-              className="rounded-lg border border-rule px-3 py-1.5 text-[12.5px] leading-snug text-muted"
-            >
-              <span className="font-semibold text-ink">{s.dept}</span>
-              <span className="mx-1 text-muted-dim">｜</span>
-              {s.roles}
-            </li>
-          ))}
-        </ul>
-      </div>
-    </div>
+    <ul className="flex flex-wrap gap-2">
+      {stakeholders.map((s) => (
+        <li key={s.dept} className="rounded-lg border border-rule px-3 py-1.5 text-[12.5px] leading-snug text-muted">
+          <span className="font-semibold text-ink">{s.dept}</span>
+          <span className="mx-1 text-muted-dim">｜</span>
+          {s.roles}
+        </li>
+      ))}
+    </ul>
   )
 }
 
@@ -254,9 +246,14 @@ export function ProjectDetailPage({ slug }: { slug: string }) {
             <Chips items={detail.competencies} tone="accent" />
           </LabelRow>
           {detail.scope && (
-            <LabelRow label="專案範疇">
-              <ProjectScopeBlock scope={detail.scope} />
-            </LabelRow>
+            <>
+              <LabelRow label="專案範疇｜時間點、時長、工程人力">
+                <Chips items={[detail.scope.time, detail.scope.duration, detail.scope.headcount]} tone="plain" />
+              </LabelRow>
+              <LabelRow label="利害關係人">
+                <StakeholderTags stakeholders={detail.scope.stakeholders} />
+              </LabelRow>
+            </>
           )}
           <LabelRow label="關聯平台">
             <Chips items={detail.platforms} tone="plain" />
