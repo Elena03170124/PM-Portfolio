@@ -110,7 +110,7 @@ export const southoneProjects: Project[] = [
   {
     id: 'edu-service-integration',
     company: 'southone',
-    companyLabel: { zh: '南一集團母公司【南一書局】', en: 'Nani (parent company)' },
+    companyLabel: { zh: '南一集團母公司【南一書局企業】', en: 'Nani (parent company)' },
     period: { zh: '2025.08 – 2026.01', en: '2025.08 – 2026.01' },
     title: {
       zh: '各大教用服務整合｜由公部門合規性反推服務定位',
@@ -161,7 +161,7 @@ export const southoneProjects: Project[] = [
   {
     id: 'teacher-auth',
     company: 'southone',
-    companyLabel: { zh: '南一集團母公司【南一書局】', en: 'Nani (parent company)' },
+    companyLabel: { zh: '南一集團母公司【南一書局企業】', en: 'Nani (parent company)' },
     period: { zh: '2025.09 – 2025.11', en: '2025.09 – 2025.11' },
     title: {
       zh: '教師身份驗證機制建構｜跨系統資料整合與驗證流程簡化',
@@ -208,7 +208,7 @@ export const southoneProjects: Project[] = [
   {
     id: 'member-auth-unification',
     company: 'southone',
-    companyLabel: { zh: '南一集團母公司【南一書局】', en: 'Nani (parent company)' },
+    companyLabel: { zh: '南一集團母公司【南一書局企業】', en: 'Nani (parent company)' },
     period: { zh: '2025.11 – 2026.01', en: '2025.11 – 2026.01' },
     title: {
       zh: '會員身份驗證模式統一化｜跨系統登入整併與身份治理',
@@ -259,7 +259,7 @@ export const southoneProjects: Project[] = [
   {
     id: 'edu-cloud-integration',
     company: 'southone',
-    companyLabel: { zh: '南一集團母公司【南一書局】', en: 'Nani (parent company)' },
+    companyLabel: { zh: '南一集團母公司【南一書局企業】', en: 'Nani (parent company)' },
     period: { zh: '2025.11 – 2026.01', en: '2025.11 – 2026.01' },
     title: {
       zh: '教育部雲端資料介接｜既有系統限制下推動平衡決策',
