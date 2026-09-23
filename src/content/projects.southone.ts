@@ -292,8 +292,8 @@ export const southoneProjects: Project[] = [
       },
     },
     metrics: [
-      { value: { zh: '3', en: '3' }, label: { zh: '建議解決方案', en: 'proposed solutions' } },
-      { value: { zh: '省下 6–8 個月', en: '6–8 months saved' }, label: { zh: '避免的架構重構工期', en: 'of avoided architecture rebuild' } },
+      { value: { zh: '3個', en: '3' }, label: { zh: '建議解決方案', en: 'proposed solutions' } },
+      { value: { zh: '省下6–8 個月', en: '6–8 months saved' }, label: { zh: '重構時間成本', en: 'of avoided architecture rebuild' } },
     ],
     competencyIds: ['stakeholder', 'tech', 'risk', 'product-strategy'],
     highlights: [
