@@ -199,7 +199,7 @@ export function ProjectDetailPage({ slug }: { slug: string }) {
         <div className="mt-8 space-y-5">
           {(
             [
-              ['PM能力應用', detail.competencies, 'accent'],
+              ['PM能力應用｜專案中扮演角色', detail.competencies, 'accent'],
               ['關聯平台', detail.platforms, 'plain'],
             ] as const
           ).map(([label, items, tone]) => (
