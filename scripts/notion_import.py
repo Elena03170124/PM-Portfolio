@@ -30,9 +30,13 @@ SECTION_MODES = {1: ("card", 3), 2: ("card", 3), 3: ("card", 3), 4: ("fold", 2),
 
 # Convention (not automated here, apply by hand after import):
 # - No "highlights" chip row on the detail page — it's dropped from the output above.
-# - Each section's intro line, and each STAR sub-heading (一/二/三/四/五) inside the
-#   full write-up, gets a one-line "what this part covers" caption:
-#   <p class="nb-purpose">...</p> right after the section/fold-body opens.
+# - Each section's intro line gets a one-line "what this part covers" caption:
+#   <p class="nb-purpose">...</p> right after the section opens.
+# - Each STAR sub-heading (一/二/三/四/五) inside the full write-up gets the same
+#   caption, but it must stay visible while the <details> is collapsed, so it goes
+#   inside the <summary>, not the fold body:
+#   <summary><span class="nb-fold-heading"><span>一、背景...</span>
+#     <span class="nb-purpose">...</span></span></summary>
 
 ALLOWED_COLORS = {"gray", "blue", "red", "orange", "yellow", "green", "purple", "pink", "brown"}
 

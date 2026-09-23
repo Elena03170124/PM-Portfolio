@@ -119,7 +119,6 @@
   letter-spacing: 0.04em;
   color: var(--color-accent);
 }
-.nb .nb-fold-body > .nb-purpose:first-child { margin-top: 0; }
 
 .nb .nb-callout {
   margin: 0 0 1.4em;
@@ -149,9 +148,16 @@
   line-height: 1.5;
   color: var(--color-ink);
   display: flex;
-  align-items: baseline;
+  align-items: center;
   gap: 0.6em;
 }
+.nb .nb-fold > summary .nb-fold-heading {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35em;
+  min-width: 0;
+}
+.nb .nb-fold > summary .nb-fold-heading .nb-purpose { margin: 0; }
 .nb .nb-fold > summary::-webkit-details-marker { display: none; }
 .nb .nb-fold > summary::after {
   content: "+";
