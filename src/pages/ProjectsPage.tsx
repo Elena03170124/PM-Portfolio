@@ -238,9 +238,9 @@ function ProjectCard({ project, archival }: { project: Project; archival?: boole
   return (
     <article
       id={`project-${project.id}`}
-      className={`relative scroll-mt-24 flex flex-col border bg-surface p-5 sm:p-6 ${
+      className={`relative scroll-mt-24 flex flex-col border p-5 sm:p-6 ${
         archival ? 'border-dashed border-rule' : 'border-rule'
-      } ${hasDetail ? 'transition-colors hover:border-accent-dim' : ''}`}
+      } ${hasDetail ? 'bg-surface transition-colors hover:border-accent-dim' : 'bg-disabled'}`}
     >
       <div className="flex items-center justify-between gap-3">
         <p className="font-mono text-[11.5px] text-muted">{t(project.period)}</p>

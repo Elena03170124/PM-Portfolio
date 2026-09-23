@@ -20,6 +20,7 @@
   --color-muted: #85746b;
   --color-muted-dim: #a89890;
   --color-rule: #e3d0d5;
+  --color-disabled: color-mix(in srgb, var(--color-ink) 6%, var(--color-paper));
 
   --font-mono: ui-monospace, "SF Mono", "SFMono-Regular", Menlo, Consolas, monospace;
   --font-serif: "Fraunces", "Noto Serif TC", Georgia, serif;
