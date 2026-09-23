@@ -171,6 +171,17 @@
 .nb .nb-fold-body { padding: 1.2em 1.4em 0.4em; background: var(--color-paper); }
 .nb .nb-fold-body > h3:first-child { margin-top: 0; }
 
+.nb .nb-table-wrap { margin: 0 0 1.1em; overflow-x: auto; border: 1px solid var(--color-rule); }
+.nb table { width: 100%; border-collapse: collapse; font-size: 13.5px; }
+.nb th, .nb td { padding: 0.6em 0.9em; border-bottom: 1px solid var(--color-rule); text-align: left; vertical-align: top; }
+.nb tr:last-child > td { border-bottom: none; }
+.nb th {
+  background: var(--color-surface);
+  font-weight: 600;
+  color: var(--color-ink);
+  white-space: nowrap;
+}
+
 .nb .nb-toggle { border: 1px dashed var(--color-rule); padding: 0.7em 1em; margin: 1.2em 0; }
 .nb .nb-toggle > summary { font-size: 14.5px; color: var(--color-muted); }
 .nb .nb-toggle[open] > summary { margin-bottom: 0.8em; }

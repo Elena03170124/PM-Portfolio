@@ -1,0 +1,60 @@
+{
+ "slug": "member-auth-unification",
+ "projectId": "member-auth-unification",
+ "title": "會員身份驗證模式統一化｜跨系統登入整併與身份治理",
+ "company": "南一集團母公司【南一書局企業】",
+ "period": "2025.11 – 2026.01",
+ "competencies": [
+  "系統架構理解能力",
+  "技術流程理解與轉譯能力",
+  "系統整合思維"
+ ],
+ "platforms": [
+  "NaniClub會員系統",
+  "NaniBook電子書服務系統",
+  "NaniPaper雲端出題系統",
+  "NaniBox備課教材系統"
+ ],
+ "cover": {
+  "src": "%BASE%projects/member-auth-unification/01.png",
+  "caption": "上圖為專案封面圖：完整跨服務整合的會員登入入口"
+ },
+ "sections": [
+  {
+   "id": "sec-1",
+   "num": "1",
+   "title": "PM能力應用分析",
+   "kind": "card",
+   "html": "<p class=\"nb-purpose\">說明在專案中扮演什麼角色、提升了哪些專業能力</p><section class=\"nb-card\"><h3>➀ 平台架構規劃與跨系統整合能力</h3><ol><li><strong>將使用者流程問題提升至架構層思考</strong><ul><li>從跨服務重複登入、身份驗證失敗等使用者體驗問題出發。</li><li>將問題定義由介面層提升至系統架構層。</li></ul></li><li><strong>推動身份資料治理與跨系統整合</strong><ul><li>分析跨系統身份驗證流程與資料來源間的相依性。</li><li>協助團隊推動一致的身份驗證機制落地。</li></ul></li><li><strong>深化平台型服務思維</strong><ul><li>理解登入驗證、身份識別統一化是平台基礎能力的一部分。</li><li>以可複用性、系統擴展效率及長期整合成本等角度，思考產品與系統架構決策，</li><li>為新服務導入建立可延續基礎。</li></ul></li></ol></section><section class=\"nb-card\"><h3><strong>➁ 陌生</strong>技術理解與跨域溝通能力</h3><ol><li><strong>將技術架構轉化為共同溝通語言</strong><ul><li>主動研究 OIDC 身份驗證流程，將技術理解繪製為流程圖。</li><li>將抽象技術流程轉化為可與非技術單位溝通的共同語言。</li><li>同時提升與工程團隊對齊需求、確認流程及討論風險的效率。</li></ul></li></ol></section>"
+  },
+  {
+   "id": "sec-2",
+   "num": "2",
+   "title": "專案價值分析",
+   "kind": "card",
+   "html": "<p class=\"nb-purpose\">說明專案可以為商業、使用者、技術等面向帶來的長期價值</p><section class=\"nb-card\"><h3>① 技術／平台價值</h3><ol><li><strong>建立一致身份治理機制，降低跨系統整合複雜度</strong><ul><li>整合各系統的身份識別、登入驗證流程，建立一致的身份治理機制。</li><li>避免服務各自維護登入邏輯，以降低後續新服務導入與維運的複雜度。</li></ul></li></ol></section><section class=\"nb-card\"><h3><strong>➁</strong> 商業價值</h3><ol><li><strong>提升平台整合能力，並強化服務拓展力</strong><ul><li>後續產品功能擴充、新服務串接及平台發展具備更高效率與一致性。</li></ul></li></ol></section><section class=\"nb-card\"><h3><strong>➂ 使用者價值</strong></h3><ol><li><strong>建立單一登入SSO（Single Sign-On）體驗，降低跨服務使用門檻</strong><ul><li>使用者無須重複建立帳號或反覆登入，即可於各服務間流暢切換。</li><li>降低操作成本並提升整體使用體驗、維持服務的市場競爭力。</li></ul></li></ol></section>"
+  },
+  {
+   "id": "sec-3",
+   "num": "3",
+   "title": "STAR｜專案概要說明",
+   "kind": "card",
+   "html": "<p class=\"nb-purpose\">說明專案複雜與困難點、對應解法、決策思維、最終成果、個人反思與能力提升</p><section class=\"nb-card\"><h3>▍背景與目標任務（Situation &amp; Task）</h3><p><strong>S｜從使用體驗問題，回推底層架構問題</strong></p><div class=\"nb-sub\"><ul><li>各服務分散開發，且新舊會員體系並存。</li><li>登入與身份識別驗證邏輯不一致。</li><li>導致「跨服務需重複登入」「會員身份驗證失敗」等體驗問題。</li></ul></div><p><strong>T｜推動身份治理架構與登入驗證流程統一化</strong></p><div class=\"nb-sub\"><ul><li>統一各大服務身份來源判斷與驗證邏輯（OIDC)。</li><li>重構會員中心，作為各服務整合入口。</li></ul></div></section><section class=\"nb-card\"><h3>▍核心行動與決策（Action）</h3><p><strong>A｜建立統一身份識別與驗證架構</strong></p><div class=\"nb-sub\"><ul><li>由會員中心統一發放登入憑證，建立跨系統身份對應機制。</li><li>各服務能辨識同一使用者，統一權限判讀邏輯。</li><li>建立跨服務運作的單一登入架構（SSO）。</li><li>使用者以一組帳號通行於各服務，無需重複登入。</li></ul></div><p><strong>A｜建立技術理解與跨域溝通基礎</strong></p><div class=\"nb-sub\"><ul><li>主動研究 OIDC 運作邏輯，將個人理解繪製成流程圖，</li><li>以此作為與工程討論、對齊進度的流程模型。</li><li>建立工程與非技術角色間的共同語言，提升決策效率。</li></ul></div></section><section class=\"nb-card\"><h3>▍成果與影響（Result）</h3><p><strong>R｜改善跨系統登入體驗，建立身份驗證流程一致性</strong></p><div class=\"nb-sub\"><ul><li>降低重複登入與身份判讀錯誤情境。</li></ul></div><p><strong>R｜統一流程升級為可複用平台力，降低未來整合開發成本</strong></p><div class=\"nb-sub\"><ul><li>新服務可直接沿用登入驗證流程，無需重複設計開發。</li><li>身份治理機制建立，減少跨系統整合的重工維運成本。</li></ul></div></section><section class=\"nb-card\"><h3>▍學習與能力提升（Reflection）</h3><ul><li>對產品建構的決策，由體驗優化上升至身份治理與平台架構層。</li><li>能以技術理解支撐跨系統整合與長期擴展決策。</li></ul></section>"
+  },
+  {
+   "id": "sec-4",
+   "num": "4",
+   "title": "STAR｜專案完整說明",
+   "kind": "fold",
+   "html": "<div class=\"nb-callout\"><h3><strong>從重複登入與新舊會員資料庫兼容性問題出發，推動驗證架構重整、建立統一身份識別基礎</strong></h3><p>公司內部多個服務分散開發，導致在實現跨服務順暢使用上還有許多問題需要克服。</p><p>在專案過程中，我從解決登入體驗問題出發，逐步梳理各系統的身份識別與驗證邏輯，並參與推動統一身份架構重整。</p><p><strong>這個過程讓我開始理解身份治理對整合成本與未來擴展能力的影響，也成為我往平台思維轉變的重要起點</strong>。</p></div><details class=\"nb-fold\"><summary><span class=\"nb-fold-heading\"><span>一、背景<strong>（Situation）</strong></span><span class=\"nb-purpose\">描述專案困難挑戰點</span></span></summary><div class=\"nb-fold-body\"><blockquote>多服務分散開發、新舊會員資料庫並存，因身份識別來源與驗證邏輯不一致，<strong>導致無法實現真正的跨服務登入與資料整合</strong>。</blockquote><h3>（一）系統開發狀況</h3><ol><li>南一公司內部有多個教用服務，例如：<ul><li>NaniBook 電子書</li><li>NaniBox 教學資源下載</li><li>NaniPaper 雲端出題</li><li>NaniVideo 影音網</li></ul></li><li>初期各服務採分散式開發，登入與驗證體系各自獨立運作。</li><li>在新會員中心建構之前，公司已存在舊會員中心，部分服務持續以舊會員資料庫作為帳號查詢依據。</li></ol><h3>（二）分散式開發導致的結構性問題</h3><ol><li><strong>身份識別方式不一致→導致無法實現跨服務登入，使用者需重複登入不同服務</strong><ul><li>各服務使用不同「識別方式」查找與核對會員身份</li><li>服務間身份查核方式無法相互匹配</li><li>身份來源與權限判讀邏輯不一致</li></ul></li><li><strong>新舊會員體系並存→服務由舊資料庫查詢，判定查無此人、無法放行登入</strong><ul><li>部分服務仍以舊會員資料庫為身份查詢基準</li><li>尚未改由新會員中心取得統一通行證進行驗證</li></ul></li><li><strong>會員資料完整度不足→登入時無法提供服務所需的完整資料欄位，登入流程中斷</strong></li></ol></div></details><details class=\"nb-fold\"><summary><span class=\"nb-fold-heading\"><span>二、任務<strong>（Task）</strong></span><span class=\"nb-purpose\">拆解複雜問題的過程</span></span></summary><div class=\"nb-fold-body\"><blockquote>將分散的登入機制與會員資料體系，升級為統一的身份治理架構。</blockquote><h3>（一）任務拆解</h3><p>在既有問題基礎下，任務拆為2個關鍵面向：</p><ol><li><strong>統一身份識別</strong><ul><li>避免各系統對「同一個會員」認定方式不同、各自判讀身份與權限</li><li>讓所有服務能辨識並對應「同一個使用者」，使登入流程順暢不中斷</li></ul></li><li><strong>建立治理機制提升擴展效率</strong><ul><li>將分散的登入機制與會員資料，升級為統一的身份治理架構</li><li>建立會員資料完整性治理框架</li><li>降低未來新增服務時的整合成本</li></ul></li></ol></div></details><details class=\"nb-fold\"><summary><span class=\"nb-fold-heading\"><span>三、行動<strong>（Action）</strong></span><span class=\"nb-purpose\">對應解法與決策思維</span></span></summary><div class=\"nb-fold-body\"><blockquote>主動建立跨域共同語言、推動統一身份架構重整，將分散的登入與會員驗證流程整合為一致且可擴展的身份治理機制。</blockquote><h3>(一）建立跨域共同語言（自主學習能力）</h3><ol><li>為了與工程團隊有效對齊進度，主動研究OIDC登入機制整體流程</li><li>將個人對流程的理解繪製為流程圖，將原本抽象的技術轉換為可討論的流程架構<ul><li>與工程討論進度與風險時更有效率</li><li>減少溝通誤差、建立跨域溝通語言</li></ul><div class=\"nb-shots\"><img src=\"%BASE%projects/member-auth-unification/02.png\" alt=\"\" loading=\"lazy\"></div></li></ol><h3>(二）推動統一身份治理架構落地</h3><ol><li><strong>統一登入憑證來源</strong><ul><li>由會員中心統一核發登入憑證</li></ul></li><li><strong>建立會員身份識別對應機制</strong><ul><li>解決跨系統會員識別不一致問題</li></ul></li><li><strong>子系統驗證流程調整</strong><ul><li>逐步將各子系統由分散改為統一驗證邏輯</li></ul></li></ol></div></details><details class=\"nb-fold\"><summary><span class=\"nb-fold-heading\"><span>四、<strong>成效與影響（Result）</strong></span><span class=\"nb-purpose\">達成目標或提供的附加價值</span></span></summary><div class=\"nb-fold-body\"><blockquote>透過建立跨部門共同語言與推動統一身份架構重整，不僅改善了跨系統登入體驗與權限一致性，更將原本分散的驗證機制升級為可複用、可擴展的平台能力，降低未來整合成本。</blockquote><h3>（一）<strong>主動理解與轉譯技術 </strong>建立共同語言 → 提升協作品質</h3><p>由於前期主動梳理登入流程並建立架構理解：</p><ol><li>登入流程實作進度得以快速定位</li><li>架構討論更聚焦於核心問題，而非反覆確認技術細節，加速溝通效率</li></ol><h3>（二）因推動統一身份架構 → 改善跨系統使用體驗</h3><p>透過統一登入憑證與身份對應機制建立：</p><ol><li>減少重複登入情境，提升跨服務使用體驗一致性</li><li>降低「查無此人」或權限錯誤的發生率</li></ol><h3>（三）因身份治理機制建立 → 提升平台長期擴展能力並降低整合成本</h3><p>在建立統一身份識別與資料來源後：</p><ol><li>新服務接入時整合成本降低</li><li>不需再為各系統獨立設計登入與身份邏輯</li><li>「身份治理」成為可複用的平台能力，而非單點功能</li></ol></div></details><details class=\"nb-fold\"><summary><span class=\"nb-fold-heading\"><span><strong>五、反思與能力提升</strong></span><span class=\"nb-purpose\">汲取經驗教訓與強化專業能力</span></span></summary><div class=\"nb-fold-body\"><blockquote>透過這次專案，我從單純關注功能是否完成，轉而開始理解技術架構對整體整合成本與未來發展的影響，並學習以更長期的視角看待基礎建設類決策。</blockquote><h3>（一）從表層介面體驗 追蹤到根本結構問題</h3><p>無法完成單一登入（SSO) 只是體驗層問題，關鍵在於身份來源不一致、識別與驗證標準尚未統一化等基礎會員資料治理問題。</p><h3>（二）讓理解技術不只是停留在「理解」，可將意義升級至「溝通」</h3><p>主動研究OIDC登入流程並繪製流程圖的過程，更讓我體會到：</p><ol><li>技術理解是為了提升溝通品質</li><li>PM 可不懂技術細節，但必須理解架構邏輯，到可以在技術與非技術之間做轉譯溝通的程度</li></ol><h3>（三）將技術決策視為長期策略，而非單純開發目標</h3><ol><li>初期工程主管時不時向我提及「OIDC 架構重整」的工項執行，初期我只把它視為需要完成的功能之一</li><li>等真正參與和工程的溝通討論，我逐漸理解到：<ul><li>技術選擇會影響未來整合成本，及當前人力配置的重工風險</li><li>架構是否統一，會影響擴展速度</li></ul></li></ol><p>這讓我開始以「長期資源配置」看待技術決策</p><h3>（四）從專案交付，升級為平台架設思維</h3><p>這個案例最重要的收穫，是我在往後基礎建設類的專案中，學會由其他層面做思考、做專案價值的定義</p><div class=\"nb-sub\"><ul><li>能否整合並統一共用流程？</li><li>是否降低未來整合成本？</li><li>是否能優化資源配置？</li></ul></div></div></details>"
+  },
+  {
+   "id": "sec-5",
+   "num": "5",
+   "title": "附錄：架構重整前後的差異",
+   "kind": "fold",
+   "html": "<details class=\"nb-fold\"><summary><span>（一）架構重整前：分散的登入→身份識別與驗證流程</span></summary><div class=\"nb-fold-body\"><p>公司各服務原先是走各自的登入驗證流程（如附圖），因此在跨服務使用情境中：</p><ol><li>各服務身份識別與權限判讀標準不一致</li><li>使用者可能需重複登入不同服務</li></ol><div class=\"nb-shots\"><img src=\"%BASE%projects/member-auth-unification/03.png\" alt=\"\" loading=\"lazy\"><img src=\"%BASE%projects/member-auth-unification/04.png\" alt=\"\" loading=\"lazy\"><img src=\"%BASE%projects/member-auth-unification/05.png\" alt=\"\" loading=\"lazy\"></div></div></details><details class=\"nb-fold\"><summary><span>（二）架構重整後</span></summary><div class=\"nb-fold-body\"><ol><li>各服務登入統一導向南一會員中心，<strong>由會員中心集中處理使用者登入與身份驗證流程</strong></li><li><strong>系統會於請求網址附帶 request id（如以下附圖），用以標記登入請求來源並作為驗證憑證發放的依據</strong><div class=\"nb-shots\"><img src=\"%BASE%projects/member-auth-unification/06.png\" alt=\"\" loading=\"lazy\"></div></li><li>request id 設有 10 分鐘有效期限；若未在期限內完成登入流程，該請求將自動失效並要求重新登入，以降低憑證被惡意利用的風險（如以下附圖）<div class=\"nb-shots\"><img src=\"%BASE%projects/member-auth-unification/07.png\" alt=\"\" loading=\"lazy\"></div></li><li>架構重整後之登入流程示意<ul><li>點擊南一電子書登入鈕</li></ul><div class=\"nb-shots\"><img src=\"%BASE%projects/member-auth-unification/08.png\" alt=\"\" loading=\"lazy\"></div><ul><li>系統會先導向會員中心進行登入驗證，驗證完成後，由會員中心發放驗證憑證</li></ul><div class=\"nb-shots\"><img src=\"%BASE%projects/member-auth-unification/09.png\" alt=\"\" loading=\"lazy\"></div><ul><li>原請求服務依據該憑證完成身份識別並放行使用，成功登入南一電子書</li></ul><div class=\"nb-shots\"><img src=\"%BASE%projects/member-auth-unification/10.png\" alt=\"\" loading=\"lazy\"></div></li></ol></div></details>"
+  }
+ ],
+ "sourceEditedAt": "2026-08-02T09:35:36.931Z"
+}

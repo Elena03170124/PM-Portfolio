@@ -82,6 +82,8 @@ def inline(s):
         return keep(f"<code>&lt;{html.escape(inner)}&gt;</code>")
 
     s = re.sub(r"\\<(.+?)\\>", escaped_tag, s)
+    # Stray inline-color markup the exporter leaves unconverted, e.g. "...text**。 {color="blue"}".
+    s = re.sub(r"\s*\{color=\"[a-z_]+\"\}", "", s)
     s = re.sub(r"`([^`]+)`", lambda m: keep(f"<code>{html.escape(m.group(1))}</code>"), s)
     s = re.sub(r"\\([\\`*_{}\[\]()#+\-.!<>|~])", lambda m: keep(html.escape(m.group(1))), s)
 
@@ -117,6 +119,27 @@ IMG_RE = re.compile(r"^!\[[^\]]*\]\((.*)\)$")
 HEAD_RE = re.compile(r"^(#{1,6})\s+(.*)$")
 BUL_RE = re.compile(r"^[-*]\s+(.*)$")
 NUM_RE = re.compile(r"^(\d+)\.\s+(.*)$")
+TABLE_RE = re.compile(r"<table([^>]*)>(.*?)</table>", re.S)
+
+
+def render_table(attrs, inner):
+    """Notion exports a table as raw pseudo-HTML that ignores the doc's indentation
+    scheme, so it's flattened into one line here (before the indentation parser
+    ever sees it) rather than walked node by node."""
+    header = 'header-row="true"' in attrs
+    inner = re.sub(r"<colgroup>.*?</colgroup>", "", inner, flags=re.S)
+    rows = re.findall(r"<tr>(.*?)</tr>", inner, re.S)
+    html_rows = []
+    for i, row in enumerate(rows):
+        cells = re.findall(r"<td>(.*?)</td>", row, re.S)
+        tag = "th" if header and i == 0 else "td"
+        cells_html = "".join(f"<{tag}>{inline(c.strip())}</{tag}>" for c in cells)
+        html_rows.append(f"<tr>{cells_html}</tr>")
+    return f'<div class="nb-table-wrap"><table>{"".join(html_rows)}</table></div>'
+
+
+def preprocess_tables(body):
+    return TABLE_RE.sub(lambda m: render_table(m.group(1), m.group(2)), body)
 
 
 class Renderer:
@@ -134,6 +157,8 @@ class Renderer:
             return "details"
         if t.startswith("<summary"):
             return "summary"
+        if t.startswith('<div class="nb-table-wrap">'):
+            return "rendered"
         if t == "---":
             return "hr"
         if IMG_RE.match(t):
@@ -196,6 +221,8 @@ class Renderer:
             return f"<blockquote>{inline(t[2:])}{self.children(n.children)}</blockquote>"
         if k == "callout":
             return f'<div class="nb-callout">{self.children(n.children)}</div>'
+        if k == "rendered":
+            return t
         if k == "para":
             text = re.sub(r"^(<br>\s*)+", "", t)
             sub = self.children(n.children)
@@ -281,6 +308,7 @@ def main():
     text = data["text"]
     props = json.loads(re.search(r"<properties>\s*(\{.*?\})\s*</properties>", text, re.S).group(1))
     body = re.search(r"<content>\n(.*)\n</content>", text, re.S).group(1)
+    body = preprocess_tables(body)
 
     # download images
     out_dir = ROOT / "public" / "projects" / args.slug
@@ -322,6 +350,7 @@ def main():
         title = find_first_heading(n)
         if not title:
             continue
+        title = title.replace("**", "").strip()
         m = re.match(r"^(\d+)\.\s*(.*)$", title)
         num = int(m.group(1)) if m else None
         label = m.group(2) if m else title
