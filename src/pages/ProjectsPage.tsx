@@ -230,7 +230,7 @@ function GrowthCitation({ citation }: { citation: GrowthRow['citation'] }) {
   )
 }
 
-function ProjectCard({ project }: { project: Project }) {
+function ProjectCard({ project, archival }: { project: Project; archival?: boolean }) {
   const { t } = useLocale()
   const hasDetail = detailSlugs.has(project.id)
   const metrics = project.metrics.slice(0, 2)
@@ -238,11 +238,18 @@ function ProjectCard({ project }: { project: Project }) {
   return (
     <article
       id={`project-${project.id}`}
-      className={`relative scroll-mt-24 flex flex-col border border-rule bg-surface p-5 sm:p-6 ${
-        hasDetail ? 'transition-colors hover:border-accent-dim' : ''
-      }`}
+      className={`relative scroll-mt-24 flex flex-col border bg-surface p-5 sm:p-6 ${
+        archival ? 'border-dashed border-rule' : 'border-rule'
+      } ${hasDetail ? 'transition-colors hover:border-accent-dim' : ''}`}
     >
-      <p className="font-mono text-[11.5px] text-muted">{t(project.period)}</p>
+      <div className="flex items-center justify-between gap-3">
+        <p className="font-mono text-[11.5px] text-muted">{t(project.period)}</p>
+        {archival && (
+          <span className="rounded-full border border-rule px-2 py-0.5 font-mono text-[10px] uppercase tracking-[0.06em] text-muted-dim">
+            {t({ zh: '原始樣貌', en: 'Unedited' })}
+          </span>
+        )}
+      </div>
       <h3 className="mt-2 font-serif text-[18px] font-semibold leading-[1.45] text-ink sm:text-[19px]">
         {hasDetail ? (
           <a href={`${BASE}projects/${project.id}/`} className="after:absolute after:inset-0">
@@ -276,19 +283,54 @@ function ProjectCard({ project }: { project: Project }) {
   )
 }
 
-function ProjectGroup({ title, note, projects }: { title: string; note?: string; projects: Project[] }) {
+function ProjectGroup({
+  title,
+  note,
+  projects,
+  archival,
+}: {
+  title: string
+  note?: ReactNode
+  projects: Project[]
+  archival?: boolean
+}) {
   return (
     <Reveal>
       <section className="mt-14">
         <h2 className="font-serif text-[22px] font-semibold text-ink sm:text-[26px]">{title}</h2>
-        {note && <p className="mt-2 max-w-2xl text-[14px] leading-relaxed text-muted">{note}</p>}
+        {note && <div className="mt-4">{note}</div>}
         <div className="mt-6 grid gap-5 md:grid-cols-2">
           {projects.map((p) => (
-            <ProjectCard key={p.id} project={p} />
+            <ProjectCard key={p.id} project={p} archival={archival} />
           ))}
         </div>
       </section>
     </Reveal>
+  )
+}
+
+/** A structured callout, not a caption — so "kept as-is on purpose" survives a skim
+ *  instead of reading like an apology for unpolished work. */
+function ArchivalNote() {
+  const { t } = useLocale()
+  return (
+    <div className="border border-rule bg-surface px-5 py-4">
+      <p className="font-mono text-[10.5px] uppercase tracking-[0.08em] text-accent">
+        {t({ zh: '刻意保留・未重新設計', en: 'Left as-is, on purpose' })}
+      </p>
+      <p className="mt-2 text-[14px] leading-relaxed text-muted">
+        {t({
+          zh: '以下是幾年前的早期作品，保留原始呈現方式，不安排重新優化。',
+          en: 'These are early projects from a few years ago, kept in their original form and not reworked.',
+        })}
+      </p>
+      <p className="mt-1.5 text-[14px] font-medium leading-relaxed text-ink">
+        {t({
+          zh: '藉此真實呈現我在兩份 PM 工作之間的能力演進。',
+          en: 'The point is to show the growth between my two PM roles honestly, without touching up the earlier work.',
+        })}
+      </p>
+    </div>
   )
 }
 
@@ -318,10 +360,8 @@ export function ProjectsPage() {
       <div className="pb-12 sm:pb-20">
         <ProjectGroup
           title={t({ zh: '和泰聯網・初級 PM 能力養成', en: 'Hotai Motor · early-career PM work' })}
-          note={t({
-            zh: '早期作品，保留幾年前的原始呈現方式，不安排重新優化，用來真實呈現兩份 PM 工作之間的能力演進。',
-            en: 'Early work, kept in its original form from a few years ago and not reworked, so the growth between the two PM roles stays honest.',
-          })}
+          note={<ArchivalNote />}
+          archival
           projects={hotaiProjects}
         />
       </div>
