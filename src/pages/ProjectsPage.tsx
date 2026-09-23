@@ -345,8 +345,15 @@ export function ProjectsPage() {
             <span className="inline-block h-1.5 w-1.5 rounded-full bg-accent" aria-hidden="true" />
             {t({ zh: '專案經驗 · project experience', en: 'project experience' })}
           </div>
-          <h1 className="max-w-3xl font-serif text-[28px] font-semibold leading-[1.35] text-ink text-balance sm:text-[36px] md:text-[44px]">
-            {t({ zh: '以 PM 核心能力為視角，呈現專案價值與專業累積', en: 'Project value and professional growth, seen through core PM competencies' })}
+          <h1 className="max-w-3xl font-serif text-[28px] font-semibold leading-[1.35] text-ink sm:text-[36px] md:text-[44px]">
+            {t({
+              zh: ['以 PM 核心能力為切入點', '呈現專業累積與專案價值'],
+              en: ['Seen through core PM competencies', 'professional growth and project value'],
+            }).map((line, i) => (
+              <span key={i} className="block">
+                {line}
+              </span>
+            ))}
           </h1>
         </Reveal>
       </section>
