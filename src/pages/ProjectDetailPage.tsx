@@ -247,7 +247,7 @@ export function ProjectDetailPage({ slug }: { slug: string }) {
           </LabelRow>
           {detail.scope && (
             <>
-              <LabelRow label="專案範疇｜時間點、時長、工程人力">
+              <LabelRow label="專案範疇｜時間點、時長、人力">
                 <Chips items={[detail.scope.time, detail.scope.duration, detail.scope.headcount]} tone="plain" />
               </LabelRow>
               <LabelRow label="利害關係人">
