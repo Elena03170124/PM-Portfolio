@@ -77,8 +77,8 @@ const growthRows: GrowthRow[] = [
   {
     dimension: { zh: '決策衡量維度', en: 'Decision criteria' },
     subtitle: {
-      zh: '從功能異常排除或優化方法 → 到結合商業、營運、技術可行、系統穩定等因素評估解決方案',
-      en: 'Fixing or optimizing a single malfunction → weighing business, operations, feasibility and stability together',
+      zh: '從參照同業做法或使用者回饋 → 到能結合商業、營運、技術可行、系統穩定等因素評估解決方案',
+      en: 'Referencing industry practice or user feedback → weighing business, operations, feasibility and stability together',
     },
     before: {
       zh: '由需求訪談、使用者評價回饋、競品分析，提出功能流程優化建議。',
