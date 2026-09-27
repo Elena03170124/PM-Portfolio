@@ -24,7 +24,7 @@ export function ProjectTimeline({ activeCompetencyId }: { activeCompetencyId: Co
   return (
     <section id="projects" className="py-20 sm:py-28 scroll-mt-16">
       <Reveal>
-        <SectionHeading eyebrow="02 / case studies" title={strings.projects.title} subtitle={strings.projects.subtitle} />
+        <SectionHeading eyebrow="02 / project experience" title={strings.projects.title} subtitle={strings.projects.subtitle} />
       </Reveal>
 
       {activeCompetency && (
