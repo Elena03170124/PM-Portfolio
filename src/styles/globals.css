@@ -207,3 +207,38 @@
   font-size: 12px;
   color: var(--color-muted-dim);
 }
+
+.nb .nb-files { display: grid; gap: 0.7em; margin: 0 0 1.1em; }
+.nb a.nb-file {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  padding: 0.9em 1.1em;
+  border: 1px solid var(--color-rule);
+  background: var(--color-surface);
+  text-decoration: none;
+  transition: border-color 0.2s;
+}
+.nb a.nb-file:hover { border-color: var(--color-accent-dim); }
+.nb .nb-file-icon {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.4em;
+  height: 2.4em;
+  border: 1px solid var(--color-rule);
+  color: var(--color-accent);
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 700;
+}
+.nb .nb-file-body { min-width: 0; }
+.nb .nb-file-name { display: block; font-weight: 600; color: var(--color-ink); }
+.nb .nb-file-meta {
+  display: block;
+  margin-top: 0.25em;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--color-muted);
+}
