@@ -74,7 +74,7 @@ function TimelineItem({ chapter }: { chapter: AboutChapter }) {
   const { t } = useLocale()
 
   return (
-    <li className="group">
+    <li id={chapter.id} className="group scroll-mt-24">
       <Reveal className="grid grid-cols-[22px_1fr] sm:grid-cols-[152px_28px_1fr]">
         {/* When: years + stage name. Left column on desktop, above the title on mobile. */}
         <div className="col-start-2 row-start-1 pt-1 pb-2 sm:col-start-1 sm:pb-0 sm:text-right">

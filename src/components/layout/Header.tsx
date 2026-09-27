@@ -79,7 +79,7 @@ export function Header({ current = 'home' }: { current?: PageId }) {
 
   return (
     <header ref={headerRef} className="sticky top-0 z-40 border-b border-rule/70 bg-paper">
-      <div className="mx-auto max-w-6xl px-5 sm:px-8 h-16 flex items-center justify-between">
+      <div className="mx-auto max-w-7xl px-5 sm:px-8 h-16 flex items-center justify-between">
         <a href={BASE} className="font-serif text-[15px] tracking-wide text-ink">
           Elena Zhuang <span className="text-muted-dim">｜</span> 莊詒安<span className="text-accent">.</span>
         </a>
@@ -108,7 +108,7 @@ export function Header({ current = 'home' }: { current?: PageId }) {
 
       {menuOpen && (
         <div id="mobile-menu" className="lg:hidden absolute inset-x-0 top-full border-b border-rule bg-paper">
-          <nav aria-label="主選單" className="mx-auto max-w-6xl px-5 py-1 sm:px-8">
+          <nav aria-label="主選單" className="mx-auto max-w-7xl px-5 py-1 sm:px-8">
             <ul>
               {nav.map((item) => (
                 <li key={item.key} className="border-b border-rule/60 last:border-b-0">

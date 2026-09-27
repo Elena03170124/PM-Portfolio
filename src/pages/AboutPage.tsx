@@ -1,8 +1,9 @@
-import { aboutThesis } from '../content'
+import { aboutChapters, aboutThesis } from '../content'
 import { useLocale } from '../i18n/LocaleContext'
 import { SiteShell } from '../components/layout/SiteShell'
 import { Reveal } from '../components/common/Reveal'
 import { AboutTimeline } from '../components/about/AboutTimeline'
+import { PageToc } from '../components/common/PageToc'
 
 export function AboutPage() {
   const { t } = useLocale()
@@ -27,9 +28,12 @@ export function AboutPage() {
         </Reveal>
       </section>
 
-      <section className="pb-12 sm:pb-20">
-        <AboutTimeline />
-      </section>
+      <div className="pb-12 sm:pb-20 lg:grid lg:grid-cols-[minmax(0,1fr)_190px] lg:gap-12 lg:items-start">
+        <div className="min-w-0">
+          <AboutTimeline />
+        </div>
+        <PageToc items={aboutChapters.map((c) => ({ id: c.id, label: t(c.tag) }))} />
+      </div>
     </SiteShell>
   )
 }

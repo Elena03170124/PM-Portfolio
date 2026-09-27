@@ -6,7 +6,7 @@ export function SiteShell({ children, current }: { children: ReactNode; current?
   return (
     <div id="top" className="min-h-screen">
       <Header current={current} />
-      <main className="mx-auto max-w-6xl px-5 sm:px-8">{children}</main>
+      <main className="mx-auto max-w-7xl px-5 sm:px-8">{children}</main>
       <Footer />
     </div>
   )

@@ -4,6 +4,7 @@ import type { Project } from '../content/types'
 import { useLocale } from '../i18n/LocaleContext'
 import { SiteShell } from '../components/layout/SiteShell'
 import { Reveal } from '../components/common/Reveal'
+import { PageToc } from '../components/common/PageToc'
 
 const BASE = import.meta.env.BASE_URL
 
@@ -140,7 +141,7 @@ function GrowthCompare() {
   const { t } = useLocale()
 
   return (
-    <section aria-labelledby="growth-title" className="border-y border-rule py-12 sm:py-14">
+    <section id="growth" aria-labelledby="growth-title" className="scroll-mt-24 border-y border-rule py-12 sm:py-14">
       <Reveal>
         <p className="mb-3 font-mono text-[11px] uppercase tracking-[0.14em] text-accent">
           {t({ zh: '能力演進', en: 'growth' })}
@@ -370,19 +371,31 @@ export function ProjectsPage() {
         </Reveal>
       </section>
 
-      <GrowthCompare />
+      <div className="lg:grid lg:grid-cols-[minmax(0,1fr)_190px] lg:gap-12 lg:items-start">
+        <div className="min-w-0">
+          <GrowthCompare />
 
-      <ProjectGroup
-        id="nani"
-        title={t({ zh: '南一集團・跨系統平台整合串接', en: 'Nani · cross-system platform integration' })}
-        projects={southoneProjects}
-      />
-      <div className="pb-12 sm:pb-20">
-        <ProjectGroup
-          title={t({ zh: '和泰聯網・初級 PM 能力養成', en: 'Hotai Motor · early-career PM work' })}
-          note={<ArchivalNote />}
-          archival
-          projects={hotaiProjects}
+          <ProjectGroup
+            id="nani"
+            title={t({ zh: '南一集團・跨系統平台整合串接', en: 'Nani · cross-system platform integration' })}
+            projects={southoneProjects}
+          />
+          <div className="pb-12 sm:pb-20">
+            <ProjectGroup
+              id="hotai"
+              title={t({ zh: '和泰聯網・初級 PM 能力養成', en: 'Hotai Motor · early-career PM work' })}
+              note={<ArchivalNote />}
+              archival
+              projects={hotaiProjects}
+            />
+          </div>
+        </div>
+        <PageToc
+          items={[
+            { id: 'growth', label: t({ zh: '能力演進', en: 'Growth' }) },
+            { id: 'nani', label: t({ zh: '南一集團', en: 'Nani' }) },
+            { id: 'hotai', label: t({ zh: '和泰聯網', en: 'Hotai' }) },
+          ]}
         />
       </div>
     </SiteShell>
