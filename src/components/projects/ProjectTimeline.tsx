@@ -46,7 +46,7 @@ export function ProjectTimeline({ activeCompetencyId }: { activeCompetencyId: Co
 
       <div className="mt-10">
         <a
-          href={`${BASE}projects/#nani`}
+          href={`${BASE}projects/`}
           className="font-mono text-[13px] text-accent underline underline-offset-4 transition-opacity hover:opacity-80"
         >
           {strings.projects.moreCta}

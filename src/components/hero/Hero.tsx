@@ -119,7 +119,7 @@ export function Hero() {
 
         <div className="mt-12 flex flex-wrap gap-4">
           <a
-            href="#projects"
+            href={`${BASE}projects/`}
             className="font-mono text-[13px] px-5 py-2.5 rounded-md bg-accent text-on-accent font-semibold hover:opacity-90 transition-opacity"
           >
             {strings.hero.ctaProjects}

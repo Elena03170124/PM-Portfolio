@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import type { Project } from '../../content/types'
 import { useLocale } from '../../i18n/LocaleContext'
-import { getCompetency } from '../../content'
 import { CornerBracketCard } from '../common/CornerBracketCard'
 import { StatRow } from '../common/StatBlock'
 import { Tag } from '../common/Tag'
@@ -40,20 +39,6 @@ export function ProjectCard({ project, dimmed }: { project: Project; dimmed: boo
             <Tag key={i}>{t(h)}</Tag>
           ))}
         </div>
-
-        {project.competencyIds.length > 0 && (
-          <div className="mt-3 flex flex-wrap gap-1.5">
-            {project.competencyIds.map((id) => {
-              const c = getCompetency(id)
-              if (!c) return null
-              return (
-                <Tag key={id} size="md">
-                  {String(c.index).padStart(2, '0')} · {t(c.name)}
-                </Tag>
-              )
-            })}
-          </div>
-        )}
 
         {project.summaryOnly ? (
           <p className="mt-5 font-mono text-[11px] text-muted-dim italic">{strings.projects.confidentialNote}</p>

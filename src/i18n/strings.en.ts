@@ -24,9 +24,9 @@ const strings: AppStrings = {
   },
   projects: {
     title: 'Project Experience',
-    subtitle: '3 representative case studies below — see the Project Experience page for the complete picture.',
+    subtitle: '3 flagship case studies below — see the Project Experience page for more projects and my growth journey.',
     moreCta: 'See more project experience →',
-    expand: 'Expand full case study',
+    expand: 'Preview summary',
     collapse: 'Collapse',
     situation: 'Situation',
     task: 'Task',

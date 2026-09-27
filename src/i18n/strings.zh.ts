@@ -24,9 +24,9 @@ const strings: AppStrings = {
   },
   projects: {
     title: '專案經驗',
-    subtitle: '以下是 3 個代表案例；完整專案經驗與能力演進歷程，請至「專案經驗」頁面查看。',
+    subtitle: '以下爲 3 大代表案例；更多專案經驗與能力演進歷程，請至「專案經驗」頁面查看。',
     moreCta: '查看更多專案經驗 →',
-    expand: '展開完整案例',
+    expand: '速覽專案概要',
     collapse: '收合',
     situation: '背景',
     task: '任務',
