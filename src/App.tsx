@@ -23,7 +23,7 @@ function App() {
   return (
     <SiteShell>
       <Hero />
-      <div className="lg:grid lg:grid-cols-[minmax(0,1fr)_190px] lg:gap-12 lg:items-start">
+      <div className="lg:grid lg:grid-cols-[minmax(0,1fr)_190px] lg:gap-12">
         <div className="min-w-0">
           <CompetencyMatrix activeId={activeCompetencyId} onSelect={setActiveCompetencyId} />
           <ProjectTimeline activeCompetencyId={activeCompetencyId} />

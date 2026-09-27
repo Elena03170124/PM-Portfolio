@@ -28,7 +28,7 @@ export function AboutPage() {
         </Reveal>
       </section>
 
-      <div className="pb-12 sm:pb-20 lg:grid lg:grid-cols-[minmax(0,1fr)_190px] lg:gap-12 lg:items-start">
+      <div className="pb-12 sm:pb-20 lg:grid lg:grid-cols-[minmax(0,1fr)_190px] lg:gap-12">
         <div className="min-w-0">
           <AboutTimeline />
         </div>

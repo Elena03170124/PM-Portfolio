@@ -371,7 +371,7 @@ export function ProjectsPage() {
         </Reveal>
       </section>
 
-      <div className="lg:grid lg:grid-cols-[minmax(0,1fr)_190px] lg:gap-12 lg:items-start">
+      <div className="lg:grid lg:grid-cols-[minmax(0,1fr)_190px] lg:gap-12">
         <div className="min-w-0">
           <GrowthCompare />
 
