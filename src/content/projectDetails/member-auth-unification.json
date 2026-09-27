@@ -5,9 +5,8 @@
  "company": "南一集團母公司【南一書局企業】",
  "period": "2025.11 – 2026.01",
  "competencies": [
-  "系統架構理解能力",
-  "技術流程理解與轉譯能力",
-  "系統整合思維"
+  "平台架構規劃與跨系統整合能力",
+  "陌生技術理解與跨域溝通能力"
  ],
  "platforms": [
   "NaniClub會員系統",
@@ -24,15 +23,15 @@
    "id": "sec-1",
    "num": "1",
    "title": "PM能力應用分析",
-   "kind": "card",
-   "html": "<p class=\"nb-purpose\">說明在專案中扮演什麼角色、提升了哪些專業能力</p><section class=\"nb-card\"><h3>➀ 平台架構規劃與跨系統整合能力</h3><ol><li><strong>將使用者流程問題提升至架構層思考</strong><ul><li>從跨服務重複登入、身份驗證失敗等使用者體驗問題出發。</li><li>將問題定義由介面層提升至系統架構層。</li></ul></li><li><strong>推動身份資料治理與跨系統整合</strong><ul><li>分析跨系統身份驗證流程與資料來源間的相依性。</li><li>協助團隊推動一致的身份驗證機制落地。</li></ul></li><li><strong>深化平台型服務思維</strong><ul><li>理解登入驗證、身份識別統一化是平台基礎能力的一部分。</li><li>以可複用性、系統擴展效率及長期整合成本等角度，思考產品與系統架構決策，</li><li>為新服務導入建立可延續基礎。</li></ul></li></ol></section><section class=\"nb-card\"><h3><strong>➁ 陌生</strong>技術理解與跨域溝通能力</h3><ol><li><strong>將技術架構轉化為共同溝通語言</strong><ul><li>主動研究 OIDC 身份驗證流程，將技術理解繪製為流程圖。</li><li>將抽象技術流程轉化為可與非技術單位溝通的共同語言。</li><li>同時提升與工程團隊對齊需求、確認流程及討論風險的效率。</li></ul></li></ol></section>"
+   "kind": "fold",
+   "html": "<p class=\"nb-purpose\">說明在專案中扮演什麼角色、提升了哪些專業能力</p><details class=\"nb-fold\"><summary><span>➀ 平台架構規劃與跨系統整合能力</span></summary><div class=\"nb-fold-body\"><ol><li><strong>將使用者流程問題提升至架構層思考</strong><ul><li>從跨服務重複登入、身份驗證失敗等使用者體驗問題出發。</li><li>將問題定義由介面層提升至系統架構層。</li></ul></li><li><strong>推動身份資料治理與跨系統整合</strong><ul><li>分析跨系統身份驗證流程與資料來源間的相依性。</li><li>協助團隊推動一致的身份驗證機制落地。</li></ul></li><li><strong>深化平台型服務思維</strong><ul><li>理解登入驗證、身份識別統一化是平台基礎能力的一部分。</li><li>以可複用性、系統擴展效率及長期整合成本等角度，思考產品與系統架構決策，</li><li>為新服務導入建立可延續基礎。</li></ul></li></ol></div></details><details class=\"nb-fold\"><summary><span><strong>➁ 陌生</strong>技術理解與跨域溝通能力</span></summary><div class=\"nb-fold-body\"><ol><li><strong>將技術架構轉化為共同溝通語言</strong><ul><li>主動研究 OIDC 身份驗證流程，將技術理解繪製為流程圖。</li><li>將抽象技術流程轉化為可與非技術單位溝通的共同語言。</li><li>同時提升與工程團隊對齊需求、確認流程及討論風險的效率。</li></ul></li></ol></div></details>"
   },
   {
    "id": "sec-2",
    "num": "2",
    "title": "專案價值分析",
-   "kind": "card",
-   "html": "<p class=\"nb-purpose\">說明專案可以為商業、使用者、技術等面向帶來的長期價值</p><section class=\"nb-card\"><h3>① 技術／平台價值</h3><ol><li><strong>建立一致身份治理機制，降低跨系統整合複雜度</strong><ul><li>整合各系統的身份識別、登入驗證流程，建立一致的身份治理機制。</li><li>避免服務各自維護登入邏輯，以降低後續新服務導入與維運的複雜度。</li></ul></li></ol></section><section class=\"nb-card\"><h3><strong>➁</strong> 商業價值</h3><ol><li><strong>提升平台整合能力，並強化服務拓展力</strong><ul><li>後續產品功能擴充、新服務串接及平台發展具備更高效率與一致性。</li></ul></li></ol></section><section class=\"nb-card\"><h3><strong>➂ 使用者價值</strong></h3><ol><li><strong>建立單一登入SSO（Single Sign-On）體驗，降低跨服務使用門檻</strong><ul><li>使用者無須重複建立帳號或反覆登入，即可於各服務間流暢切換。</li><li>降低操作成本並提升整體使用體驗、維持服務的市場競爭力。</li></ul></li></ol></section>"
+   "kind": "fold",
+   "html": "<p class=\"nb-purpose\">說明專案可以為商業、使用者、技術等面向帶來的長期價值</p><details class=\"nb-fold\"><summary><span>① 技術／平台價值</span></summary><div class=\"nb-fold-body\"><ol><li><strong>建立一致身份治理機制，降低跨系統整合複雜度</strong><ul><li>整合各系統的身份識別、登入驗證流程，建立一致的身份治理機制。</li><li>避免服務各自維護登入邏輯，以降低後續新服務導入與維運的複雜度。</li></ul></li></ol></div></details><details class=\"nb-fold\"><summary><span><strong>➁</strong> 商業價值</span></summary><div class=\"nb-fold-body\"><ol><li><strong>提升平台整合能力，並強化服務拓展力</strong><ul><li>後續產品功能擴充、新服務串接及平台發展具備更高效率與一致性。</li></ul></li></ol></div></details><details class=\"nb-fold\"><summary><span><strong>➂ 使用者價值</strong></span></summary><div class=\"nb-fold-body\"><ol><li><strong>建立單一登入SSO（Single Sign-On）體驗，降低跨服務使用門檻</strong><ul><li>使用者無須重複建立帳號或反覆登入，即可於各服務間流暢切換。</li><li>降低操作成本並提升整體使用體驗、維持服務的市場競爭力。</li></ul></li></ol></div></details>"
   },
   {
    "id": "sec-3",

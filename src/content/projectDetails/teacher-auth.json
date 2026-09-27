@@ -5,12 +5,9 @@
  "company": "南一集團母公司【南一書局企業】",
  "period": "2025.09 – 2025.11",
  "competencies": [
-  "跨部門溝通協調能力",
-  "系統流程設計能力",
-  "資料結構理解能力",
-  "問題拆解與情境建模能力",
-  "系統整合思維",
-  "資料治理思維"
+  "複雜問題拆解／邏輯情境設計",
+  "跨系統資料治理與規格對齊／權責範疇界定",
+  "系統架構簡化／維運成本控制"
  ],
  "platforms": [
   "NaniClub會員系統",
@@ -28,15 +25,15 @@
    "id": "sec-1",
    "num": "1",
    "title": "PM能力應用分析",
-   "kind": "card",
-   "html": "<p class=\"nb-purpose\">說明在專案中扮演什麼角色、提升了哪些專業能力</p><section class=\"nb-card\"><h3><strong>➀ 複雜問題拆解／邏輯情境設計</strong></h3><p>將複雜的多源資料，拆解並轉化為系統可判斷的極簡驗證邏輯：</p><ol><li><strong>情境歸納與路徑設計</strong><ul><li>歸納 4 種註冊與驗證情境（如任教學校是否存在選單、有無業務手機等）。</li><li><strong>確保系統在不同資料完整度下皆有明確應對路徑</strong>。</li></ul></li><li><strong>自動與人工雙軌驗證機制</strong><ul><li>規劃「自動為主、人工為輔」驗證機制。</li><li>提高一般情境的自動驗證效率，<strong>也兼顧例外資料與資料更新時間差的情境</strong>。</li></ul></li></ol></section><section class=\"nb-card\"><h3>➁ 跨系統資料治理與規格對齊 <strong>／權責範疇界定</strong></h3><p>釐清跨系統資料關聯與維護責任，建立穩定且低成本的資料交換機制：</p><ol><li><strong>資料主鍵規格對齊與欄位需求梳理</strong><ul><li>代表研發團隊主動向外部單位溝通釐清白名單必要資料欄位。</li><li>對齊 JSON 交換格式，以「教育部學校代碼」作為跨系統比對主鍵。</li><li>降低後續跨系統資料同步成本。</li></ul></li><li><strong>維護責任邊界劃分</strong><ul><li>將資料維護責任保留於源頭業管系統。</li><li><strong>避免研發處重複開發與維護 API，確保資料一致性並降低長期維運負擔</strong>。</li></ul></li></ol></section><section class=\"nb-card\"><h3><strong>➂ </strong>系統架構簡化／維運成本控制</h3><p>從使用者體驗延伸至系統維運視角，設計輕量且易於擴展的作業流程：</p><ol><li><strong>跨服務流程重構</strong><ul><li>將原先跨越會員中心、Zendesk 與 Teams 的複雜流程。</li><li>重新評估並收攏集中至 Microsoft Teams 平台運作管理。</li></ul></li><li><strong>兼顧體驗與維運效益</strong><ul><li><strong>在保障業務端操作便利（一鍵審核）的前提下；</strong></li><li>簡化系統架構與自動化控制，<strong>顯著降低系統未來的誤操作與客訴成本。</strong></li></ul></li></ol></section>"
+   "kind": "fold",
+   "html": "<p class=\"nb-purpose\">說明在專案中扮演什麼角色、提升了哪些專業能力</p><details class=\"nb-fold\"><summary><span><strong>➀ 複雜問題拆解／邏輯情境設計</strong></span></summary><div class=\"nb-fold-body\"><p>將複雜的多源資料，拆解並轉化為系統可判斷的極簡驗證邏輯：</p><ol><li><strong>情境歸納與路徑設計</strong><ul><li>歸納 4 種註冊與驗證情境（如任教學校是否存在選單、有無業務手機等）。</li><li><strong>確保系統在不同資料完整度下皆有明確應對路徑</strong>。</li></ul></li><li><strong>自動與人工雙軌驗證機制</strong><ul><li>規劃「自動為主、人工為輔」驗證機制。</li><li>提高一般情境的自動驗證效率，<strong>也兼顧例外資料與資料更新時間差的情境</strong>。</li></ul></li></ol></div></details><details class=\"nb-fold\"><summary><span>➁ 跨系統資料治理與規格對齊 <strong>／權責範疇界定</strong></span></summary><div class=\"nb-fold-body\"><p>釐清跨系統資料關聯與維護責任，建立穩定且低成本的資料交換機制：</p><ol><li><strong>資料主鍵規格對齊與欄位需求梳理</strong><ul><li>代表研發團隊主動向外部單位溝通釐清白名單必要資料欄位。</li><li>對齊 JSON 交換格式，以「教育部學校代碼」作為跨系統比對主鍵。</li><li>降低後續跨系統資料同步成本。</li></ul></li><li><strong>維護責任邊界劃分</strong><ul><li>將資料維護責任保留於源頭業管系統。</li><li><strong>避免研發處重複開發與維護 API，確保資料一致性並降低長期維運負擔</strong>。</li></ul></li></ol></div></details><details class=\"nb-fold\"><summary><span><strong>➂ </strong>系統架構簡化／維運成本控制</span></summary><div class=\"nb-fold-body\"><p>從使用者體驗延伸至系統維運視角，設計輕量且易於擴展的作業流程：</p><ol><li><strong>跨服務流程重構</strong><ul><li>將原先跨越會員中心、Zendesk 與 Teams 的複雜流程。</li><li>重新評估並收攏集中至 Microsoft Teams 平台運作管理。</li></ul></li><li><strong>兼顧體驗與維運效益</strong><ul><li><strong>在保障業務端操作便利（一鍵審核）的前提下；</strong></li><li>簡化系統架構與自動化控制，<strong>顯著降低系統未來的誤操作與客訴成本。</strong></li></ul></li></ol></div></details>"
   },
   {
    "id": "sec-2",
    "num": "2",
    "title": "專案價值分析",
-   "kind": "card",
-   "html": "<p class=\"nb-purpose\">說明專案可以為商業、使用者、技術等面向帶來的長期價值</p><section class=\"nb-card\"><h3>➀ 商業與營運價值</h3><p>落實數位資產防護並降低組織內部營運負擔：</p><ol><li><strong>落實資源分級管理，保障產品商業價值</strong><ul><li><strong>確保核心教學產品與服務僅提供給具真實教師身份的使用者</strong>。</li><li>避免資源濫用與商業權限溢流 。</li></ul></li><li><strong>建立自動化驗證機制，大幅降低營運人力審核成本</strong><ul><li>以「自動驗證為主」協助絕大多數教師於註冊當下即時完成驗證。</li><li>大幅減少業務與客服人員人工逐筆審核的時間與營運成本。</li></ul></li><li><strong>釐清資料維護權責，避免組織重工</strong><ul><li>維持資料維護責任保留於源頭業管系統的原則。</li><li>避免研發團隊耗費額外人力維護雙邊資料庫，影響組織維運效率。</li></ul></li></ol></section><section class=\"nb-card\"><h3>➁ 使用者體驗價值</h3><p>兼顧外部教師註冊流暢度與內部人員審核便利性：</p><ol><li><strong>外部教師端：容錯性高的雙軌引導流程</strong><ul><li>將現實複雜的資料狀態拆解為 4 大情境。</li><li>提供自動比對與人工補強雙軌路徑。</li><li>確保教師不會因資料更新時間差或資料缺漏而導致註冊中斷。</li></ul></li><li><strong>內部營運端：集中化且低門檻的審核體驗</strong><ul><li>將原先分散的審核作業收攏至單一平台（Microsoft Teams）。</li><li>提供清晰的申請資訊與簡化操作介面，</li><li>降低業務單位的數位學習門檻與誤操作風險。</li></ul></li></ol></section><section class=\"nb-card\"><h3>➂ 技術與系統架構價值</h3><p>建立標準化資料介接規範並提升系統維運彈性：</p><ol><li><strong>確立跨系統資料標準，強化數據對齊品質</strong><ul><li>對齊「教育部學校代碼」作為 Primary Key。</li><li>規範標準 JSON 資料交換格式。</li><li><strong>建立穩固且高一致性的跨系統資料介接基礎。</strong></li></ul></li><li><strong>重構服務架構，顯著降低系統維運與擴充成本</strong><ul><li>將原本跨越會員中心、Zendesk 與 Teams 的複雜架構進行減法重構。</li><li>減少跨服務運作的失敗點與資安風險，</li><li><strong>大幅提升系統穩定度與後續系統架構擴充導入的彈性。</strong></li></ul></li></ol></section>"
+   "kind": "fold",
+   "html": "<p class=\"nb-purpose\">說明專案可以為商業、使用者、技術等面向帶來的長期價值</p><details class=\"nb-fold\"><summary><span>➀ 商業與營運價值</span></summary><div class=\"nb-fold-body\"><p>落實數位資產防護並降低組織內部營運負擔：</p><ol><li><strong>落實資源分級管理，保障產品商業價值</strong><ul><li><strong>確保核心教學產品與服務僅提供給具真實教師身份的使用者</strong>。</li><li>避免資源濫用與商業權限溢流 。</li></ul></li><li><strong>建立自動化驗證機制，大幅降低營運人力審核成本</strong><ul><li>以「自動驗證為主」協助絕大多數教師於註冊當下即時完成驗證。</li><li>大幅減少業務與客服人員人工逐筆審核的時間與營運成本。</li></ul></li><li><strong>釐清資料維護權責，避免組織重工</strong><ul><li>維持資料維護責任保留於源頭業管系統的原則。</li><li>避免研發團隊耗費額外人力維護雙邊資料庫，影響組織維運效率。</li></ul></li></ol></div></details><details class=\"nb-fold\"><summary><span>➁ 使用者體驗價值</span></summary><div class=\"nb-fold-body\"><p>兼顧外部教師註冊流暢度與內部人員審核便利性：</p><ol><li><strong>外部教師端：容錯性高的雙軌引導流程</strong><ul><li>將現實複雜的資料狀態拆解為 4 大情境。</li><li>提供自動比對與人工補強雙軌路徑。</li><li>確保教師不會因資料更新時間差或資料缺漏而導致註冊中斷。</li></ul></li><li><strong>內部營運端：集中化且低門檻的審核體驗</strong><ul><li>將原先分散的審核作業收攏至單一平台（Microsoft Teams）。</li><li>提供清晰的申請資訊與簡化操作介面，</li><li>降低業務單位的數位學習門檻與誤操作風險。</li></ul></li></ol></div></details><details class=\"nb-fold\"><summary><span>➂ 技術與系統架構價值</span></summary><div class=\"nb-fold-body\"><p>建立標準化資料介接規範並提升系統維運彈性：</p><ol><li><strong>確立跨系統資料標準，強化數據對齊品質</strong><ul><li>對齊「教育部學校代碼」作為 Primary Key。</li><li>規範標準 JSON 資料交換格式。</li><li><strong>建立穩固且高一致性的跨系統資料介接基礎。</strong></li></ul></li><li><strong>重構服務架構，顯著降低系統維運與擴充成本</strong><ul><li>將原本跨越會員中心、Zendesk 與 Teams 的複雜架構進行減法重構。</li><li>減少跨服務運作的失敗點與資安風險，</li><li><strong>大幅提升系統穩定度與後續系統架構擴充導入的彈性。</strong></li></ul></li></ol></div></details>"
   },
   {
    "id": "sec-3",
