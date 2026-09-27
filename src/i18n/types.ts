@@ -27,8 +27,7 @@ export interface AppStrings {
   projects: {
     title: string
     subtitle: string
-    southoneLabel: string
-    hotaiLabel: string
+    moreCta: string
     expand: string
     collapse: string
     situation: string

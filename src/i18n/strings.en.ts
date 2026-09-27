@@ -24,9 +24,8 @@ const strings: AppStrings = {
   },
   projects: {
     title: 'Project Experience',
-    subtitle: 'Six full case studies from Nani, plus earlier product-assistant work at Hotai.',
-    southoneLabel: 'Nani · Systems & Infrastructure PM',
-    hotaiLabel: 'Hotai Motor · Product-Assistant Origins',
+    subtitle: '3 representative case studies below — see the Project Experience page for the complete picture.',
+    moreCta: 'See more project experience →',
     expand: 'Expand full case study',
     collapse: 'Collapse',
     situation: 'Situation',

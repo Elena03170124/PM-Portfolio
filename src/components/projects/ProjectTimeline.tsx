@@ -1,11 +1,18 @@
 import { southoneProjects } from '../../content/projects.southone'
-import { hotaiProjects } from '../../content/projects.hotai'
 import { getCompetency } from '../../content'
 import type { CompetencyId } from '../../content/types'
 import { useLocale } from '../../i18n/LocaleContext'
 import { SectionHeading } from '../common/SectionHeading'
 import { Reveal } from '../common/Reveal'
 import { ProjectCard } from './ProjectCard'
+
+const BASE = import.meta.env.BASE_URL
+
+/** The 3 flagship 南一集團 case studies, most recent first — a homepage teaser.
+ *  The complete set (plus the growth-comparison narrative) lives on the
+ *  dedicated Project Experience page; see strings.projects.subtitle/moreCta. */
+const FLAGSHIP_IDS = ['member-auth-unification', 'edu-cloud-integration', 'dual-system-merge']
+const flagshipProjects = FLAGSHIP_IDS.map((id) => southoneProjects.find((p) => p.id === id)!)
 
 export function ProjectTimeline({ activeCompetencyId }: { activeCompetencyId: CompetencyId | null }) {
   const { t, strings } = useLocale()
@@ -29,30 +36,21 @@ export function ProjectTimeline({ activeCompetencyId }: { activeCompetencyId: Co
         </div>
       )}
 
-      <div className="mt-10">
-        <p className="font-mono text-[11px] uppercase tracking-[0.1em] text-muted-dim mb-4">
-          {strings.projects.southoneLabel}
-        </p>
-        <div className="grid gap-5">
-          {southoneProjects.map((p) => (
-            <Reveal key={p.id}>
-              <ProjectCard project={p} dimmed={isDimmed(p.competencyIds)} />
-            </Reveal>
-          ))}
-        </div>
+      <div className="mt-10 grid gap-5">
+        {flagshipProjects.map((p) => (
+          <Reveal key={p.id}>
+            <ProjectCard project={p} dimmed={isDimmed(p.competencyIds)} />
+          </Reveal>
+        ))}
       </div>
 
-      <div className="mt-16">
-        <p className="font-mono text-[11px] uppercase tracking-[0.1em] text-muted-dim mb-4">
-          {strings.projects.hotaiLabel}
-        </p>
-        <div className="grid gap-5">
-          {hotaiProjects.map((p) => (
-            <Reveal key={p.id}>
-              <ProjectCard project={p} dimmed={isDimmed(p.competencyIds)} />
-            </Reveal>
-          ))}
-        </div>
+      <div className="mt-10">
+        <a
+          href={`${BASE}projects/#nani`}
+          className="font-mono text-[13px] text-accent underline underline-offset-4 transition-opacity hover:opacity-80"
+        >
+          {strings.projects.moreCta}
+        </a>
       </div>
     </section>
   )

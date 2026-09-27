@@ -24,9 +24,8 @@ const strings: AppStrings = {
   },
   projects: {
     title: '專案經驗',
-    subtitle: '南一集團的 6 個完整案例，加上和泰聯網早期的產品助理經歷。',
-    southoneLabel: '南一集團・系統與架構型 PM',
-    hotaiLabel: '和泰聯網・產品助理起點',
+    subtitle: '以下是 3 個代表案例；完整專案經驗與能力演進歷程，請至「專案經驗」頁面查看。',
+    moreCta: '查看更多專案經驗 →',
     expand: '展開完整案例',
     collapse: '收合',
     situation: '背景',

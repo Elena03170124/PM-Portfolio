@@ -1,4 +1,4 @@
-import type { ReactNode } from 'react'
+import { useEffect, type ReactNode } from 'react'
 import { hotaiProjects, southoneProjects } from '../content'
 import type { Project } from '../content/types'
 import { useLocale } from '../i18n/LocaleContext'
@@ -286,11 +286,13 @@ function ProjectCard({ project, archival }: { project: Project; archival?: boole
 }
 
 function ProjectGroup({
+  id,
   title,
   note,
   projects,
   archival,
 }: {
+  id?: string
   title: string
   note?: ReactNode
   projects: Project[]
@@ -298,7 +300,7 @@ function ProjectGroup({
 }) {
   return (
     <Reveal>
-      <section className="mt-14">
+      <section id={id} className="mt-14 scroll-mt-24">
         <h2 className="font-serif text-[22px] font-semibold text-ink sm:text-[26px]">{title}</h2>
         {note && <div className="mt-4">{note}</div>}
         <div className="mt-6 grid gap-5 md:grid-cols-2">
@@ -339,6 +341,14 @@ function ArchivalNote() {
 export function ProjectsPage() {
   const { t } = useLocale()
 
+  // Arriving via "projects/#nani" (e.g. from the homepage teaser): the sections
+  // are rendered by React after load, so the browser's own anchor scroll finds
+  // nothing yet. Do it here once mounted — same fix as App.tsx's "#projects".
+  useEffect(() => {
+    const id = decodeURIComponent(window.location.hash.slice(1))
+    if (id) document.getElementById(id)?.scrollIntoView()
+  }, [])
+
   return (
     <SiteShell current="projects">
       <section className="pb-12 pt-16 sm:pb-14 sm:pt-24">
@@ -363,6 +373,7 @@ export function ProjectsPage() {
       <GrowthCompare />
 
       <ProjectGroup
+        id="nani"
         title={t({ zh: '南一集團・跨系統平台整合串接', en: 'Nani · cross-system platform integration' })}
         projects={southoneProjects}
       />
