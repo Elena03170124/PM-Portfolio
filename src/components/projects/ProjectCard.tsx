@@ -21,7 +21,7 @@ export function ProjectCard({ project, dimmed }: { project: Project; dimmed: boo
       <div id={`project-${project.id}`} className="scroll-mt-24">
         <div className="flex flex-wrap items-center gap-2 mb-3">
           <CompanyBadge company={project.company} label={t(project.companyLabel)} />
-          <span className="font-mono text-[11px] text-muted-dim">{t(project.period)}</span>
+          {project.period && <span className="font-mono text-[11px] text-muted-dim">{t(project.period)}</span>}
         </div>
 
         <h3 className="font-serif text-[19px] sm:text-[21px] font-semibold text-ink leading-snug text-balance">

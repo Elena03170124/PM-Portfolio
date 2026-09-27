@@ -10,7 +10,6 @@ export const hotaiProjects: Project[] = [
     id: 'hotai-spec-logic-flow',
     company: 'hotai',
     companyLabel: { zh: '和泰聯網', en: 'Hotai Motor — digital division' },
-    period: { zh: '2023.11 – 2024.02', en: '2023.11 – 2024.02' },
     title: {
       zh: '功能開發前｜製作 Logic Flow、SPEC 文件與產品文案發想',
       en: 'Pre-development: Logic Flow, Spec Docs & Product Copy',
@@ -39,7 +38,6 @@ export const hotaiProjects: Project[] = [
     id: 'hotai-qa-launch-quality',
     company: 'hotai',
     companyLabel: { zh: '和泰聯網', en: 'Hotai Motor — digital division' },
-    period: { zh: '2023.06 – 2024.02', en: '2023.06 – 2024.02' },
     title: {
       zh: '功能上線前｜App 品質驗收與流程文案優化',
       en: 'Pre-launch: QA Sign-off & Flow/Copy Polish',
@@ -68,7 +66,6 @@ export const hotaiProjects: Project[] = [
     id: 'hotai-post-launch-feedback',
     company: 'hotai',
     companyLabel: { zh: '和泰聯網', en: 'Hotai Motor — digital division' },
-    period: { zh: '2023.06 – 2024.02', en: '2023.06 – 2024.02' },
     title: {
       zh: '功能上線後｜使用者訪談、優化建議與指標定義',
       en: 'Post-launch: User Interviews, Optimization & Metrics',

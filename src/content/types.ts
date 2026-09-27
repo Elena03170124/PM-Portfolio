@@ -50,8 +50,9 @@ export interface Project {
   id: string
   company: Company
   companyLabel: Bilingual
-  /** Display string, e.g. "2025.09 – 2025.11" */
-  period: Bilingual
+  /** Display string, e.g. "2025.09 – 2025.11". Omitted for early, informal work
+   *  (the Hotai archival group) that isn't dated as a formal project. */
+  period?: Bilingual
   title: Bilingual
   /** One-line summary shown on the collapsed card. */
   summary: Bilingual

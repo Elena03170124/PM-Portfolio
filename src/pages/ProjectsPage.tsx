@@ -242,14 +242,16 @@ function ProjectCard({ project, archival }: { project: Project; archival?: boole
         archival ? 'border-dashed border-rule' : 'border-rule'
       } ${hasDetail ? 'bg-surface transition-colors hover:border-accent-dim' : 'bg-disabled'}`}
     >
-      <div className="flex items-center justify-between gap-3">
-        <p className="font-mono text-[11.5px] text-muted">{t(project.period)}</p>
-        {archival && (
-          <span className="rounded-full border border-rule px-2 py-0.5 font-mono text-[10px] uppercase tracking-[0.06em] text-muted-dim">
-            {t({ zh: '原始樣貌', en: 'Unedited' })}
-          </span>
-        )}
-      </div>
+      {(project.period || archival) && (
+        <div className={`flex items-center gap-3 ${project.period ? 'justify-between' : 'justify-end'}`}>
+          {project.period && <p className="font-mono text-[11.5px] text-muted">{t(project.period)}</p>}
+          {archival && (
+            <span className="rounded-full border border-rule px-2 py-0.5 font-mono text-[10px] uppercase tracking-[0.06em] text-muted-dim">
+              {t({ zh: '原始樣貌', en: 'Unedited' })}
+            </span>
+          )}
+        </div>
+      )}
       <h3 className="mt-2 font-serif text-[18px] font-semibold leading-[1.45] text-ink sm:text-[19px]">
         {hasDetail ? (
           <a href={`${BASE}projects/${project.id}/`} className="after:absolute after:inset-0">
