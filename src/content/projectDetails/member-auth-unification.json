@@ -5,10 +5,10 @@
  "company": "南一集團母公司【南一書局企業】",
  "period": "2025.11 – 2026.01",
  "competencies": [
-  "平台架構規劃能力",
-  "跨系統整合能力",
-  "陌生技術理解能力",
-  "跨域溝通能力"
+  "平台架構規劃",
+  "跨系統整合",
+  "陌生技術理解",
+  "跨域溝通"
  ],
  "platforms": [
   "NaniClub會員系統",
@@ -26,7 +26,7 @@
    "num": "1",
    "title": "PM能力應用分析",
    "kind": "fold",
-   "html": "<p class=\"nb-purpose\">說明在專案中扮演什麼角色、提升了哪些專業能力</p><details class=\"nb-fold\"><summary><span>1. 平台架構規劃與跨系統整合能力</span></summary><div class=\"nb-fold-body\"><ol><li><strong>將使用者流程問題提升至架構層思考</strong><ul><li>從跨服務重複登入、身份驗證失敗等使用者體驗問題出發。</li><li>將問題定義由介面層提升至系統架構層。</li></ul></li><li><strong>推動身份資料治理與跨系統整合</strong><ul><li>分析跨系統身份驗證流程與資料來源間的相依性。</li><li>協助團隊推動一致的身份驗證機制落地。</li></ul></li><li><strong>深化平台型服務思維</strong><ul><li>理解登入驗證、身份識別統一化是平台基礎能力的一部分。</li><li>以可複用性、系統擴展效率及長期整合成本等角度，思考產品與系統架構決策，</li><li>為新服務導入建立可延續基礎。</li></ul></li></ol></div></details><details class=\"nb-fold\"><summary><span><strong>2. 陌生</strong>技術理解與跨域溝通能力</span></summary><div class=\"nb-fold-body\"><ol><li><strong>將技術架構轉化為共同溝通語言</strong><ul><li>主動研究 OIDC 身份驗證流程，將技術理解繪製為流程圖。</li><li>將抽象技術流程轉化為可與非技術單位溝通的共同語言。</li><li>同時提升與工程團隊對齊需求、確認流程及討論風險的效率。</li></ul></li></ol></div></details>"
+   "html": "<p class=\"nb-purpose\">說明在專案中扮演什麼角色、提升了哪些專業能力</p><details class=\"nb-fold\"><summary><span>1. 平台架構規劃與跨系統整合</span></summary><div class=\"nb-fold-body\"><ol><li><strong>將使用者流程問題提升至架構層思考</strong><ul><li>從跨服務重複登入、身份驗證失敗等使用者體驗問題出發。</li><li>將問題定義由介面層提升至系統架構層。</li></ul></li><li><strong>推動身份資料治理與跨系統整合</strong><ul><li>分析跨系統身份驗證流程與資料來源間的相依性。</li><li>協助團隊推動一致的身份驗證機制落地。</li></ul></li><li><strong>深化平台型服務思維</strong><ul><li>理解登入驗證、身份識別統一化是平台基礎能力的一部分。</li><li>以可複用性、系統擴展效率及長期整合成本等角度，思考產品與系統架構決策，</li><li>為新服務導入建立可延續基礎。</li></ul></li></ol></div></details><details class=\"nb-fold\"><summary><span><strong>2. 陌生</strong>技術理解與跨域溝通</span></summary><div class=\"nb-fold-body\"><ol><li><strong>將技術架構轉化為共同溝通語言</strong><ul><li>主動研究 OIDC 身份驗證流程，將技術理解繪製為流程圖。</li><li>將抽象技術流程轉化為可與非技術單位溝通的共同語言。</li><li>同時提升與工程團隊對齊需求、確認流程及討論風險的效率。</li></ul></li></ol></div></details>"
   },
   {
    "id": "sec-2",

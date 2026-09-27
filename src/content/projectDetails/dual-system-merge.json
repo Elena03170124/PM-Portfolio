@@ -5,11 +5,11 @@
  "company": "南一集團子公司【萬通教育】",
  "period": "2024.11 – 2025.04",
  "competencies": [
-  "模糊需求聚焦力",
-  "複雜問題拆解能力",
-  "系統整合理解能力",
-  "專案推進能力",
-  "風險管理能力"
+  "模糊需求聚焦",
+  "複雜問題拆解",
+  "系統整合理解",
+  "專案推進",
+  "風險管理"
  ],
  "platforms": [
   "Live App｜家教家長用",
@@ -27,7 +27,7 @@
    "num": "1",
    "title": "PM能力應用分析",
    "kind": "fold",
-   "html": "<p class=\"nb-purpose\">說明在專案中扮演什麼角色、提升了哪些專業能力</p><details class=\"nb-fold\"><summary><span>1. 模糊需求聚焦力、複雜問題拆解能力</span></summary><div class=\"nb-fold-body\"><ol><li><strong>將抽象整併目標轉化為可執行的專案策略</strong><ul><li>面對僅有「整併家教至補教系統」的模糊需求，</li><li>將整併拆解為使用者、資料與營運三個影響範疇。</li><li>定義第一階段 MVP（家教會員登入、課程顯示、進入教室），建立團隊共同推進依據。</li></ul></li></ol></div></details><details class=\"nb-fold\"><summary><span><strong>2. 系統整合理解能力</strong></span></summary><div class=\"nb-fold-body\"><ol><li><strong>從資料結構理解整體整併策略，非單純規劃功能流程</strong><ul><li>理解會員、班級、課程及後台管理等多套資料模型的相依關係。</li><li>從資料流、系統耦合與資料一致性角度評估整併優先序。</li><li>兼顧既有系統穩定性與技術風險，制定可長期維運的整合方案。</li></ul></li></ol></div></details><details class=\"nb-fold\"><summary><span><strong>3. 專案推進與風險管理能力</strong></span></summary><div class=\"nb-fold-body\"><ol><li><strong>建立大型跨系統專案的上線風險管理機制</strong><ul><li>主動盤點推版順序、前置條件、資料處理時機及跨系統相依關係。</li><li>整理為完整上線檢核指引，使專案順利上線且無重大異常或客訴。</li><li>主管亦回饋該文件為專案成功落地的重要因素。</li></ul></li></ol></div></details>"
+   "html": "<p class=\"nb-purpose\">說明在專案中扮演什麼角色、提升了哪些專業能力</p><details class=\"nb-fold\"><summary><span>1. 模糊需求聚焦、複雜問題拆解</span></summary><div class=\"nb-fold-body\"><ol><li><strong>將抽象整併目標轉化為可執行的專案策略</strong><ul><li>面對僅有「整併家教至補教系統」的模糊需求，</li><li>將整併拆解為使用者、資料與營運三個影響範疇。</li><li>定義第一階段 MVP（家教會員登入、課程顯示、進入教室），建立團隊共同推進依據。</li></ul></li></ol></div></details><details class=\"nb-fold\"><summary><span><strong>2. 系統整合理解</strong></span></summary><div class=\"nb-fold-body\"><ol><li><strong>從資料結構理解整體整併策略，非單純規劃功能流程</strong><ul><li>理解會員、班級、課程及後台管理等多套資料模型的相依關係。</li><li>從資料流、系統耦合與資料一致性角度評估整併優先序。</li><li>兼顧既有系統穩定性與技術風險，制定可長期維運的整合方案。</li></ul></li></ol></div></details><details class=\"nb-fold\"><summary><span><strong>3. 專案推進與風險管理</strong></span></summary><div class=\"nb-fold-body\"><ol><li><strong>建立大型跨系統專案的上線風險管理機制</strong><ul><li>主動盤點推版順序、前置條件、資料處理時機及跨系統相依關係。</li><li>整理為完整上線檢核指引，使專案順利上線且無重大異常或客訴。</li><li>主管亦回饋該文件為專案成功落地的重要因素。</li></ul></li></ol></div></details>"
   },
   {
    "id": "sec-2",
