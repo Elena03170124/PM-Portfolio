@@ -20,8 +20,8 @@
   "MMS營運管理用（資料/訂單/銷售/報表）"
  ],
  "cover": {
-  "src": "%BASE%projects/dual-system-merge/01.png",
-  "caption": "上圖為專案封面圖：班級資料結構調整，大幅降低系統整併後的超載風險"
+  "src": "%BASE%projects/dual-system-merge/05-action-matrix.svg",
+  "caption": "上圖為專案封面圖：三大資料領域（會員班級／課程／前台功能）在兩階段推進中的具體調整規劃"
  },
  "sections": [
   {
