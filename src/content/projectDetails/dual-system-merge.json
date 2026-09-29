@@ -7,8 +7,10 @@
  "competencies": [
   "模糊需求聚焦",
   "複雜問題拆解",
+  "MVP範疇界定",
   "系統整合理解",
-  "專案推進",
+  "跨系統資料對齊",
+  "專案平穩落地",
   "風險管理"
  ],
  "platforms": [
@@ -27,7 +29,7 @@
    "num": "1",
    "title": "PM能力應用分析",
    "kind": "fold",
-   "html": "<p class=\"nb-purpose\">說明在專案中扮演什麼角色、提升了哪些專業能力</p><details class=\"nb-fold\"><summary><span>1. 模糊需求聚焦、複雜問題拆解</span></summary><div class=\"nb-fold-body\"><ol><li><strong>將抽象整併目標轉化為可執行的專案策略</strong><ul><li>面對僅有「整併家教至補教系統」的模糊需求，</li><li>將整併拆解為使用者、資料與營運三個影響範疇。</li><li>定義第一階段 MVP（家教會員登入、課程顯示、進入教室），建立團隊共同推進依據。</li></ul></li></ol></div></details><details class=\"nb-fold\"><summary><span><strong>2. 系統整合理解</strong></span></summary><div class=\"nb-fold-body\"><ol><li><strong>從資料結構理解整體整併策略，非單純規劃功能流程</strong><ul><li>理解會員、班級、課程及後台管理等多套資料模型的相依關係。</li><li>從資料流、系統耦合與資料一致性角度評估整併優先序。</li><li>兼顧既有系統穩定性與技術風險，制定可長期維運的整合方案。</li></ul></li></ol></div></details><details class=\"nb-fold\"><summary><span><strong>3. 專案推進與風險管理</strong></span></summary><div class=\"nb-fold-body\"><ol><li><strong>建立大型跨系統專案的上線風險管理機制</strong><ul><li>主動盤點推版順序、前置條件、資料處理時機及跨系統相依關係。</li><li>整理為完整上線檢核指引，使專案順利上線且無重大異常或客訴。</li><li>主管亦回饋該文件為專案成功落地的重要因素。</li></ul></li></ol></div></details>"
+   "html": "<p class=\"nb-purpose\">說明在專案中扮演什麼角色、提升了哪些專業能力</p><details class=\"nb-fold\"><summary><span>1. 模糊需求梳理／複雜問題拆解</span></summary><div class=\"nb-fold-body\"><ol><li><strong>將抽象整併目標轉化為可執行的專案策略</strong><ul><li>面對僅有「整併家教至補教系統」的模糊需求，</li><li>將整併拆解為使用者、資料與營運三個影響範疇。</li><li>定義第一階段 MVP（家教會員登入、課程顯示、進入教室），建立團隊共同推進依據。</li></ul></li></ol></div></details><details class=\"nb-fold\"><summary><span><strong>2. 跨系統整併／多套資料模型對齊</strong></span></summary><div class=\"nb-fold-body\"><ol><li><strong>從資料結構理解整體整併策略，非單純規劃功能流程</strong><ul><li>理解會員、班級、課程及後台管理等多套資料模型的相依關係。</li><li>從資料流、系統耦合與資料一致性角度評估整併優先序。</li><li>兼顧既有系統穩定性與技術風險，制定可長期維運的整合方案。</li></ul></li><li><strong>針對無法直接整併的資料欄位，改採用統一資料取用來源</strong><ul><li>雙系統班級資料欄位差異甚遠，因此改採統一課程資料存放取用來源。</li><li>透過此法達成「降低雙系統重複維運開發」的目標。</li></ul></li></ol></div></details><details class=\"nb-fold\"><summary><span><strong>3. 大型專案推進／跨部門協作風險管理</strong></span></summary><div class=\"nb-fold-body\"><ol><li><strong>建立大型跨系統專案的上線風險管理機制</strong><ul><li>主動盤點推版順序、前置條件、資料處理時機及跨系統相依關係。</li><li>整理為完整上線檢核指引，使專案順利上線且無重大異常或客訴。</li><li>主管亦回饋該文件為專案成功落地的重要因素。</li></ul></li><li><strong>落實詳盡跨部門教育訓練，消彌資訊落差</strong><ul><li>製作約50頁篇幅的詳細教育訓練手冊，協助非研發部門適應整併系統。</li><li>主導過2場對公司內多個內勤部門的教育訓練會。</li><li>透過資訊同步降低整併項目上線後的誤操作風險。</li></ul></li></ol></div></details>"
   },
   {
    "id": "sec-2",
@@ -58,5 +60,20 @@
    "html": "<p class=\"nb-purpose\">專案上線前使用的檢核與訓練文件</p><div class=\"nb-files\"><a class=\"nb-file\" href=\"%BASE%projects/dual-system-merge/appendix-training-manual.pdf\" target=\"_blank\" rel=\"noopener\"><span class=\"nb-file-icon\">PDF</span><span class=\"nb-file-body\"><span class=\"nb-file-name\">跨部門教育訓練手冊</span><span class=\"nb-file-meta\">家教學生改用補教系統上課．操作教學手冊</span></span></a></div>"
   }
  ],
- "sourceEditedAt": "2026-08-02T09:32:25.715Z"
+ "sourceEditedAt": "2026-08-02T09:32:25.715Z",
+ "scope": {
+  "time": "2024.11 – 2025.04",
+  "duration": "7個月",
+  "headcount": "7人",
+  "stakeholders": [
+   {
+    "dept": "研發部",
+    "roles": "前端工程師、後端工程師、補教系統PM、QA、UX設計師"
+   },
+   {
+    "dept": "外單位",
+    "roles": "客服處、業務處、顧問處、輔導處、教務處及其他內勤單位"
+   }
+  ]
+ }
 }

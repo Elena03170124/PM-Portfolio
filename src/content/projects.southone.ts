@@ -13,8 +13,8 @@ export const southoneProjects: Project[] = [
       en: 'Tutoring × Home-Tutoring System Merge',
     },
     summary: {
-      zh: '首次主導的大型跨系統整合：把模糊的「系統合併」目標拆成分階段落地策略，班級結構收斂 5000→60 個。',
-      en: "My first large cross-system integration: turned a vague 'merge the two systems' mandate into a phased rollout, and consolidated class structures from ~5,000 down to 60.",
+      zh: '沒有既定系統整併規格可參照，要同時考慮既有系統穩定性、使用者適應成本、系統資料大規模移轉風險，推動整合結果順利落地。',
+      en: 'With no existing spec to follow for the merge, I had to weigh legacy system stability, user adaptation cost, and the risk of migrating data at scale — all while driving the integration to a clean landing.',
     },
     star: {
       situation: {
@@ -40,8 +40,8 @@ export const southoneProjects: Project[] = [
     },
     metrics: [
       { value: { zh: '5000 → 60', en: '5,000 → 60' }, label: { zh: '班級結構收斂', en: 'classes consolidated' } },
-      { value: { zh: '約 98%', en: '~98%' }, label: { zh: '班級數降幅', en: 'reduction in class count' } },
-      { value: { zh: '8 個月', en: '8 months' }, label: { zh: '推進至第一階段上線', en: 'to phase-one launch' } },
+      { value: { zh: '98%', en: '98%' }, label: { zh: '資料收斂降低超載風險', en: 'data consolidated, overload risk cut' } },
+      { value: { zh: '7個月', en: '7 months' }, label: { zh: '第一階段整合順利上線', en: 'clean phase-one launch' } },
     ],
     competencyIds: ['requirements', 'tech', 'risk', 'project-mgmt', 'ux'],
     highlights: [
