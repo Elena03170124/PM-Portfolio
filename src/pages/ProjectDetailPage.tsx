@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react'
+import { memo, useEffect, useRef, useState } from 'react'
 import { allProjects } from '../content'
 import { useLocale } from '../i18n/LocaleContext'
 import { SiteShell } from '../components/layout/SiteShell'
@@ -114,7 +114,7 @@ function Lightbox({ src, onClose }: { src: string; onClose: () => void }) {
   )
 }
 
-function SectionBody({ section }: { section: DetailSection }) {
+function SectionBodyImpl({ section }: { section: DetailSection }) {
   const { t } = useLocale()
   const ref = useRef<HTMLDivElement>(null)
 
@@ -144,6 +144,8 @@ function SectionBody({ section }: { section: DetailSection }) {
     </section>
   )
 }
+
+const SectionBody = memo(SectionBodyImpl)
 
 export function ProjectDetailPage({ slug }: { slug: string }) {
   const { t, locale } = useLocale()
