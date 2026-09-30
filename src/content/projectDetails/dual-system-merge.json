@@ -57,7 +57,7 @@
    "num": "5",
    "title": "附錄：風險檢核表與跨部門教育訓練手冊",
    "kind": "card",
-   "html": "<p class=\"nb-purpose\">專案上線前使用的檢核與訓練文件</p><div class=\"nb-files\"><a class=\"nb-file\" href=\"%BASE%projects/dual-system-merge/appendix-training-manual.pdf\" target=\"_blank\" rel=\"noopener\"><span class=\"nb-file-icon\">PDF</span><span class=\"nb-file-body\"><span class=\"nb-file-name\">跨部門教育訓練手冊</span><span class=\"nb-file-meta\">家教學生改用補教系統上課．操作教學手冊</span></span></a></div>"
+   "html": "<p class=\"nb-purpose\">專案上線前使用的檢核與訓練文件（皆為對外公開版，機密與敏感資訊已全數處理）</p><div class=\"nb-files\"><a class=\"nb-file\" href=\"%BASE%projects/dual-system-merge/appendix-training-manual.pdf\" target=\"_blank\" rel=\"noopener\"><span class=\"nb-file-icon\">PDF</span><span class=\"nb-file-body\"><span class=\"nb-file-name\">跨部門教育訓練手冊</span><span class=\"nb-file-meta\">家教學生登入 Link+ 上課．操作教學手冊（公開版）</span></span></a><a class=\"nb-file\" href=\"%BASE%projects/dual-system-merge/appendix-risk-checklist.pdf\" target=\"_blank\" rel=\"noopener\"><span class=\"nb-file-icon\">PDF</span><span class=\"nb-file-body\"><span class=\"nb-file-name\">上線風險檢核表</span><span class=\"nb-file-meta\">Live 合併 Link+．上線檢核項目（公開版）</span></span></a></div>"
   }
  ],
  "sourceEditedAt": "2026-08-02T09:32:25.715Z",
