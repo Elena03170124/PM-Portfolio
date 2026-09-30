@@ -15,7 +15,7 @@
 <text x="186" y="303.4" font-family="-apple-system, 'PingFang TC', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif" font-size="15" fill="#26161c"><tspan fill="#c2748f" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace">–</tspan> 依輔導／顧問所屬組別，對應分校與班級</text>
 <text x="186" y="333.4" font-family="-apple-system, 'PingFang TC', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif" font-size="15" fill="#26161c"><tspan fill="#c2748f" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace">–</tspan> 將家教學生5000班收斂成60班級數</text>
 <rect x="698" y="192" width="512" height="176" rx="16" fill="#fdfaf9"/>
-<text x="720" y="232.4" font-family="-apple-system, 'PingFang TC', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif" font-weight="700" font-size="16" fill="#9c2f52">協助營運單位改以補教系統管理會員資料</text>
+<text x="720" y="232.4" font-family="-apple-system, 'PingFang TC', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif" font-weight="700" font-size="16" fill="#85746b">協助營運單位改以補教系統管理會員資料</text>
 <text x="720" y="273.4" font-family="-apple-system, 'PingFang TC', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif" font-size="15" fill="#26161c"><tspan fill="#c2748f" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace">–</tspan> 建立營運後台資料與補教系統前台顯示間的聯動</text>
 <text x="720" y="303.4" font-family="-apple-system, 'PingFang TC', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif" font-size="15" fill="#26161c"><tspan fill="#c2748f" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace">–</tspan> 建立同步規則：年級異動、會員停用／啟用</text>
 <rect x="78" y="388.0" width="64" height="203.0" rx="12" fill="#9c2f52"/>
@@ -27,7 +27,7 @@
 <text x="186" y="529.4" font-family="-apple-system, 'PingFang TC', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif" font-size="15" fill="#26161c"><tspan fill="#c2748f" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace">–</tspan> 家教學生登入補教系統時，觸發API讀取MMS課程資料</text>
 <text x="186" y="559.4" font-family="-apple-system, 'PingFang TC', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif" font-size="15" fill="#26161c"><tspan fill="#c2748f" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace">–</tspan> 讓學生即使改用補教系統，也能看到並完成原定課程</text>
 <rect x="698" y="388" width="512" height="203" rx="16" fill="#fdfaf9"/>
-<text x="720" y="428.4" font-family="-apple-system, 'PingFang TC', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif" font-weight="700" font-size="16" fill="#9c2f52">逐步統一課程資料取用與存放來源</text>
+<text x="720" y="428.4" font-family="-apple-system, 'PingFang TC', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif" font-weight="700" font-size="16" fill="#85746b">逐步統一課程資料取用與存放來源</text>
 <text x="720" y="469.4" font-family="-apple-system, 'PingFang TC', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif" font-size="15" fill="#26161c"><tspan fill="#c2748f" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace">–</tspan> 因使用情境差異甚遠，雙系統課程欄位難以相容合併</text>
 <text x="720" y="499.4" font-family="-apple-system, 'PingFang TC', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif" font-size="15" fill="#26161c"><tspan fill="#c2748f" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace">–</tspan> 由「合併」改為「統一取用來源」策略</text>
 <text x="720" y="529.4" font-family="-apple-system, 'PingFang TC', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif" font-size="15" fill="#26161c"><tspan fill="#c2748f" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace">–</tspan> 雙系統課程資料逐步統一由MMS管理</text>
@@ -42,7 +42,7 @@
 <text x="186" y="782.4" font-family="-apple-system, 'PingFang TC', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif" font-size="15" fill="#26161c"><tspan fill="#c2748f" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace">–</tspan> 處理跨系統引發的身份與權限判讀問題</text>
 <text x="186" y="812.4" font-family="-apple-system, 'PingFang TC', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif" font-size="15" fill="#26161c"><tspan fill="#c2748f" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace">–</tspan> 以「功能入口／來源路徑」判斷是否進行家長學生身份轉換</text>
 <rect x="698" y="611" width="512" height="233" rx="16" fill="#fdfaf9"/>
-<text x="720" y="651.4" font-family="-apple-system, 'PingFang TC', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif" font-weight="700" font-size="16" fill="#9c2f52">以前台功能支援營運單位，改以補教系統管理學生與班級</text>
+<text x="720" y="651.4" font-family="-apple-system, 'PingFang TC', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif" font-weight="700" font-size="16" fill="#85746b">以前台功能支援營運單位，改以補教系統管理學生與班級</text>
 <text x="720" y="692.4" font-family="-apple-system, 'PingFang TC', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif" font-size="15" fill="#26161c"><tspan fill="#c2748f" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace">–</tspan> 以前置完成的新分班邏輯為基礎，依「分校 × 年級」進行</text>
 <text x="736" y="722.4" font-family="-apple-system, 'PingFang TC', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif" font-size="15" fill="#26161c">班級重分配</text>
 <text x="720" y="752.4" font-family="-apple-system, 'PingFang TC', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif" font-size="15" fill="#26161c"><tspan fill="#c2748f" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace">–</tspan> 使營運角色可依據權限管理範圍，檢視學生班級與課程資訊</text>
