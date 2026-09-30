@@ -140,8 +140,8 @@ export const southoneProjects: Project[] = [
       },
     },
     metrics: [
-      { value: { zh: '1 組憑證', en: '1 credential' }, label: { zh: '跨全服務單一登入', en: 'single sign-on across every service' } },
-      { value: { zh: 'OIDC', en: 'OIDC' }, label: { zh: '自主研究並落地的協議', en: 'protocol I self-studied and shipped' } },
+      { value: { zh: '1種跨服務身份驗證機制', en: '1 identity method, used platform-wide' }, label: { zh: '跨全服務單一登入', en: 'single sign-on across every service' } },
+      { value: { zh: 'OIDC', en: 'OIDC' }, label: { zh: '繪製作業流程圖並推動落地', en: 'mapped the workflow and drove it live' } },
     ],
     competencyIds: ['tech', 'stakeholder', 'product-strategy'],
     highlights: [

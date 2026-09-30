@@ -5,10 +5,9 @@
  "company": "南一集團母公司【南一書局企業】",
  "period": "2025.11 – 2026.01",
  "competencies": [
-  "平台架構規劃",
-  "跨系統整合",
-  "陌生技術理解",
-  "跨域溝通"
+  "跨系統整合規劃",
+  "技術流程理解與轉譯",
+  "平台架構拓展考量"
  ],
  "platforms": [
   "NaniClub會員系統",
@@ -16,6 +15,15 @@
   "NaniPaper雲端出題系統",
   "NaniBox備課教材系統"
  ],
+ "scope": {
+  "time": "2025.11 – 2026.01",
+  "duration": "3個月",
+  "headcount": "3人",
+  "stakeholders": [
+   { "dept": "研發部", "roles": "前端工程師、後端工程師、UX設計師" },
+   { "dept": "外單位", "roles": "欲串接南一會員中心登入服務者" }
+  ]
+ },
  "cover": {
   "src": "%BASE%projects/member-auth-unification/01.png",
   "caption": "上圖為專案封面圖：完整跨服務整合的會員登入入口"
@@ -33,7 +41,7 @@
    "num": "2",
    "title": "專案價值分析",
    "kind": "fold",
-   "html": "<p class=\"nb-purpose\">說明專案可以為商業、使用者、技術等面向帶來的長期價值</p><details class=\"nb-fold\"><summary><span>1. 技術開發維運價值</span></summary><div class=\"nb-fold-body\"><ol><li><strong>建立一致身份治理機制，降低跨系統整合複雜度</strong><ul><li>整合各系統的身份識別、登入驗證流程，建立一致的身份治理機制。</li><li>避免服務各自維護登入邏輯，以降低後續新服務導入與維運的複雜度。</li></ul></li></ol></div></details><details class=\"nb-fold\"><summary><span><strong>2.</strong> 商業價值</span></summary><div class=\"nb-fold-body\"><ol><li><strong>提升平台整合能力，並強化服務拓展力</strong><ul><li>後續產品功能擴充、新服務串接及平台發展具備更高效率與一致性。</li></ul></li></ol></div></details><details class=\"nb-fold\"><summary><span><strong>3. 使用者價值</strong></span></summary><div class=\"nb-fold-body\"><ol><li><strong>建立單一登入SSO（Single Sign-On）體驗，降低跨服務使用門檻</strong><ul><li>使用者無須重複建立帳號或反覆登入，即可於各服務間流暢切換。</li><li>降低操作成本並提升整體使用體驗、維持服務的市場競爭力。</li></ul></li></ol></div></details>"
+   "html": "<p class=\"nb-purpose\">說明專案可以為商業、使用者、技術等面向帶來的長期價值</p><details class=\"nb-fold\"><summary><span class=\"nb-fold-heading\"><span>1. 技術開發維運價值</span><span class=\"nb-purpose\">建立一致身份治理機制，降低跨系統整合複雜度</span></span></summary><div class=\"nb-fold-body\"><ul><li>整合各系統的身份識別、登入驗證流程，建立一致的身份治理機制。</li><li>避免服務各自維護登入邏輯，以降低後續新服務導入與維運的複雜度。</li></ul></div></details><details class=\"nb-fold\"><summary><span class=\"nb-fold-heading\"><span>2. 商業價值</span><span class=\"nb-purpose\">提升平台整合能力，並強化服務拓展力</span></span></summary><div class=\"nb-fold-body\"><ul><li>後續產品功能擴充、新服務串接及平台發展具備更高效率與一致性。</li></ul></div></details><details class=\"nb-fold\"><summary><span class=\"nb-fold-heading\"><span>3. 使用者價值</span><span class=\"nb-purpose\">建立單一登入SSO（Single Sign-On）體驗，降低跨服務使用門檻</span></span></summary><div class=\"nb-fold-body\"><ul><li>使用者無須重複建立帳號或反覆登入，即可於各服務間流暢切換。</li><li>降低操作成本並提升整體使用體驗、維持服務的市場競爭力。</li></ul></div></details>"
   },
   {
    "id": "sec-3",
