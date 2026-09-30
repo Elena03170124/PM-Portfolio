@@ -106,6 +106,52 @@ export const southoneProjects: Project[] = [
     },
   },
   {
+    id: 'teacher-auth',
+    company: 'southone',
+    companyLabel: { zh: '南一集團母公司【南一書局企業】', en: 'Nani (parent company)' },
+    title: {
+      zh: '教師身份驗證機制建構｜跨系統資料整合與驗證流程簡化',
+      en: 'Teacher Identity Verification System',
+    },
+    summary: {
+      zh: '建構「自動為主、人工為輔」的雙軌教師驗證機制，並釐清會員中心與業管系統之間的資料治理邊界。',
+      en: 'Built an automatic-first, manual-fallback teacher verification system, and drew a clean data-ownership line between the member center and the internal sales-ops system.',
+    },
+    star: {
+      situation: {
+        zh: '為確保教用功能僅提供給真正的教師使用者，需以「在職學校」與「負責該校業務手機」建構白名單驗證機制。但驗證資料源來自既有業務管理系統而非會員系統，存在跨系統資料結構不一致、更新時間差，以及僑校等特殊學校資料缺漏等現實挑戰。',
+        en: 'To keep teacher-only features restricted to verified teachers, the plan was an allowlist check against "current school" plus "the assigned sales rep\'s phone number" — but that data lived in the sales-ops system, not the member system, and came with mismatched schemas, sync lag, and gaps for edge cases like overseas Chinese schools.',
+      },
+      task: {
+        zh: '規劃「自動為主、人工為輔」的雙軌驗證機制，兼顧驗證效率與例外資料彈性，同時釐清會員中心與業管系統間的資料關聯、主鍵與交換格式，劃分資料維護邊界，避免研發團隊承擔額外的重複維護成本。',
+        en: 'Design an automatic-first, manual-fallback verification flow that stays fast for the common case while staying flexible for messy exceptions — and separately, pin down the data relationship, primary key, and exchange format between the two systems so engineering isn\'t stuck maintaining a duplicate database.',
+      },
+      action: {
+        zh: '把教師註冊過程可能出現的資料狀態歸納為 4 種驗證情境，各自導向明確的自動或人工路徑；代表研發團隊向外部單位溝通，確立以「教育部學校代碼」作為跨系統比對主鍵，並定義標準 JSON 交換格式；堅持把資料維護責任留在源頭業管系統，避免研發重複開發維護 API；把原先橫跨會員中心、Zendesk、Teams 三個服務的人工驗證流程，收攏重構至單一 Microsoft Teams 平台運作。',
+        en: 'Reduced the range of real-world teacher registration states into 4 clear scenarios, each routed to an automatic or manual path; represented engineering in talks with the external sales unit to fix on the Ministry of Education\'s school code as the cross-system matching key and define a standard JSON exchange format; insisted the source-of-truth for the data stay in the sales-ops system rather than have engineering build and maintain a duplicate API; and consolidated a manual-verification flow that originally spanned the member center, Zendesk, and Teams into a single Microsoft Teams workflow.',
+      },
+      result: {
+        zh: '大多數教師能在註冊當下即完成自動驗證，例外情境自然轉入人工審核，維持高可用性與註冊完成率；確立跨系統資料治理邊界，研發團隊免於重複維護學校與業務資料庫的負擔；人工驗證作業集中於 Teams 一鍵審核，大幅簡化跨部門操作流程。',
+        en: 'Most teachers now clear automatic verification at the moment of registration, with edge cases falling cleanly into manual review without breaking the completion rate; the data-ownership boundary held, sparing engineering a duplicate-database maintenance burden; and manual review now happens with one click inside Teams, sharply simplifying what used to be a cross-department chore.',
+      },
+      reflection: {
+        zh: '初期未與工程團隊先對齊建立白名單所需的最小必要欄位，導致工程需額外花時間整理合併資料——這讓我理解到，跨系統資料介接前應先與工程對齊必要／非必要欄位，才能降低整理成本。這個案子也讓我建構起「系統整合維護成本」與「流程與資料驗證需求平衡點取捨」更深化的決策思維，是我成為系統規劃型 PM 的代表案例。',
+        en: 'Not aligning with engineering up front on the minimum required fields cost real cleanup time later — the lesson being: agree on necessary vs. unnecessary fields with engineering before any cross-system data integration starts, not after. This case sharpened my thinking on integration maintenance cost versus verification-flow trade-offs, and it\'s the project I\'d point to as the moment I became a systems-minded PM.',
+      },
+    },
+    metrics: [
+      { value: { zh: '4 種情境', en: '4 scenarios' }, label: { zh: '涵蓋所有驗證路徑', en: 'covering every verification path' } },
+      { value: { zh: '3 → 1 平台', en: '3 → 1 platform' }, label: { zh: '人工驗證流程收攏', en: 'manual review consolidated' } },
+    ],
+    competencyIds: ['stakeholder', 'tech', 'requirements', 'risk'],
+    highlights: [
+      { zh: '資料治理邊界釐清', en: 'clear data-ownership boundary' },
+      { zh: '身份識別與資料對應設計', en: 'identity & data-mapping design' },
+      { zh: '技術流程理解與轉譯溝通', en: 'technical translation across teams' },
+    ],
+    summaryOnly: false,
+  },
+  {
     id: 'member-auth-unification',
     company: 'southone',
     companyLabel: { zh: '南一集團母公司【南一書局企業】', en: 'Nani (parent company)' },
@@ -154,52 +200,6 @@ export const southoneProjects: Project[] = [
       zh: '這個專案讓我從單純做體驗優化，進一步提升到用架構與平台思維去解決問題。',
       en: 'The project that moved me from optimizing experience to solving problems with architecture and platform thinking.',
     },
-  },
-  {
-    id: 'teacher-auth',
-    company: 'southone',
-    companyLabel: { zh: '南一集團母公司【南一書局企業】', en: 'Nani (parent company)' },
-    title: {
-      zh: '教師身份驗證機制建構｜跨系統資料整合與驗證流程簡化',
-      en: 'Teacher Identity Verification System',
-    },
-    summary: {
-      zh: '建構「自動為主、人工為輔」的雙軌教師驗證機制，並釐清會員中心與業管系統之間的資料治理邊界。',
-      en: 'Built an automatic-first, manual-fallback teacher verification system, and drew a clean data-ownership line between the member center and the internal sales-ops system.',
-    },
-    star: {
-      situation: {
-        zh: '為確保教用功能僅提供給真正的教師使用者，需以「在職學校」與「負責該校業務手機」建構白名單驗證機制。但驗證資料源來自既有業務管理系統而非會員系統，存在跨系統資料結構不一致、更新時間差，以及僑校等特殊學校資料缺漏等現實挑戰。',
-        en: 'To keep teacher-only features restricted to verified teachers, the plan was an allowlist check against "current school" plus "the assigned sales rep\'s phone number" — but that data lived in the sales-ops system, not the member system, and came with mismatched schemas, sync lag, and gaps for edge cases like overseas Chinese schools.',
-      },
-      task: {
-        zh: '規劃「自動為主、人工為輔」的雙軌驗證機制，兼顧驗證效率與例外資料彈性，同時釐清會員中心與業管系統間的資料關聯、主鍵與交換格式，劃分資料維護邊界，避免研發團隊承擔額外的重複維護成本。',
-        en: 'Design an automatic-first, manual-fallback verification flow that stays fast for the common case while staying flexible for messy exceptions — and separately, pin down the data relationship, primary key, and exchange format between the two systems so engineering isn\'t stuck maintaining a duplicate database.',
-      },
-      action: {
-        zh: '把教師註冊過程可能出現的資料狀態歸納為 4 種驗證情境，各自導向明確的自動或人工路徑；代表研發團隊向外部單位溝通，確立以「教育部學校代碼」作為跨系統比對主鍵，並定義標準 JSON 交換格式；堅持把資料維護責任留在源頭業管系統，避免研發重複開發維護 API；把原先橫跨會員中心、Zendesk、Teams 三個服務的人工驗證流程，收攏重構至單一 Microsoft Teams 平台運作。',
-        en: 'Reduced the range of real-world teacher registration states into 4 clear scenarios, each routed to an automatic or manual path; represented engineering in talks with the external sales unit to fix on the Ministry of Education\'s school code as the cross-system matching key and define a standard JSON exchange format; insisted the source-of-truth for the data stay in the sales-ops system rather than have engineering build and maintain a duplicate API; and consolidated a manual-verification flow that originally spanned the member center, Zendesk, and Teams into a single Microsoft Teams workflow.',
-      },
-      result: {
-        zh: '大多數教師能在註冊當下即完成自動驗證，例外情境自然轉入人工審核，維持高可用性與註冊完成率；確立跨系統資料治理邊界，研發團隊免於重複維護學校與業務資料庫的負擔；人工驗證作業集中於 Teams 一鍵審核，大幅簡化跨部門操作流程。',
-        en: 'Most teachers now clear automatic verification at the moment of registration, with edge cases falling cleanly into manual review without breaking the completion rate; the data-ownership boundary held, sparing engineering a duplicate-database maintenance burden; and manual review now happens with one click inside Teams, sharply simplifying what used to be a cross-department chore.',
-      },
-      reflection: {
-        zh: '初期未與工程團隊先對齊建立白名單所需的最小必要欄位，導致工程需額外花時間整理合併資料——這讓我理解到，跨系統資料介接前應先與工程對齊必要／非必要欄位，才能降低整理成本。這個案子也讓我建構起「系統整合維護成本」與「流程與資料驗證需求平衡點取捨」更深化的決策思維，是我成為系統規劃型 PM 的代表案例。',
-        en: 'Not aligning with engineering up front on the minimum required fields cost real cleanup time later — the lesson being: agree on necessary vs. unnecessary fields with engineering before any cross-system data integration starts, not after. This case sharpened my thinking on integration maintenance cost versus verification-flow trade-offs, and it\'s the project I\'d point to as the moment I became a systems-minded PM.',
-      },
-    },
-    metrics: [
-      { value: { zh: '4 種情境', en: '4 scenarios' }, label: { zh: '涵蓋所有驗證路徑', en: 'covering every verification path' } },
-      { value: { zh: '3 → 1 平台', en: '3 → 1 platform' }, label: { zh: '人工驗證流程收攏', en: 'manual review consolidated' } },
-    ],
-    competencyIds: ['stakeholder', 'tech', 'requirements', 'risk'],
-    highlights: [
-      { zh: '資料治理邊界釐清', en: 'clear data-ownership boundary' },
-      { zh: '身份識別與資料對應設計', en: 'identity & data-mapping design' },
-      { zh: '技術流程理解與轉譯溝通', en: 'technical translation across teams' },
-    ],
-    summaryOnly: false,
   },
   {
     id: 'leave-flow-rebuild',
