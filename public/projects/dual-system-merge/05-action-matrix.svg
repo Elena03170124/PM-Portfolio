@@ -37,14 +37,14 @@
 <rect x="164" y="611" width="512" height="233" rx="16" fill="#fdfaf9"/>
 <text x="186" y="651.4" font-family="-apple-system, 'PingFang TC', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif" font-weight="700" font-size="16" fill="#9c2f52">降低學生系統切換的操作落差，保留原系統關鍵服務與使用模式</text>
 <text x="186" y="692.4" font-family="-apple-system, 'PingFang TC', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif" font-size="15" fill="#26161c"><tspan fill="#c2748f" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace">–</tspan> 保留家教服務原登入口，登入時自動轉導至補教系統首頁</text>
-<text x="186" y="722.4" font-family="-apple-system, 'PingFang TC', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif" font-size="15" fill="#26161c"><tspan fill="#c2748f" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace">–</tspan> 延續家教系統「家庭共用帳號、登入後可切換子帳號」的特</text>
-<text x="202" y="752.4" font-family="-apple-system, 'PingFang TC', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif" font-size="15" fill="#26161c">性，免去重新註冊新服務帳號的不便性</text>
+<text x="186" y="722.4" font-family="-apple-system, 'PingFang TC', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif" font-size="15" fill="#26161c"><tspan fill="#c2748f" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace">–</tspan> 延續「家庭共用帳號、登入後可切換子帳號」的特性，免去</text>
+<text x="202" y="752.4" font-family="-apple-system, 'PingFang TC', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif" font-size="15" fill="#26161c">重新註冊新服務帳號的不便性</text>
 <text x="186" y="782.4" font-family="-apple-system, 'PingFang TC', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif" font-size="15" fill="#26161c"><tspan fill="#c2748f" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace">–</tspan> 處理跨系統引發的身份與權限判讀問題</text>
 <text x="186" y="812.4" font-family="-apple-system, 'PingFang TC', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif" font-size="15" fill="#26161c"><tspan fill="#c2748f" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace">–</tspan> 以「功能入口／來源路徑」判斷是否進行家長學生身份轉換</text>
 <rect x="698" y="611" width="512" height="233" rx="16" fill="#fdfaf9"/>
 <text x="720" y="651.4" font-family="-apple-system, 'PingFang TC', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif" font-weight="700" font-size="16" fill="#9c2f52">以前台功能支援營運單位，改以補教系統管理學生與班級</text>
-<text x="720" y="692.4" font-family="-apple-system, 'PingFang TC', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif" font-size="15" fill="#26161c"><tspan fill="#c2748f" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace">–</tspan> 以前置完成的新分班邏輯為基礎，依「分校 × 年級」進</text>
-<text x="736" y="722.4" font-family="-apple-system, 'PingFang TC', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif" font-size="15" fill="#26161c">行班級重分配</text>
+<text x="720" y="692.4" font-family="-apple-system, 'PingFang TC', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif" font-size="15" fill="#26161c"><tspan fill="#c2748f" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace">–</tspan> 以前置完成的新分班邏輯為基礎，依「分校 × 年級」進行</text>
+<text x="736" y="722.4" font-family="-apple-system, 'PingFang TC', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif" font-size="15" fill="#26161c">班級重分配</text>
 <text x="720" y="752.4" font-family="-apple-system, 'PingFang TC', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif" font-size="15" fill="#26161c"><tspan fill="#c2748f" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace">–</tspan> 使營運角色可依據權限管理範圍，檢視學生班級與課程資訊</text>
 <rect x="906" y="16" width="270" height="96" rx="12" fill="#f0e6e2"/>
 <text x="920" y="34" font-family="-apple-system, 'PingFang TC', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif" font-weight="700" font-size="10.5" letter-spacing="0.04em" fill="#9c2f52">關聯服務說明</text>
