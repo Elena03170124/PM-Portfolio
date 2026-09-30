@@ -44,7 +44,8 @@ const strings: AppStrings = {
     copied: '已複製email',
   },
   footer: {
-    note: '內容整理自個人 Notion 專案文件，如有錯誤或想進一步了解案例細節，歡迎聯繫。',
+    note: '內容整理自個人 Notion 文件，如想進一步了解專案細節，歡迎聯繫：',
+    disclaimer: '部分尚未完成的頁面暫不開放瀏覽，敬請見諒。',
   },
 }
 

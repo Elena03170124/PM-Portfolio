@@ -44,7 +44,8 @@ const strings: AppStrings = {
     copied: 'Email copied',
   },
   footer: {
-    note: 'Content curated from my own Notion project documentation — reach out for corrections or to go deeper on any case study.',
+    note: 'Content curated from my own Notion project documentation — reach out to go deeper on any case study:',
+    disclaimer: "A few pages are still being finished and aren't open yet — thanks for your understanding.",
   },
 }
 

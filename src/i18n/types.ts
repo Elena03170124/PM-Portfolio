@@ -47,5 +47,6 @@ export interface AppStrings {
   }
   footer: {
     note: string
+    disclaimer: string
   }
 }

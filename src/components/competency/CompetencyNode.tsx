@@ -9,7 +9,7 @@ export function CompetencyNode({ competency }: { competency: Competency }) {
   const count = getCompetencyProjectCount(competency.id)
 
   return (
-    <div className="rounded-[3px] border border-rule bg-disabled p-4 sm:p-5">
+    <div className="rounded-[3px] border border-rule bg-disabled p-4 sm:p-5 cursor-not-allowed">
       <div className="flex items-start justify-between gap-2">
         <span className="font-mono text-[13px] text-muted-dim">{String(competency.index).padStart(2, '0')}</span>
         <span className="font-mono text-[10px] px-1.5 py-0.5 rounded-full border border-rule text-muted-dim/60">
