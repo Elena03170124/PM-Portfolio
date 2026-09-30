@@ -140,7 +140,7 @@ export const southoneProjects: Project[] = [
       },
     },
     metrics: [
-      { value: { zh: '4 種情境', en: '4 scenarios' }, label: { zh: '涵蓋所有驗證路徑', en: 'covering every verification path' } },
+      { value: { zh: '4大類', en: '4 categories' }, label: { zh: '涵蓋邊界驗證情境', en: 'covering edge-case verification scenarios' } },
       { value: { zh: '3 → 1 平台', en: '3 → 1 platform' }, label: { zh: '人工驗證流程收攏', en: 'manual review consolidated' } },
     ],
     competencyIds: ['stakeholder', 'tech', 'requirements', 'risk'],

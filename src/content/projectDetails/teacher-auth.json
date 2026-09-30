@@ -8,10 +8,11 @@
   "複雜問題拆解",
   "邏輯情境設計",
   "跨系統資料治理",
-  "規格對齊",
+  "欄位資料對齊",
   "權責範疇界定",
-  "系統架構簡化",
-  "維運成本控制"
+  "作業流程簡化",
+  "維運成本控制",
+  "人工驗證平台收斂"
  ],
  "platforms": [
   "NaniClub會員系統",
@@ -20,6 +21,17 @@
   "Microsoft Power Automate",
   "Zendesk"
  ],
+ "scope": {
+  "time": "2025.09 – 2025.11",
+  "duration": "3個月",
+  "headcount": "4人",
+  "stakeholders": [
+   { "dept": "研發部", "roles": "前端工程師、後端工程師、UX設計師、QA" },
+   { "dept": "資訊部", "roles": "業管系統介接聯繫窗口" },
+   { "dept": "業務部", "roles": "人工驗證審核者" },
+   { "dept": "教務部", "roles": "中繼表原始資料提供者" }
+  ]
+ },
  "cover": {
   "src": "%BASE%projects/teacher-auth/01.png",
   "caption": "上圖為專案封面圖：與工程對齊串接系統運作邏輯，繪製教師身份驗證流程圖"
