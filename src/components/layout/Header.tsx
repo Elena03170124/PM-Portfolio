@@ -7,14 +7,16 @@ const BASE = import.meta.env.BASE_URL
 
 export type PageId = 'home' | 'about' | 'projects'
 
-type NavKey = 'about' | 'projects' | 'competencies'
+type NavKey = 'about' | 'projects' | 'competencies' | 'honors'
 
 // Sections live on the home page, so their links go through BASE + hash:
 // clicking one on the home page just scrolls, on another page it navigates home first.
-const nav: { key: NavKey; href: string; page?: PageId }[] = [
+// competencies/honors are placeholders with no content yet — disabled, not linked.
+const nav: { key: NavKey; href: string; page?: PageId; disabled?: boolean }[] = [
   { key: 'about', href: `${BASE}about/`, page: 'about' },
   { key: 'projects', href: `${BASE}projects/`, page: 'projects' },
-  { key: 'competencies', href: `${BASE}#competencies` },
+  { key: 'competencies', href: `${BASE}#competencies`, disabled: true },
+  { key: 'honors', href: '', disabled: true },
 ]
 
 function NavLink({
@@ -30,6 +32,14 @@ function NavLink({
   className?: string
   onNavigate?: () => void
 }) {
+  if (item.disabled) {
+    return (
+      <span aria-disabled="true" className={`font-sans tracking-wide text-muted-dim/60 cursor-not-allowed ${className}`}>
+        {label}
+      </span>
+    )
+  }
+
   const isCurrent = item.page === current
   return (
     <a

@@ -7,6 +7,7 @@ export interface AppStrings {
     about: string
     projects: string
     competencies: string
+    honors: string
   }
   languageToggle: {
     label: string
@@ -20,7 +21,6 @@ export interface AppStrings {
   competencyMatrix: {
     title: string
     subtitle: string
-    resetFilter: string
     emptyState: string
     projectCount: (n: number) => string
   }
@@ -36,7 +36,6 @@ export interface AppStrings {
     result: string
     reflection: string
     confidentialNote: string
-    filteredBy: string
   }
   menu: {
     open: string

@@ -5,6 +5,7 @@ const strings: AppStrings = {
     about: '關於我',
     projects: '專案經驗',
     competencies: 'PM能力矩陣',
+    honors: '其他榮譽',
   },
   languageToggle: {
     label: 'EN',
@@ -17,8 +18,7 @@ const strings: AppStrings = {
   },
   competencyMatrix: {
     title: '九大能力矩陣',
-    subtitle: '點一個能力節點，篩選出實際應用它的專案。',
-    resetFilter: '顯示全部專案',
+    subtitle: '涵蓋 PM 核心職能的九個面向，內容整理中。',
     emptyState: '目前尚無對應的已交付專案——這是我近期主動自學、正在累積實作經驗的方向。',
     projectCount: (n: number) => `${n} 個專案`,
   },
@@ -34,7 +34,6 @@ const strings: AppStrings = {
     result: '成果',
     reflection: '反思',
     confidentialNote: '部分文件涉及商業機密，完整原稿可於面談階段提供查核。',
-    filteredBy: '目前篩選：',
   },
   menu: {
     open: '開啟選單',

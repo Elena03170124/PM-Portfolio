@@ -7,16 +7,14 @@ import { Tag } from '../common/Tag'
 import { CompanyBadge } from './CompanyBadge'
 import { STARPanel } from './STARPanel'
 
-export function ProjectCard({ project, dimmed }: { project: Project; dimmed: boolean }) {
+export function ProjectCard({ project }: { project: Project }) {
   const { t, strings } = useLocale()
   const [open, setOpen] = useState(false)
 
   const stats = project.metrics.map((m) => ({ value: t(m.value), label: t(m.label) }))
 
   return (
-    <CornerBracketCard
-      className={`p-5 sm:p-7 transition-opacity duration-300 ${dimmed ? 'opacity-35' : 'opacity-100'}`}
-    >
+    <CornerBracketCard className="p-5 sm:p-7">
       <div id={`project-${project.id}`} className="scroll-mt-24">
         <div className="flex flex-wrap items-center gap-2 mb-3">
           <CompanyBadge company={project.company} label={t(project.companyLabel)} />

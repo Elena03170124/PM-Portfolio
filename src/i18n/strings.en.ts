@@ -5,6 +5,7 @@ const strings: AppStrings = {
     about: 'About',
     projects: 'Project Experience',
     competencies: 'PM Competency Matrix',
+    honors: 'Honors',
   },
   languageToggle: {
     label: '中',
@@ -17,8 +18,7 @@ const strings: AppStrings = {
   },
   competencyMatrix: {
     title: 'The Nine-Competency Matrix',
-    subtitle: 'Click a node to filter the projects that actually applied it.',
-    resetFilter: 'Show all projects',
+    subtitle: 'Nine areas core to the PM role — still being filled in.',
     emptyState: "No shipped project here yet — this is a direction I'm actively self-studying and building toward.",
     projectCount: (n: number) => `${n} project${n === 1 ? '' : 's'}`,
   },
@@ -34,7 +34,6 @@ const strings: AppStrings = {
     result: 'Result',
     reflection: 'Reflection',
     confidentialNote: 'Some source documents are confidential — full originals available on request at interview stage.',
-    filteredBy: 'Filtered by:',
   },
   menu: {
     open: 'Open menu',
