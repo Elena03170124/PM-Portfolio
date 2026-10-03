@@ -17,6 +17,10 @@ export function Footer() {
             </a>
           </p>
           <p className="font-mono text-[11.5px] leading-relaxed text-muted-dim">{strings.footer.disclaimer}</p>
+          <p className="font-mono text-[11.5px] leading-relaxed text-muted-dim">
+            {strings.footer.lastUpdated}
+            {import.meta.env.VITE_BUILD_DATE}
+          </p>
         </div>
         <p className="font-mono text-[11px] text-muted-dim">© {new Date().getFullYear()} Elena Zhuang ｜ 莊詒安</p>
       </div>

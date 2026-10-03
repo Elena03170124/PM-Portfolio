@@ -46,6 +46,7 @@ const strings: AppStrings = {
   footer: {
     note: '內容整理自個人 Notion 文件，如想進一步了解專案細節，歡迎聯繫：',
     disclaimer: '部分尚未完成的頁面暫不開放瀏覽，敬請見諒。',
+    lastUpdated: '近期更新時間：',
   },
 }
 

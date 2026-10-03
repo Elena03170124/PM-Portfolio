@@ -20,8 +20,21 @@ const projectDetailPages = Object.fromEntries(
     .map((entry) => [`project-${entry.name}`, fromRoot(`./projects/${entry.name}/index.html`)]),
 )
 
+// Footer "最近更新" date: the day this build ran, in Taiwan time (CI runs in UTC).
+const buildDate = new Intl.DateTimeFormat('en-CA', {
+  timeZone: 'Asia/Taipei',
+  year: 'numeric',
+  month: '2-digit',
+  day: '2-digit',
+})
+  .format(new Date())
+  .replaceAll('-', '/')
+
 export default defineConfig({
   base: process.env.GITHUB_PAGES_BASE ?? '/',
+  define: {
+    'import.meta.env.VITE_BUILD_DATE': JSON.stringify(buildDate),
+  },
   plugins: [react(), tailwindcss()],
   build: {
     rollupOptions: {
