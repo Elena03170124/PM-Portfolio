@@ -26,8 +26,8 @@ export const naniInfo: CompanyInfo = {
   internalTitles: { zh: 'PM、產品經理、專案企劃', en: 'PM, Product Manager, Project Planner' },
   scope: {
     zh: [
-      '梳理整合資訊脈絡',
-      '定義規格流程與驗收標準',
+      '資訊脈絡梳理整合',
+      '規格流程與驗收標準定義',
       '需求與優先序變動管理',
       '資源成本管理',
       '風險識別與根因分析',
