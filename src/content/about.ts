@@ -51,8 +51,8 @@ export const aboutChapters: AboutChapter[] = [
     id: 'breakout',
     years: { zh: '2023 – 2024', en: '2023 – 2024' },
     heading: {
-      zh: '爲校準職涯道路，果斷選擇離職',
-      en: 'Recalibrating my career path — and choosing decisively to leave',
+      zh: '以工作表現爭取由APM轉任PM，最終為校準職涯道路果斷轉換跑道',
+      en: 'Pushing, through strong performance, to move from APM to PM — and ultimately switching tracks decisively to recalibrate my career path',
     },
     title: {
       zh: '主動破局，追求真正具影響力的舞台',
