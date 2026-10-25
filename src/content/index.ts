@@ -8,7 +8,7 @@ export * from './types'
 export { aboutThesis, aboutChapters } from './about'
 export { competencies, southoneProjects, hotaiProjects, heroQuotes, positioningStatement }
 
-/** All projects, chronological (南一集團 first since it's the current,
+/** All projects, chronological (南一教育集團 first since it's the current,
  *  deeper body of work; 和泰聯網 appended as the earlier chapter). Consumers
  *  that want a strict timeline should sort by `period` themselves. */
 export const allProjects: Project[] = [...southoneProjects, ...hotaiProjects]

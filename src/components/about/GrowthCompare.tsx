@@ -24,7 +24,7 @@ interface GrowthRow {
   subtitle: { zh: string; en: string }
   before: { zh: string; en: string }
   after: { zh: string; en: string }
-  /** The 南一集團 example names a specific project; cited here as evidence. */
+  /** The 南一教育集團 example names a specific project; cited here as evidence. */
   citation: { projectId: string; label: { zh: string; en: string } }
 }
 
@@ -208,7 +208,7 @@ function SideLabel({ children, tone }: { children: ReactNode; tone: 'plain' | 'a
   )
 }
 
-/** Names the project the 南一集團 example is drawn from — links to its detail page
+/** Names the project the 南一教育集團 example is drawn from — links to its detail page
  *  when one exists, otherwise to its card on the Project Experience page. */
 function GrowthCitation({ citation }: { citation: GrowthRow['citation'] }) {
   const { t } = useLocale()

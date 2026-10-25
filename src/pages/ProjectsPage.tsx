@@ -1,11 +1,13 @@
 import { useEffect, type ReactNode } from 'react'
 import { hotaiProjects, southoneProjects } from '../content'
 import { detailSlugs } from '../content/detailSlugs'
+import { hotaiInfo, naniInfo, type CompanyInfo } from '../content/companyInfo'
 import type { Project } from '../content/types'
 import { useLocale } from '../i18n/LocaleContext'
 import { SiteShell } from '../components/layout/SiteShell'
 import { Reveal } from '../components/common/Reveal'
 import { PageToc } from '../components/common/PageToc'
+import { CompanyInfoPanel } from '../components/projects/CompanyInfoPanel'
 
 const BASE = import.meta.env.BASE_URL
 
@@ -67,12 +69,14 @@ function ProjectCard({ project, archival }: { project: Project; archival?: boole
 function ProjectGroup({
   id,
   title,
+  info,
   note,
   projects,
   archival,
 }: {
   id?: string
   title: string
+  info?: CompanyInfo
   note?: ReactNode
   projects: Project[]
   archival?: boolean
@@ -81,6 +85,7 @@ function ProjectGroup({
     <Reveal>
       <section id={id} className="mt-14 scroll-mt-24">
         <h2 className="font-serif text-[22px] font-semibold text-ink sm:text-[26px]">{title}</h2>
+        {info && <div className="mt-5"><CompanyInfoPanel info={info} /></div>}
         {note && <div className="mt-4">{note}</div>}
         <div className="mt-6 grid gap-5 md:grid-cols-2">
           {projects.map((p) => (
@@ -153,13 +158,15 @@ export function ProjectsPage() {
         <div className="min-w-0">
           <ProjectGroup
             id="nani"
-            title={t({ zh: '南一集團・跨系統平台整合串接', en: 'Nani · cross-system platform integration' })}
+            title={t({ zh: '南一教育集團・跨系統平台整合串接', en: 'Nani · cross-system platform integration' })}
+            info={naniInfo}
             projects={southoneProjects}
           />
           <div className="pb-12 sm:pb-20">
             <ProjectGroup
               id="hotai"
               title={t({ zh: '和泰聯網・初級 PM 能力養成', en: 'Hotai Motor · early-career PM work' })}
+              info={hotaiInfo}
               note={<ArchivalNote />}
               archival
               projects={hotaiProjects}
@@ -168,7 +175,7 @@ export function ProjectsPage() {
         </div>
         <PageToc
           items={[
-            { id: 'nani', label: t({ zh: '南一集團', en: 'Nani' }) },
+            { id: 'nani', label: t({ zh: '南一教育集團', en: 'Nani' }) },
             { id: 'hotai', label: t({ zh: '和泰聯網', en: 'Hotai' }) },
           ]}
         />

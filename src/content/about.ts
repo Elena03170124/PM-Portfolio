@@ -91,7 +91,7 @@ export const aboutChapters: AboutChapter[] = [
     },
     paras: [
       {
-        zh: '進入南一集團任職產品經理後，我承接了多個系統重構與跨服務整合專案。',
+        zh: '進入南一教育集團任職產品經理後，我承接了多個系統重構與跨服務整合專案。',
         en: 'After joining Nani as a Product Manager, I took on several system-rebuild and cross-service integration projects.',
       },
       {

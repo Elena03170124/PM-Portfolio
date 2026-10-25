@@ -1,13 +1,13 @@
 import type { Project } from './types'
 
 /** The six full case studies from Cassandra's current role across
- *  南一集團 (Nani) — 南一書局 (parent) and 萬通教育 (subsidiary).
+ *  南一教育集團 (Nani) — 南一書局 (parent) and 萬通教育 (subsidiary).
  *  Ordered with the flagship projects first (dates removed from display). */
 export const southoneProjects: Project[] = [
   {
     id: 'dual-system-merge',
     company: 'southone',
-    companyLabel: { zh: '南一集團子公司【萬通教育】', en: 'Nani — OneClass (subsidiary)' },
+    companyLabel: { zh: '南一教育集團子公司【萬通教育】', en: 'Nani — OneClass (subsidiary)' },
     title: {
       zh: '補教 × 家教雙系統合併｜跨服務資料對齊與流程重構',
       en: 'Tutoring × Home-Tutoring System Merge',
@@ -100,7 +100,7 @@ export const southoneProjects: Project[] = [
   {
     id: 'edu-cloud-integration',
     company: 'southone',
-    companyLabel: { zh: '南一集團母公司【南一書局企業】', en: 'Nani (parent company)' },
+    companyLabel: { zh: '南一教育集團母公司【南一書局企業】', en: 'Nani (parent company)' },
     title: {
       zh: '教育部雲端資料介接｜既有系統限制下推動平衡決策',
       en: 'National EduCloud Data Integration Under Legacy Constraints',
@@ -190,7 +190,7 @@ export const southoneProjects: Project[] = [
   {
     id: 'teacher-auth',
     company: 'southone',
-    companyLabel: { zh: '南一集團母公司【南一書局企業】', en: 'Nani (parent company)' },
+    companyLabel: { zh: '南一教育集團母公司【南一書局企業】', en: 'Nani (parent company)' },
     title: {
       zh: '教師身份驗證機制建構｜跨系統資料整合與驗證流程簡化',
       en: 'Teacher Identity Verification System',
@@ -274,7 +274,7 @@ export const southoneProjects: Project[] = [
   {
     id: 'member-auth-unification',
     company: 'southone',
-    companyLabel: { zh: '南一集團母公司【南一書局企業】', en: 'Nani (parent company)' },
+    companyLabel: { zh: '南一教育集團母公司【南一書局企業】', en: 'Nani (parent company)' },
     title: {
       zh: '會員身份驗證模式統一化｜跨系統登入整併與身份治理',
       en: 'Unified Identity & SSO Across the Platform',
@@ -324,7 +324,7 @@ export const southoneProjects: Project[] = [
   {
     id: 'leave-flow-rebuild',
     company: 'southone',
-    companyLabel: { zh: '南一集團子公司【萬通教育】', en: 'Nani — OneClass (subsidiary)' },
+    companyLabel: { zh: '南一教育集團子公司【萬通教育】', en: 'Nani — OneClass (subsidiary)' },
     title: {
       zh: 'Live App 學生請假新流程｜補課機制重構',
       en: 'Live App Leave & Makeup-Class Flow Rebuild',
@@ -374,7 +374,7 @@ export const southoneProjects: Project[] = [
   {
     id: 'edu-service-integration',
     company: 'southone',
-    companyLabel: { zh: '南一集團母公司【南一書局企業】', en: 'Nani (parent company)' },
+    companyLabel: { zh: '南一教育集團母公司【南一書局企業】', en: 'Nani (parent company)' },
     title: {
       zh: '各大教用服務整合｜由公部門合規性反推服務定位',
       en: 'Cross-Product Login via the National EduCloud',
