@@ -19,8 +19,8 @@ export const naniInfo: CompanyInfo = {
   size: { zh: '100～500人', en: '100–500 employees' },
   group: { zh: '南一教育集團', en: 'Nani Education Group' },
   products: {
-    zh: 'NaniClub會員中心、OneClass一對一真人家教系統',
-    en: 'NaniClub member center, OneClass one-on-one live tutoring system',
+    zh: 'NaniClub會員中心系統、OneClass一對一真人家教系統、Live App家教家長專用App',
+    en: 'NaniClub member center system, OneClass one-on-one live tutoring system, Live App (parent-only app for tutoring)',
   },
   appliedTitle: { zh: '產品經理', en: 'Product Manager' },
   internalTitles: { zh: 'PM、產品經理、專案企劃', en: 'PM, Product Manager, Project Planner' },
