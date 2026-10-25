@@ -20,8 +20,8 @@ export const naniInfo: CompanyInfo = {
   size: { zh: '100～500人', en: '100–500 employees' },
   group: { zh: '南一教育集團', en: 'Nani Education Group' },
   industry: {
-    zh: '網際網路相關｜教育科技（數位服務為主，非傳統出版印刷）',
-    en: 'Internet-related | Education technology (digital services first, not traditional publishing or printing)',
+    zh: '網際網路產業｜教育科技（數位服務為主，非傳統出版印刷）',
+    en: 'Internet industry | Education technology (digital services first, not traditional publishing or printing)',
   },
   products: {
     zh: 'NaniClub會員中心系統、OneClass一對一真人家教系統、Live App家教家長專用App',
