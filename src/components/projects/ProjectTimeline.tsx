@@ -12,12 +12,12 @@ const FLAGSHIP_IDS = ['dual-system-merge', 'edu-cloud-integration', 'teacher-aut
 const flagshipProjects = FLAGSHIP_IDS.map((id) => southoneProjects.find((p) => p.id === id)!)
 
 export function ProjectTimeline() {
-  const { strings } = useLocale()
+  const { t, strings } = useLocale()
 
   return (
     <section id="projects" className="py-20 sm:py-28 scroll-mt-16">
       <Reveal>
-        <SectionHeading eyebrow="01 / project experience" title={strings.projects.title} subtitle={strings.projects.subtitle} />
+        <SectionHeading eyebrow={t({ zh: '01 / 專案經驗 · project experience', en: '01 / project experience' })} title={strings.projects.title} subtitle={strings.projects.subtitle} />
       </Reveal>
 
       <div className="mt-10 grid gap-5">
