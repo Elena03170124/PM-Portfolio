@@ -22,6 +22,10 @@ export const aboutChapters: AboutChapter[] = [
     },
     paras: [
       {
+        zh: '結合前端網頁建構、用戶數據處理分析、數位行銷等多項專業基礎，以及在繁雜混亂中梳理脈絡資訊，用量化方法評估方案成效的興趣專長，訂定成爲資訊軟體業PM的目標。',
+        en: 'Drawing on a foundation in front-end web development, user data processing and analysis, and digital marketing, together with a knack for untangling information amid complexity and evaluating solutions with quantitative methods, I set my goal of becoming a PM in the software and information industry.',
+      },
+      {
         zh: '將數十篇 Medium 文章與 Podcast 內容，梳理轉化為個人專業能力檢核框架。',
         en: 'I distilled dozens of Medium articles and podcast episodes into a personal framework for checking my own professional competencies.',
       },
