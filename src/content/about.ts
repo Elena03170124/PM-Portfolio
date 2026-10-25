@@ -14,8 +14,8 @@ export const aboutChapters: AboutChapter[] = [
     years: { zh: '2022 – 2023', en: '2022 – 2023' },
     tag: { zh: '確立方向', en: 'Finding direction' },
     title: {
-      zh: '建立「優秀 PM 能力框架」與自我專業檢核標準',
-      en: 'Building an “Excellent PM Competency Framework” and my own standards for professional self-assessment',
+      zh: '合格 PM 的能力框架',
+      en: 'A competency framework for a qualified PM',
     },
     paras: [
       {
