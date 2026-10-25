@@ -67,7 +67,7 @@ function renderInlineBold(text: string) {
   const parts = text.split(/(\*\*[^*]+\*\*)/)
   const nodes = parts.map((part, i) =>
     part.startsWith('**') ? (
-      <strong key={i} className="font-semibold text-ink">
+      <strong key={i} className="about-em">
         {part.slice(2, -2)}
       </strong>
     ) : (
@@ -90,8 +90,8 @@ function renderInlineBold(text: string) {
 function Para({ para }: { para: AboutPara }) {
   const { t } = useLocale()
   return (
-    <p className={`mb-3 whitespace-pre-line text-[15.5px] leading-[1.8] ${para.emphasis ? 'font-semibold text-ink' : 'text-ink/90'}`}>
-      {renderInlineBold(t(para))}
+    <p className={`mb-3 whitespace-pre-line text-[15.5px] leading-[1.8] ${para.emphasis ? 'text-ink' : 'text-ink/90'}`}>
+      {para.emphasis ? <span className="about-em">{renderInlineBold(t(para))}</span> : renderInlineBold(t(para))}
     </p>
   )
 }

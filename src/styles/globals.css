@@ -242,3 +242,13 @@
   font-size: 11px;
   color: var(--color-muted);
 }
+
+/* Key phrases on the About page: heavier weight plus a soft pink highlighter
+   band, so they stand out even where the CJK fallback font has no bold cut. */
+.about-em {
+  font-weight: 700;
+  color: var(--color-ink);
+  background-image: linear-gradient(transparent 58%, color-mix(in srgb, var(--color-accent) 26%, transparent) 58%);
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
