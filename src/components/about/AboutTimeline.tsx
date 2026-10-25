@@ -91,7 +91,7 @@ function TimelineItem({ chapter }: { chapter: AboutChapter }) {
           <h3 className="mb-1.5 font-serif text-[21px] sm:text-[24px] font-semibold leading-[1.4] text-accent text-balance">
             {renderTitle(t(chapter.heading))}
           </h3>
-          <p className="mb-3.5 font-serif text-[16px] sm:text-[17px] font-semibold leading-[1.5] text-accent/75 text-balance">
+          <p className="mb-3.5 font-serif text-[16px] sm:text-[17px] font-semibold leading-[1.5] text-muted text-balance">
             {renderTitle(t(chapter.title))}
           </p>
 
