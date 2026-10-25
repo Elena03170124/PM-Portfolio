@@ -38,12 +38,15 @@ export interface Metric {
 
 export type Company = 'southone' | 'hotai'
 
+/** A STAR field is either one paragraph or a list of bullet points. */
+export type StarText = string | string[]
+
 export interface StarNarrative {
-  situation: Bilingual
-  task: Bilingual
-  action: Bilingual
-  result: Bilingual
-  reflection: Bilingual
+  situation: Bilingual<StarText>
+  task: Bilingual<StarText>
+  action: Bilingual<StarText>
+  result: Bilingual<StarText>
+  reflection: Bilingual<StarText>
 }
 
 export interface Project {

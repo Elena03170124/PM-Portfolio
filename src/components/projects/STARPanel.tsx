@@ -1,11 +1,24 @@
 import { useLocale } from '../../i18n/LocaleContext'
-import type { StarNarrative } from '../../content/types'
+import type { StarNarrative, StarText } from '../../content/types'
 
-function StarRow({ label, text }: { label: string; text: string }) {
+function StarRow({ label, text }: { label: string; text: StarText }) {
   return (
     <div className="grid sm:grid-cols-[88px_1fr] gap-2 sm:gap-5 py-4 border-b border-rule last:border-b-0">
       <div className="font-mono text-[11px] uppercase tracking-[0.08em] text-accent pt-0.5">{label}</div>
-      <p className="text-[13.5px] leading-relaxed text-ink/85 whitespace-pre-line">{text}</p>
+      {Array.isArray(text) ? (
+        <ul className="space-y-1.5">
+          {text.map((item, i) => (
+            <li
+              key={i}
+              className="relative pl-[18px] text-[13.5px] leading-relaxed text-ink/85 before:absolute before:left-0 before:top-[0.85em] before:h-px before:w-1.5 before:bg-accent"
+            >
+              {item}
+            </li>
+          ))}
+        </ul>
+      ) : (
+        <p className="text-[13.5px] leading-relaxed text-ink/85 whitespace-pre-line">{text}</p>
+      )}
     </div>
   )
 }
