@@ -85,7 +85,7 @@ function ProjectGroup({
     <Reveal>
       <section id={id} className="mt-14 scroll-mt-24">
         <h2 className="font-serif text-[22px] font-semibold text-ink sm:text-[26px]">{title}</h2>
-        {info && <div className="mt-5"><CompanyInfoPanel info={info} /></div>}
+        {info && <div className="mt-4"><CompanyInfoPanel info={info} /></div>}
         {note && <div className="mt-4">{note}</div>}
         <div className="mt-6 grid gap-5 md:grid-cols-2">
           {projects.map((p) => (
