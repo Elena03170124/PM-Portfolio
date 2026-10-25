@@ -1,8 +1,9 @@
-import { aboutChapters, aboutThesis } from '../content'
+import { aboutThesis } from '../content'
 import { useLocale } from '../i18n/LocaleContext'
 import { SiteShell } from '../components/layout/SiteShell'
 import { Reveal } from '../components/common/Reveal'
 import { AboutTimeline } from '../components/about/AboutTimeline'
+import { GrowthCompare } from '../components/about/GrowthCompare'
 import { PageToc } from '../components/common/PageToc'
 
 export function AboutPage() {
@@ -30,9 +31,23 @@ export function AboutPage() {
 
       <div className="pb-12 sm:pb-20 lg:grid lg:grid-cols-[minmax(0,1fr)_190px] lg:gap-12">
         <div className="min-w-0">
-          <AboutTimeline />
+          <section id="career" className="scroll-mt-24 pb-6">
+            <Reveal>
+              <p className="mb-8 font-mono text-[11px] uppercase tracking-[0.14em] text-accent">
+                {t({ zh: '職涯發展 · career', en: 'career' })}
+              </p>
+            </Reveal>
+            <AboutTimeline />
+          </section>
+
+          <GrowthCompare />
         </div>
-        <PageToc items={aboutChapters.map((c) => ({ id: c.id, label: t(c.tag) }))} />
+        <PageToc
+          items={[
+            { id: 'career', label: t({ zh: '職涯發展', en: 'Career' }) },
+            { id: 'growth', label: t({ zh: '專業能力演進', en: 'Professional growth' }) },
+          ]}
+        />
       </div>
     </SiteShell>
   )

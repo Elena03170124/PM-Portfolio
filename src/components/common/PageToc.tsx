@@ -92,15 +92,24 @@ export function PageToc({ items }: { items: TocItem[] }) {
       .split(',')
       .map((id) => document.getElementById(id))
       .filter((el): el is HTMLElement => !!el)
-    const observer = new IntersectionObserver(
-      (entries) => {
-        const visible = entries.filter((e) => e.isIntersecting).sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top)
-        if (visible[0]) setActiveId(visible[0].target.id)
-      },
-      { rootMargin: '-96px 0px -60% 0px' },
-    )
-    targets.forEach((el) => observer.observe(el))
-    return () => observer.disconnect()
+    // Active = the last section whose top has scrolled past a line just under
+    // the sticky header; at the very bottom of the page, the last section.
+    const update = () => {
+      if (targets.length === 0) return
+      const atBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2
+      let current = ''
+      for (const el of targets) {
+        if (el.getBoundingClientRect().top <= 140) current = el.id
+      }
+      setActiveId(atBottom ? targets[targets.length - 1].id : current)
+    }
+    update()
+    window.addEventListener('scroll', update, { passive: true })
+    window.addEventListener('resize', update)
+    return () => {
+      window.removeEventListener('scroll', update)
+      window.removeEventListener('resize', update)
+    }
   }, [idsKey])
 
   return (
