@@ -13,8 +13,8 @@ export const southoneProjects: Project[] = [
       en: 'Tutoring × Home-Tutoring System Merge',
     },
     summary: {
-      zh: '沒有既定系統整併規格可參照，要同時考慮既有系統穩定性、使用者適應成本、系統資料大規模移轉風險，推動整合結果順利落地。',
-      en: 'With no existing spec to follow for the merge, I had to weigh legacy system stability, user adaptation cost, and the risk of migrating data at scale — all while driving the integration to a clean landing.',
+      zh: '在沒有既定整併規格可參照的情況下，要兼顧資料欄位融合規格、使用者移轉適應成本、系統資料大規模移轉風險、多角色資訊落差風險管理，推動整合結果順利落地。',
+      en: 'With no existing merge spec to follow, I had to balance how data fields would be reconciled, the cost of users adapting to the move, the risk of migrating data at scale, and the risk of information gaps across roles — all while driving the integration to a clean landing.',
     },
     star: {
       situation: {
@@ -106,8 +106,8 @@ export const southoneProjects: Project[] = [
       en: 'National EduCloud Data Integration Under Legacy Constraints',
     },
     summary: {
-      zh: '在合規、架構限制、系統穩定性之間找到折衷解法，避免了 6–8 個月級的高成本架構重構。',
-      en: 'Found a middle path between compliance, legacy architecture, and stability — avoiding what would have been a 6–8 month rebuild.',
+      zh: '在外部合規性、既有架構限制、時程壓力、系統穩定性之間找到折衷解法，避免了 6–8 個月級的高成本架構重構。',
+      en: 'Found a middle path between external compliance, legacy architecture limits, schedule pressure, and system stability — avoiding what would have been a 6–8 month rebuild.',
     },
     star: {
       situation: {
