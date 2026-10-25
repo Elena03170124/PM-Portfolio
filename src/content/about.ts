@@ -17,40 +17,40 @@ export const aboutChapters: AboutChapter[] = [
       en: 'Taking stock of my skills and setting my PM career direction',
     },
     title: {
-      zh: '建立「合格 PM 的能力框架」與自我專業檢核標準',
-      en: 'Building a “Competency Framework for a Qualified PM” and my own standards for professional self-assessment',
+      zh: '建立「合格 PM 的能力框架」作為自我專業檢核標準',
+      en: 'Building a “Competency Framework for a Qualified PM” as my own standard for professional self-assessment',
     },
     paras: [
       {
         zh: '將數十篇 Medium 文章與 Podcast 內容，梳理轉化為個人專業能力檢核框架。',
         en: 'I distilled dozens of Medium articles and podcast episodes into a personal framework for checking my own professional competencies.',
       },
-      { zh: '內容包含兩大核心：', en: 'It has two core parts:' },
+      { zh: '框架範疇最初概括2大核心：', en: 'At first, the framework covered two core areas:' },
     ],
     bullets: [
       {
         lead: { zh: '技能工具方法論：', en: 'Skills, tools and methods: ' },
         text: {
-          zh: '產品生命週期、競品分析、用戶訪談、需求管理與優先級排序方法等。',
-          en: 'the product lifecycle, competitor analysis, user interviews, requirements management and prioritization methods, and more.',
+          zh: '競品分析、用戶訪談、需求管理與優先級排序方法、指標定義等。',
+          en: 'competitor analysis, user interviews, requirements management and prioritization methods, metric definition, and more.',
         },
       },
       {
         lead: { zh: '軟實力要求：', en: 'Soft-skill expectations: ' },
         text: {
-          zh: 'PM 職責範疇定義、常見利害關係人梳理與跨團隊溝通協商方法。',
-          en: 'how a PM’s responsibilities are defined, mapping common stakeholders, and methods for cross-team communication and negotiation.',
+          zh: 'PM 職責範疇定義、利害關係人溝通協商方法等。',
+          en: 'how a PM’s responsibilities are defined, and methods for stakeholder communication and negotiation.',
         },
       },
     ],
     closing: [
       {
-        zh: '幾年來隨著專案經驗累積，這套能力框架開展為 9 大核心能力矩陣。',
-        en: 'Over the years, as my project experience has grown, this framework has expanded into a matrix of nine core competencies.',
+        zh: '近年來隨著專案經驗累積，這套能力框架開展為 9 大核心能力框架。',
+        en: 'In recent years, as my project experience has grown, this framework has expanded into a framework of nine core competencies.',
       },
       {
-        zh: '至今仍以此梳理每次的專案經驗教訓與能力累積、盤點專業缺口，以此定義下一階段職涯目標。',
-        en: 'I still use it to sort out the lessons and skills from every project, take stock of my professional gaps, and define my next career goal.',
+        zh: '至今仍以此梳理專案經驗、能力累積、專業缺口，以此定義下一階段職涯目標。',
+        en: 'I still use it to sort out my project experience, skills gained, and professional gaps, and to define my next career goal.',
         emphasis: true,
       },
     ],
