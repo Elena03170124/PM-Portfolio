@@ -77,7 +77,7 @@ function renderInlineBold(text: string) {
 function Para({ para }: { para: AboutPara }) {
   const { t } = useLocale()
   return (
-    <p className={`mb-3 text-[15.5px] leading-[1.8] ${para.emphasis ? 'font-semibold text-ink' : 'text-ink/90'}`}>
+    <p className={`mb-3 whitespace-pre-line text-[15.5px] leading-[1.8] ${para.emphasis ? 'font-semibold text-ink' : 'text-ink/90'}`}>
       {renderInlineBold(t(para))}
     </p>
   )

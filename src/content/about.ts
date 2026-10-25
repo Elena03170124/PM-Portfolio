@@ -22,8 +22,8 @@ export const aboutChapters: AboutChapter[] = [
     },
     paras: [
       {
-        zh: '結合前端網頁建構、用戶數據處理分析、數位行銷等多項專業基礎，以及在繁雜混亂中梳理脈絡資訊，用量化方法評估方案成效的興趣專長，訂定成爲資訊軟體業PM的目標。',
-        en: 'Drawing on a foundation in front-end web development, user data processing and analysis, and digital marketing, together with a knack for untangling information amid complexity and evaluating solutions with quantitative methods, I set my goal of becoming a PM in the software and information industry.',
+        zh: '結合前端網頁建構、用戶數據處理分析、數位行銷等多項專業基礎，\n以及在繁雜混亂中梳理脈絡資訊，用量化方法評估方案成效的興趣專長，訂定成爲資訊軟體業PM的目標。',
+        en: 'Drawing on a foundation in front-end web development, user data processing and analysis, and digital marketing,\ntogether with a knack for untangling information amid complexity and evaluating solutions with quantitative methods, I set my goal of becoming a PM in the software and information industry.',
       },
       {
         zh: '將數十篇 Medium 文章與 Podcast 內容，梳理轉化為個人專業能力檢核框架。',
@@ -36,8 +36,8 @@ export const aboutChapters: AboutChapter[] = [
     ],
     closing: [
       {
-        zh: '近年來隨著專案經驗累積，這套能力框架開展為 9 大核心能力框架，包含商業策略MVP、需求管理評估、流程建構與優化、技術轉譯協調、Stakeholder 協作、資源配置成本控管、風險管理識別、成效驗證追蹤、AI導入應用。',
-        en: 'In recent years, as my project experience has grown, this framework has expanded into nine core competencies, covering business strategy and MVP, requirements management and evaluation, process building and optimization, technical translation and coordination, stakeholder collaboration, resource allocation and cost control, risk identification and management, results validation and tracking, and AI adoption.',
+        zh: '近年來隨著專案經驗累積，這套能力框架開展為 9 大核心能力框架，\n包含商業策略MVP、需求管理評估、流程建構與優化、技術轉譯協調、Stakeholder 協作、資源配置成本控管、風險管理識別、成效驗證追蹤、AI導入應用。',
+        en: 'In recent years, as my project experience has grown, this framework has expanded into nine core competencies,\ncovering business strategy and MVP, requirements management and evaluation, process building and optimization, technical translation and coordination, stakeholder collaboration, resource allocation and cost control, risk identification and management, results validation and tracking, and AI adoption.',
       },
       {
         zh: '至今仍以此梳理專案經驗、能力累積、專業缺口，以此定義下一階段職涯目標。',
