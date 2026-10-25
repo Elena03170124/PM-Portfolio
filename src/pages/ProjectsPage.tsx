@@ -147,12 +147,12 @@ function GrowthCompare() {
           {t({ zh: '能力演進', en: 'growth' })}
         </p>
         <h2 id="growth-title" className="max-w-3xl font-serif text-[24px] font-semibold leading-[1.35] text-ink text-balance sm:text-[30px]">
-          {t({ zh: '從「任務執行者」到「系統層級決策者」', en: 'From task executor to system-level decision-maker' })}
+          {t({ zh: '從「任務執行者」到「系統整合推動者」', en: 'From task executor to system integration driver' })}
         </h2>
         <p className="mt-4 max-w-3xl whitespace-pre-line text-[15px] leading-[1.85] text-muted">
           {t({
-            zh: '結合整體作品脈絡，可明顯感受我由「任務執行者」蛻變為「系統層級決策者」。\n論需求拆解、系統理解、決策衡量、風險管理與溝通轉譯等專業能力，都有顯著成長。',
-            en: 'Read across the whole portfolio, the shift from task executor to system-level decision-maker is clear.\nAcross requirement breakdown, system understanding, decision criteria, risk management and communication, the growth shows.',
+            zh: '結合整體作品脈絡，可明顯感受我由「任務執行者」蛻變為「系統整合推動者」。\n論需求拆解、系統理解、決策衡量、風險管理與溝通轉譯等專業能力，都有顯著成長。',
+            en: 'Read across the whole portfolio, the shift from task executor to system integration driver is clear.\nAcross requirement breakdown, system understanding, decision criteria, risk management and communication, the growth shows.',
           })}
         </p>
       </Reveal>
