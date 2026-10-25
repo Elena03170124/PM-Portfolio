@@ -17,7 +17,7 @@ export const aboutChapters: AboutChapter[] = [
       en: 'Taking stock of my skills and setting my PM career direction',
     },
     title: {
-      zh: '建立「合格 PM 的能力框架」作為自我專業檢核標準',
+      zh: '建立「合格 PM 的能力框架」作為自我專業能力檢核標準',
       en: 'Building a “Competency Framework for a Qualified PM” as my own standard for professional self-assessment',
     },
     paras: [
