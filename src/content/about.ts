@@ -13,8 +13,8 @@ export const aboutChapters: AboutChapter[] = [
     id: 'direction',
     years: { zh: '2022 – 2023', en: '2022 – 2023' },
     heading: {
-      zh: '盤點技能基礎，確立PM職涯方向',
-      en: 'Taking stock of my skills and setting my PM career direction',
+      zh: '盤點技能專長，確立PM職涯方向',
+      en: 'Taking stock of my skills and strengths, and setting my PM career direction',
     },
     title: {
       zh: '建立「合格 PM 的能力框架」作為自我專業能力檢核標準',
