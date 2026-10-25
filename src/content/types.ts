@@ -93,8 +93,6 @@ export interface AboutChapter {
   id: string
   /** Display string, e.g. "2022 – 2023" */
   years: Bilingual
-  /** Short stage name, e.g. "確立方向" */
-  tag: Bilingual
   /** A "|" marks the only place the title may wrap (it is not shown). */
   title: Bilingual
   paras: AboutPara[]

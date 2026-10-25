@@ -79,9 +79,6 @@ function TimelineItem({ chapter }: { chapter: AboutChapter }) {
         {/* When: years + stage name. Left column on desktop, above the title on mobile. */}
         <div className="col-start-2 row-start-1 pt-1 pb-2 sm:col-start-1 sm:pb-0 sm:text-right">
           <span className="block font-mono text-[12.5px] text-muted font-mono-num">{t(chapter.years)}</span>
-          <span className="mt-1 block font-serif text-[17px] font-semibold leading-[1.35] text-accent sm:text-[18px]">
-            {t(chapter.tag)}
-          </span>
         </div>
 
         {/* Line + node. The last node is filled and the line stops there. */}
