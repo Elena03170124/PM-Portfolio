@@ -29,28 +29,15 @@ export const aboutChapters: AboutChapter[] = [
         zh: '將數十篇 Medium 文章與 Podcast 內容，梳理轉化為個人專業能力檢核框架。',
         en: 'I distilled dozens of Medium articles and podcast episodes into a personal framework for checking my own professional competencies.',
       },
-      { zh: '框架範疇最初概括2大核心：', en: 'At first, the framework covered two core areas:' },
-    ],
-    bullets: [
       {
-        lead: { zh: '技能工具方法論：', en: 'Skills, tools and methods: ' },
-        text: {
-          zh: '競品分析、用戶訪談、需求管理與優先級排序方法、指標定義等。',
-          en: 'competitor analysis, user interviews, requirements management and prioritization methods, metric definition, and more.',
-        },
-      },
-      {
-        lead: { zh: '軟實力要求：', en: 'Soft-skill expectations: ' },
-        text: {
-          zh: 'PM 職責範疇定義、利害關係人溝通協商方法等。',
-          en: 'how a PM’s responsibilities are defined, and methods for stakeholder communication and negotiation.',
-        },
+        zh: '框架範疇最初僅概括**技能工具方法論**（用戶訪談、需求管理與優先級排序方法、指標定義），以及**軟實力要求**（PM 職責範疇、利害關係人溝通協商方法）；',
+        en: 'At first, the framework covered only **skills, tools and methods** (user interviews, requirements management and prioritization methods, metric definition) and **soft-skill expectations** (a PM’s scope of responsibility, and methods for stakeholder communication and negotiation);',
       },
     ],
     closing: [
       {
-        zh: '近年來隨著專案經驗累積，這套能力框架開展為 9 大核心能力框架。',
-        en: 'In recent years, as my project experience has grown, this framework has expanded into a framework of nine core competencies.',
+        zh: '近年來隨著專案經驗累積，這套能力框架開展為 9 大核心能力框架，包含商業策略MVP、需求管理評估、流程建構與優化、技術轉譯協調、資源配置成本控管、風險管理識別、成效驗證追蹤、AI導入應用。',
+        en: 'In recent years, as my project experience has grown, this framework has expanded into nine core competencies, covering business strategy and MVP, requirements management and evaluation, process building and optimization, technical translation and coordination, resource allocation and cost control, risk identification and management, results validation and tracking, and AI adoption.',
       },
       {
         zh: '至今仍以此梳理專案經驗、能力累積、專業缺口，以此定義下一階段職涯目標。',

@@ -61,11 +61,24 @@ function Cta({ cta }: { cta: AboutCta }) {
   )
 }
 
+/** "**text**" inside a paragraph is set in bold. */
+function renderInlineBold(text: string) {
+  return text.split(/(\*\*[^*]+\*\*)/).map((part, i) =>
+    part.startsWith('**') ? (
+      <strong key={i} className="font-semibold text-ink">
+        {part.slice(2, -2)}
+      </strong>
+    ) : (
+      part
+    ),
+  )
+}
+
 function Para({ para }: { para: AboutPara }) {
   const { t } = useLocale()
   return (
     <p className={`mb-3 text-[15.5px] leading-[1.8] ${para.emphasis ? 'font-semibold text-ink' : 'text-ink/90'}`}>
-      {t(para)}
+      {renderInlineBold(t(para))}
     </p>
   )
 }
