@@ -27,7 +27,7 @@ function App() {
         <PageToc
           items={[
             { id: 'projects', num: '01', label: t({ zh: '專案經驗', en: 'Project Experience' }) },
-            { id: 'competencies', num: '02', label: t({ zh: '能力矩陣', en: 'Competency matrix' }) },
+            { id: 'competencies', num: '02', label: t({ zh: '能力框架', en: 'Competency framework' }) },
           ]}
         />
       </div>

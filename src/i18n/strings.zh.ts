@@ -4,7 +4,7 @@ const strings: AppStrings = {
   nav: {
     about: '關於我',
     projects: '專案經驗',
-    competencies: 'PM能力矩陣',
+    competencies: 'PM能力框架',
     honors: '其他成就',
   },
   languageToggle: {
@@ -17,7 +17,7 @@ const strings: AppStrings = {
     ctaAbout: '更多關於我',
   },
   competencyMatrix: {
-    title: '九大能力矩陣',
+    title: '九大能力框架',
     subtitle: '涵蓋 PM 核心職能的九個面向，內容整理中。',
     emptyState: '目前尚無對應的已交付專案——這是我近期主動自學、正在累積實作經驗的方向。',
     projectCount: (n: number) => `${n} 個專案`,

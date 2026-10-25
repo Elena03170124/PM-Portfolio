@@ -4,7 +4,7 @@ const strings: AppStrings = {
   nav: {
     about: 'About',
     projects: 'Project Experience',
-    competencies: 'PM Competency Matrix',
+    competencies: 'PM Competency Framework',
     honors: 'Achievements',
   },
   languageToggle: {
@@ -17,7 +17,7 @@ const strings: AppStrings = {
     ctaAbout: 'More about me',
   },
   competencyMatrix: {
-    title: 'The Nine-Competency Matrix',
+    title: 'The Nine-Competency Framework',
     subtitle: 'Nine areas core to the PM role — still being filled in.',
     emptyState: "No shipped project here yet — this is a direction I'm actively self-studying and building toward.",
     projectCount: (n: number) => `${n} project${n === 1 ? '' : 's'}`,

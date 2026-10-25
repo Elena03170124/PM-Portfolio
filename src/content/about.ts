@@ -56,7 +56,7 @@ export const aboutChapters: AboutChapter[] = [
     ],
     cta: {
       kind: 'link',
-      label: { zh: '查看新版本 PM 能力矩陣', en: 'View the new PM competency matrix' },
+      label: { zh: '查看新版本 PM 能力框架', en: 'View the new PM competency framework' },
       href: '#competencies',
     },
   },

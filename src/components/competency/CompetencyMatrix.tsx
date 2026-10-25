@@ -10,7 +10,7 @@ export function CompetencyMatrix() {
   return (
     <section id="competencies" className="py-20 sm:py-28 scroll-mt-16">
       <Reveal>
-        <SectionHeading eyebrow={t({ zh: '02 / 能力矩陣 · capability map', en: '02 / capability map' })} title={strings.competencyMatrix.title} subtitle={strings.competencyMatrix.subtitle} />
+        <SectionHeading eyebrow={t({ zh: '02 / 能力框架 · competency framework', en: '02 / competency framework' })} title={strings.competencyMatrix.title} subtitle={strings.competencyMatrix.subtitle} />
       </Reveal>
 
       <Reveal delayMs={80}>
