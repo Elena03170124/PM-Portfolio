@@ -158,7 +158,7 @@ export function ProjectsPage() {
         <div className="min-w-0">
           <ProjectGroup
             id="nani"
-            title={t({ zh: '南一教育集團・跨系統平台整合串接', en: 'Nani · cross-system platform integration' })}
+            title={t({ zh: '南一教育集團・跨系統整合型 PM 能力累積', en: 'Nani · building skills as a cross-system integration PM' })}
             info={naniInfo}
             projects={southoneProjects}
           />
