@@ -14,7 +14,7 @@ export function AboutPage() {
     <SiteShell current="about">
       <section className="pt-16 pb-14 sm:pt-24 sm:pb-16">
         <Reveal>
-          <div className="mb-6 flex items-center gap-2 font-mono text-[11px] uppercase tracking-[0.16em] text-accent">
+          <div className="mb-6 flex items-center gap-2 font-mono text-[14px] uppercase tracking-[0.12em] text-accent">
             <span className="inline-block h-1.5 w-1.5 rounded-full bg-accent" aria-hidden="true" />
             {t({ zh: '關於我 · about', en: 'about' })}
           </div>
@@ -33,7 +33,7 @@ export function AboutPage() {
         <div className="min-w-0">
           <section id="career" className="scroll-mt-24 pb-6">
             <Reveal>
-              <p className="mb-8 font-mono text-[11px] uppercase tracking-[0.14em] text-accent">
+              <p className="mb-8 font-mono text-[14px] uppercase tracking-[0.12em] text-accent">
                 {t({ zh: '職涯發展 · career', en: 'career' })}
               </p>
             </Reveal>

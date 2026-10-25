@@ -132,7 +132,7 @@ export function ProjectsPage() {
     <SiteShell current="projects">
       <section className="pb-12 pt-16 sm:pb-14 sm:pt-24">
         <Reveal>
-          <div className="mb-6 flex items-center gap-2 font-mono text-[11px] uppercase tracking-[0.16em] text-accent">
+          <div className="mb-6 flex items-center gap-2 font-mono text-[14px] uppercase tracking-[0.12em] text-accent">
             <span className="inline-block h-1.5 w-1.5 rounded-full bg-accent" aria-hidden="true" />
             {t({ zh: '專案經驗 · project experience', en: 'project experience' })}
           </div>

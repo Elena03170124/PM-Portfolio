@@ -135,7 +135,7 @@ export function GrowthCompare() {
   return (
     <section id="growth" aria-labelledby="growth-title" className="scroll-mt-24 border-y border-rule py-12 sm:py-14">
       <Reveal>
-        <p className="mb-3 font-mono text-[11px] uppercase tracking-[0.14em] text-accent">
+        <p className="mb-3 font-mono text-[14px] uppercase tracking-[0.12em] text-accent">
           {t({ zh: '專業能力演進 · growth', en: 'professional growth' })}
         </p>
         <h2 id="growth-title" className="max-w-3xl font-serif text-[24px] font-semibold leading-[1.35] text-ink text-balance sm:text-[30px]">
