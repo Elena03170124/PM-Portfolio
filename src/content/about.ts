@@ -12,6 +12,10 @@ export const aboutChapters: AboutChapter[] = [
   {
     id: 'direction',
     years: { zh: '2022 – 2023', en: '2022 – 2023' },
+    heading: {
+      zh: '盤點技能基礎，確立PM職涯方向',
+      en: 'Taking stock of my skills and setting my PM career direction',
+    },
     title: {
       zh: '建立「合格 PM 的能力框架」與自我專業檢核標準',
       en: 'Building a “Competency Framework for a Qualified PM” and my own standards for professional self-assessment',
@@ -59,6 +63,10 @@ export const aboutChapters: AboutChapter[] = [
   {
     id: 'breakout',
     years: { zh: '2023 – 2024', en: '2023 – 2024' },
+    heading: {
+      zh: '爲校準職涯道路，果斷選擇離職',
+      en: 'Recalibrating my career path — and choosing decisively to leave',
+    },
     title: {
       zh: '主動破局，追求真正具影響力的舞台',
       en: 'Breaking out on my own to find a stage with real influence',
@@ -86,6 +94,10 @@ export const aboutChapters: AboutChapter[] = [
   {
     id: 'adversity',
     years: { zh: '2024 – 2026', en: '2024 – 2026' },
+    heading: {
+      zh: '承接複雜系統專案，專業能力躍進',
+      en: 'Taking on complex system projects and leaping forward professionally',
+    },
     title: {
       zh: '越是混亂，越要鋪出一條|讓專案平穩落地的路',
       en: 'The more chaotic it gets, the more I lay a path for projects to land smoothly',
@@ -110,6 +122,10 @@ export const aboutChapters: AboutChapter[] = [
   {
     id: 'elevate',
     years: { zh: '2026 – 今', en: '2026 – Present' },
+    heading: {
+      zh: '追求更進階挑戰，朝 Strategy TPM目標邁進',
+      en: 'Seeking more advanced challenges, moving toward Strategy TPM',
+    },
     title: {
       zh: '朝 Strategy TPM 的長遠目標持續邁進',
       en: 'Moving steadily toward my long-term goal of Strategy TPM',

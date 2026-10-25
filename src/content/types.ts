@@ -93,7 +93,9 @@ export interface AboutChapter {
   id: string
   /** Display string, e.g. "2022 – 2023" */
   years: Bilingual
-  /** A "|" marks the only place the title may wrap (it is not shown). */
+  /** Headline summarising the stage, shown above `title`. */
+  heading: Bilingual
+  /** Shown as the subtitle under `heading`. A "|" marks the only place it may wrap (it is not shown). */
   title: Bilingual
   paras: AboutPara[]
   /** Bulleted list rendered after the paragraphs. Each item carries a bold

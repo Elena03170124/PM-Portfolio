@@ -88,9 +88,12 @@ function TimelineItem({ chapter }: { chapter: AboutChapter }) {
         />
 
         <div className="col-start-2 row-start-2 max-w-[620px] pb-12 sm:col-start-3 sm:row-start-1 sm:pl-4">
-          <h3 className="mb-3.5 font-serif text-[20px] sm:text-[22px] font-semibold leading-[1.45] text-ink text-balance">
-            {renderTitle(t(chapter.title))}
+          <h3 className="mb-1.5 font-serif text-[21px] sm:text-[24px] font-semibold leading-[1.4] text-accent text-balance">
+            {renderTitle(t(chapter.heading))}
           </h3>
+          <p className="mb-3.5 font-serif text-[16px] sm:text-[17px] font-semibold leading-[1.5] text-accent/75 text-balance">
+            {renderTitle(t(chapter.title))}
+          </p>
 
           {chapter.paras.map((p, i) => (
             <Para key={i} para={p} />
