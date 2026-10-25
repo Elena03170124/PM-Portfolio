@@ -61,9 +61,11 @@ function Cta({ cta }: { cta: AboutCta }) {
   )
 }
 
-/** "**text**" inside a paragraph is set in bold. */
+/** "**text**" inside a paragraph is set in bold. The last few characters are kept
+ *  together so a paragraph never ends with a lone character on its final line. */
 function renderInlineBold(text: string) {
-  return text.split(/(\*\*[^*]+\*\*)/).map((part, i) =>
+  const parts = text.split(/(\*\*[^*]+\*\*)/)
+  const nodes = parts.map((part, i) =>
     part.startsWith('**') ? (
       <strong key={i} className="font-semibold text-ink">
         {part.slice(2, -2)}
@@ -72,6 +74,17 @@ function renderInlineBold(text: string) {
       part
     ),
   )
+  const last = parts[parts.length - 1]
+  const TAIL = 6
+  if (!last.startsWith('**') && last.length > TAIL) {
+    nodes[nodes.length - 1] = (
+      <span key="tail">
+        {last.slice(0, -TAIL)}
+        <span className="whitespace-nowrap">{last.slice(-TAIL)}</span>
+      </span>
+    )
+  }
+  return nodes
 }
 
 function Para({ para }: { para: AboutPara }) {
