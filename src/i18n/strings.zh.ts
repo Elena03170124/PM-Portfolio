@@ -5,7 +5,7 @@ const strings: AppStrings = {
     about: '關於我',
     projects: '專案經驗',
     competencies: 'PM能力矩陣',
-    honors: '其他榮譽',
+    honors: '其他成就',
   },
   languageToggle: {
     label: 'EN',

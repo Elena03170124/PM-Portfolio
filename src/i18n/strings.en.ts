@@ -5,7 +5,7 @@ const strings: AppStrings = {
     about: 'About',
     projects: 'Project Experience',
     competencies: 'PM Competency Matrix',
-    honors: 'Honors',
+    honors: 'Achievements',
   },
   languageToggle: {
     label: '中',
