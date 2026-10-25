@@ -5,6 +5,7 @@ export interface CompanyInfo {
   organization: Bilingual
   size: Bilingual
   group: Bilingual
+  industry: Bilingual
   products: Bilingual
   appliedTitle: Bilingual
   internalTitles: Bilingual
@@ -18,6 +19,10 @@ export const naniInfo: CompanyInfo = {
   },
   size: { zh: '100～500人', en: '100–500 employees' },
   group: { zh: '南一教育集團', en: 'Nani Education Group' },
+  industry: {
+    zh: '網際網路相關｜教育科技（數位服務為主，非傳統出版印刷）',
+    en: 'Internet-related | Education technology (digital services first, not traditional publishing or printing)',
+  },
   products: {
     zh: 'NaniClub會員中心系統、OneClass一對一真人家教系統、Live App家教家長專用App',
     en: 'NaniClub member center system, OneClass one-on-one live tutoring system, Live App (parent-only app for tutoring)',
@@ -56,6 +61,10 @@ export const hotaiInfo: CompanyInfo = {
   organization: { zh: '和泰聯網股份有限公司', en: 'Hotai Connected Co., Ltd.' },
   size: { zh: '100～500人', en: '100–500 employees' },
   group: { zh: '和泰汽車集團', en: 'Hotai Motor Group' },
+  industry: {
+    zh: '網際網路產業｜MaaS（Mobility as a Service，交通即服務）數位發展',
+    en: 'Internet industry | MaaS (Mobility as a Service) digital development',
+  },
   products: { zh: '行程規劃App「chicTrip去趣」', en: 'Trip-planning app “chicTrip”' },
   appliedTitle: { zh: '產品助理', en: 'Product Assistant' },
   internalTitles: { zh: 'QA、數據分析專員', en: 'QA, Data Analyst' },

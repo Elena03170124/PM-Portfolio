@@ -10,6 +10,7 @@ export function CompanyInfoPanel({ info }: { info: CompanyInfo }) {
     { label: t({ zh: '任職企業', en: 'Company' }), value: t(info.organization) },
     { label: t({ zh: '企業規模', en: 'Size' }), value: t(info.size) },
     { label: t({ zh: '隸屬集團', en: 'Group' }), value: t(info.group) },
+    { label: t({ zh: '產業類別', en: 'Industry' }), value: t(info.industry) },
     { label: t({ zh: '主責產品', en: 'Main products' }), value: t(info.products) },
     { label: t({ zh: '應徵職稱', en: 'Title applied for' }), value: t(info.appliedTitle) },
     { label: t({ zh: '內部職稱', en: 'Internal titles' }), value: t(info.internalTitles) },
