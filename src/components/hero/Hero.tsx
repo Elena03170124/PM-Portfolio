@@ -90,7 +90,7 @@ export function Hero() {
   return (
     <section className="pt-16 pb-24 sm:pt-24 sm:pb-32">
       <Reveal>
-        <div className="font-mono text-[11px] tracking-[0.16em] uppercase text-accent mb-6 flex items-center gap-2">
+        <div className="font-mono text-[14px] tracking-[0.12em] uppercase text-accent mb-6 flex items-center gap-2">
           <span className="inline-block w-1.5 h-1.5 rounded-full bg-accent animate-pulse" aria-hidden="true" />
           {strings.hero.eyebrow}
         </div>
