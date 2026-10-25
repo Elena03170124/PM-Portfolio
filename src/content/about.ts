@@ -26,12 +26,8 @@ export const aboutChapters: AboutChapter[] = [
         en: 'Drawing on a foundation in front-end web development, user data processing and analysis, and digital marketing,\ntogether with **a knack for untangling information amid complexity and evaluating solutions with quantitative methods**, I set my goal of becoming a PM in the software and information industry.',
       },
       {
-        zh: '將數十篇 Medium 文章與 Podcast 內容，梳理轉化為個人專業能力檢核框架。',
-        en: 'I distilled dozens of Medium articles and podcast episodes into a personal framework for checking my own professional competencies.',
-      },
-      {
-        zh: '框架範疇最初僅概括技能工具方法論（用戶訪談、需求管理與優先級排序方法、指標定義），以及軟實力要求（PM 職責範疇、利害關係人溝通協商方法）；',
-        en: 'At first, the framework covered only skills, tools and methods (user interviews, requirements management and prioritization methods, metric definition) and soft-skill expectations (a PM’s scope of responsibility, and methods for stakeholder communication and negotiation);',
+        zh: '將數十篇 Medium 文章與 Podcast 內容，梳理轉化為個人專業能力檢核框架。\n框架範疇最初僅概括技能工具方法論（用戶訪談、需求管理與優先級排序方法、指標定義），以及軟實力要求（PM 職責範疇、利害關係人溝通協商方法）；',
+        en: 'I distilled dozens of Medium articles and podcast episodes into a personal framework for checking my own professional competencies.\nAt first, the framework covered only skills, tools and methods (user interviews, requirements management and prioritization methods, metric definition) and soft-skill expectations (a PM’s scope of responsibility, and methods for stakeholder communication and negotiation);',
       },
     ],
     closing: [
