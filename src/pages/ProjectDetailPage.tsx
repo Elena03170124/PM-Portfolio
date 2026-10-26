@@ -188,8 +188,12 @@ export function ProjectDetailPage({ slug }: { slug: string }) {
   }
 
   const back = (
-    <a href={`${BASE}projects/`} className="font-mono text-[12.5px] text-muted transition-colors hover:text-accent">
-      ← {t({ zh: '專案經驗', en: 'Project Experience' })}
+    <a
+      href={`${BASE}projects/`}
+      className="inline-flex items-center gap-2 rounded-full border border-accent-dim/70 px-5 py-2.5 font-sans text-[15px] font-semibold tracking-wide text-accent transition-colors hover:bg-accent hover:text-on-accent"
+    >
+      <span aria-hidden="true">←</span>
+      {t({ zh: '回到專案經驗', en: 'Back to Project Experience' })}
     </a>
   )
 
