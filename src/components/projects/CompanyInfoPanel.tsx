@@ -8,6 +8,7 @@ export function CompanyInfoPanel({ info }: { info: CompanyInfo }) {
 
   const rows: { label: string; value: string }[] = [
     { label: t({ zh: '任職企業', en: 'Company' }), value: t(info.organization) },
+    { label: t({ zh: '任職期間', en: 'Tenure' }), value: t(info.tenure) },
     { label: t({ zh: '企業規模', en: 'Size' }), value: t(info.size) },
     { label: t({ zh: '隸屬集團', en: 'Group' }), value: t(info.group) },
     { label: t({ zh: '產業類別', en: 'Industry' }), value: t(info.industry) },

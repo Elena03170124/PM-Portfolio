@@ -3,6 +3,7 @@ import type { Bilingual } from './types'
 /** Employer facts shown under each company heading on the Project Experience page. */
 export interface CompanyInfo {
   organization: Bilingual
+  tenure: Bilingual
   size: Bilingual
   group: Bilingual
   industry: Bilingual
@@ -16,6 +17,10 @@ export const naniInfo: CompanyInfo = {
   organization: {
     zh: '母公司南一書局企業、子公司萬通教育科技',
     en: 'Nani Book Enterprise (parent company), OneClass Education Technology (subsidiary)',
+  },
+  tenure: {
+    zh: '2024.05~2026.03｜共22個月、近2年',
+    en: 'May 2024 – Mar 2026 | 22 months, nearly 2 years',
   },
   size: { zh: '100～500人', en: '100–500 employees' },
   group: { zh: '南一教育集團', en: 'Nani Education Group' },
@@ -59,6 +64,7 @@ export const naniInfo: CompanyInfo = {
 
 export const hotaiInfo: CompanyInfo = {
   organization: { zh: '和泰聯網股份有限公司', en: 'Hotai Connected Co., Ltd.' },
+  tenure: { zh: '2023.06~2024.02｜共9個月', en: 'Jun 2023 – Feb 2024 | 9 months' },
   size: { zh: '100～500人', en: '100–500 employees' },
   group: { zh: '和泰汽車集團', en: 'Hotai Motor Group' },
   industry: {
