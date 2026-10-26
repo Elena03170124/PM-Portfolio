@@ -5,6 +5,25 @@ import { Reveal } from '../common/Reveal'
 
 const BASE = import.meta.env.BASE_URL
 
+/** The same stroke arrow is used between the Hotai and Nani blocks and inside
+ *  each subtitle, so both read as one visual language. */
+function ArrowIcon({ className = 'size-4' }: { className?: string }) {
+  return (
+    <svg
+      viewBox="0 0 16 16"
+      className={className}
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+    >
+      <path d="M3 8h10M9 4l4 4-4 4" />
+    </svg>
+  )
+}
+
 /** On a phone, break a "before → after" subtitle only at the arrow, so the two
  *  phrases each keep their own line instead of wrapping wherever they run out of
  *  room. From the sm breakpoint up there's space for the whole thing on one line. */
@@ -14,7 +33,9 @@ function ArrowSubtitle({ text }: { text: string }) {
   return (
     <>
       <span className="block sm:inline">{before}</span>{' '}
-      <span className="block sm:inline">→ {after}</span>
+      <span className="block sm:inline">
+        <ArrowIcon className="mx-1 inline-block size-[1.05em] align-[-0.18em] text-accent" /> {after}
+      </span>
     </>
   )
 }
@@ -157,7 +178,7 @@ export function GrowthCompare() {
                 <span className="font-mono text-[11px] text-muted-dim">{String(i + 1).padStart(2, '0')}</span>
                 <h3 className="font-serif text-[18px] font-semibold leading-snug text-ink sm:text-[19px]">{t(row.dimension)}</h3>
               </div>
-              <p className="mt-1.5 text-[13px] leading-[1.6] text-ink/75">
+              <p className="mt-2 text-[15px] leading-[1.65] text-ink/80">
                 <ArrowSubtitle text={t(row.subtitle)} />
               </p>
 
@@ -171,17 +192,7 @@ export function GrowthCompare() {
                     the change — no arrow needed there. From sm up, it sits between the two side
                     by side, matching the subtitle's own horizontal "→" above. */}
                 <div aria-hidden="true" className="hidden items-center justify-center text-accent sm:flex sm:px-4">
-                  <svg
-                    viewBox="0 0 16 16"
-                    className="size-4"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="1.5"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <path d="M3 8h10M9 4l4 4-4 4" />
-                  </svg>
+                  <ArrowIcon />
                 </div>
 
                 <div className="border-l-2 border-accent-dim/70 pl-4 sm:flex-1 sm:pl-5">
