@@ -125,21 +125,25 @@ export const aboutChapters: AboutChapter[] = [
     id: 'elevate',
     years: { zh: '2026 – 今', en: '2026 – Present' },
     heading: {
-      zh: '追求更進階挑戰，朝 Strategy TPM目標邁進',
-      en: 'Seeking more advanced challenges, moving toward Strategy TPM',
+      zh: '追求更進階挑戰環境，|朝 Strategy TPM長遠目標邁進',
+      en: 'Seeking a more advanced, challenging environment, moving toward my long-term goal of Strategy TPM',
     },
     title: {
-      zh: '朝 Strategy TPM 的長遠目標持續邁進',
-      en: 'Moving steadily toward my long-term goal of Strategy TPM',
+      zh: '強化資源成本控管、數據指標驗證實務，|以及IT架構運作知識',
+      en: 'Strengthening resource and cost control, data-driven metric validation in practice, and knowledge of how IT architecture runs',
     },
     paras: [
       {
-        zh: '在下一階段，我希望能投入更具規模與挑戰性的複雜系統專案及溝通環境，進一步培養從技術、產品、商業與營運等多重角度思考問題、權衡評估決策的能力。',
-        en: 'In the next stage, I hope to work on larger and more challenging complex-system projects and communication environments, further developing the ability to think through problems and weigh decisions from technical, product, business and operational angles.',
+        zh: '下一階段工作環境：**希望能投入更具規模的複雜系統專案，更多利害關係人協作的溝通環境**，深化從技術、產品、商業、營運、資安、法遵等多重角度思考問題、權衡評估決策的能力。',
+        en: 'Next workplace: **I hope to work on larger-scale complex-system projects and in a communication environment with more stakeholders to collaborate with**, deepening my ability to think through problems and weigh decisions from technical, product, business, operational, security and compliance angles.',
       },
       {
-        zh: '同時，我也期待新環境能提供更多元的方案評估與成效追蹤管道，除了強化對「資源投入何處能帶來最大整體價值」的配置判斷力，更能發揮我在數據分析上的基礎專業，投入實驗設計、定義成效衡量指標，並追蹤評估開發與優化成果。',
-        en: 'I also hope my next environment offers more varied ways to evaluate options and track results. Beyond strengthening my judgment on where resources should go to create the greatest overall value, I want to put my foundation in data analysis to work — designing experiments, defining success metrics, and tracking and evaluating the outcomes of development and optimization.',
+        zh: '也期待新環境**能提供更多元的專案量化追蹤管道，發揮我在數據分析上的基礎專業累積**，投入實驗設計、定義成效衡量指標，評估開發與優化成果，讓下一步行動有客觀依據。',
+        en: 'I also hope my next environment **offers more varied ways to track projects quantitatively, so I can put my foundation in data analysis to work**, designing experiments, defining success metrics and evaluating the results of development and optimization — giving my next steps an objective basis.',
+      },
+      {
+        zh: '**並考取PMP以及AWS證照、完成IT全端運作進修課程，強化對「資源投入何處能帶來最大整體價值」的配置判斷力。**',
+        en: '**I also plan to earn the PMP and AWS certifications and complete a full-stack IT operations course, to strengthen my judgment on where resources should go to create the greatest overall value.**',
       },
     ],
   },
