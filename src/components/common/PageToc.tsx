@@ -116,7 +116,7 @@ export function PageToc({ items }: { items: TocItem[] }) {
   return (
     <>
       <aside className="hidden lg:block">
-        <nav aria-label="目錄" className="sticky top-24 rounded-md border border-rule bg-surface px-3 py-4">
+        <nav aria-label="目錄" className="sticky top-24 border-l border-rule/60 py-1 pl-3">
           <p className="mb-2.5 flex items-center gap-2 px-2 font-mono text-[12px] font-semibold uppercase tracking-[0.1em] text-accent">
             <ListIcon />
             {t({ zh: '目錄', en: 'Contents' })}
