@@ -71,9 +71,10 @@ function MobileToc({ items, activeId }: { items: TocItem[]; activeId: string }) 
         onClick={() => setOpen((v) => !v)}
         aria-expanded={open}
         aria-label={t({ zh: '開啟目錄', en: 'Open contents' })}
-        className="ml-auto flex h-11 w-11 items-center justify-center rounded-full border border-rule bg-paper text-ink shadow-md transition-colors hover:border-accent hover:text-accent"
+        className="ml-auto flex h-11 items-center gap-2 rounded-full bg-accent px-4 text-[14px] font-semibold tracking-wide text-on-accent shadow-lg transition-opacity hover:opacity-90"
       >
         <ListIcon />
+        {t({ zh: '目錄', en: 'Contents' })}
       </button>
     </div>
   )
@@ -115,15 +116,18 @@ export function PageToc({ items }: { items: TocItem[] }) {
   return (
     <>
       <aside className="hidden lg:block">
-        <nav aria-label="目錄" className="sticky top-24 border-l border-rule pl-4">
-          <p className="mb-3 font-mono text-[11px] uppercase tracking-[0.1em] text-muted-dim">{t({ zh: '目錄', en: 'Contents' })}</p>
-          <ul className="space-y-2.5">
+        <nav aria-label="目錄" className="sticky top-24 rounded-md border border-rule bg-surface px-3 py-4">
+          <p className="mb-2.5 flex items-center gap-2 px-2 font-mono text-[12px] font-semibold uppercase tracking-[0.1em] text-accent">
+            <ListIcon />
+            {t({ zh: '目錄', en: 'Contents' })}
+          </p>
+          <ul className="space-y-0.5">
             {items.map((item) => (
               <li key={item.id}>
                 <a
                   href={`#${item.id}`}
-                  className={`block text-[13px] leading-snug transition-colors hover:text-accent ${
-                    activeId === item.id ? 'text-accent' : 'text-muted'
+                  className={`block rounded px-2 py-1.5 text-[14px] leading-snug transition-colors hover:text-accent ${
+                    activeId === item.id ? 'bg-accent/10 font-semibold text-accent' : 'text-ink/75'
                   }`}
                 >
                   {item.num && <span className="mr-1.5 font-mono text-[11px]">{item.num}</span>}

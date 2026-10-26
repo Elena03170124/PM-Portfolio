@@ -3,6 +3,7 @@ import { allProjects } from '../content'
 import { useLocale } from '../i18n/LocaleContext'
 import { SiteShell } from '../components/layout/SiteShell'
 import { StatRow } from '../components/common/StatBlock'
+import { PageToc } from '../components/common/PageToc'
 
 const BASE = import.meta.env.BASE_URL
 
@@ -152,7 +153,6 @@ export function ProjectDetailPage({ slug }: { slug: string }) {
   const [detail, setDetail] = useState<ProjectDetail | null>(null)
   const [missing, setMissing] = useState(false)
   const [zoom, setZoom] = useState<string | null>(null)
-  const [activeId, setActiveId] = useState<string>('')
 
   useEffect(() => {
     const key = Object.keys(loaders).find((k) => k.endsWith(`/${slug}.json`))
@@ -165,21 +165,6 @@ export function ProjectDetailPage({ slug }: { slug: string }) {
 
   useEffect(() => {
     if (detail) document.title = `${detail.title.split('｜')[0]} · Elena Zhuang ｜ 莊詒安`
-  }, [detail])
-
-  // Highlight the table-of-contents entry for the section being read.
-  useEffect(() => {
-    if (!detail) return
-    const targets = detail.sections.map((s) => document.getElementById(s.id)).filter((el): el is HTMLElement => !!el)
-    const observer = new IntersectionObserver(
-      (entries) => {
-        const visible = entries.filter((e) => e.isIntersecting).sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top)
-        if (visible[0]) setActiveId(visible[0].target.id)
-      },
-      { rootMargin: '-96px 0px -60% 0px' },
-    )
-    targets.forEach((el) => observer.observe(el))
-    return () => observer.disconnect()
   }, [detail])
 
   const openImage = (e: React.MouseEvent) => {
@@ -279,26 +264,7 @@ export function ProjectDetailPage({ slug }: { slug: string }) {
             ))}
           </div>
 
-          <aside className="hidden lg:block">
-            <nav aria-label="目錄" className="sticky top-24 border-l border-rule pl-4">
-              <p className="mb-3 font-mono text-[11px] uppercase tracking-[0.1em] text-muted-dim">{t({ zh: '目錄', en: 'Contents' })}</p>
-              <ul className="space-y-2.5">
-                {detail.sections.map((s) => (
-                  <li key={s.id}>
-                    <a
-                      href={`#${s.id}`}
-                      className={`block text-[13px] leading-snug transition-colors hover:text-accent ${
-                        activeId === s.id ? 'text-accent' : 'text-muted'
-                      }`}
-                    >
-                      {s.num && <span className="mr-1.5 font-mono text-[11px]">{s.num.padStart(2, '0')}</span>}
-                      {s.title}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </nav>
-          </aside>
+          <PageToc items={detail.sections.map((s) => ({ id: s.id, num: s.num ? s.num.padStart(2, '0') : undefined, label: s.title }))} />
         </div>
 
         <div className="mt-16 border-t border-rule pt-8">{back}</div>
