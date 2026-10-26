@@ -150,9 +150,9 @@ export function GrowthCompare() {
       </Reveal>
 
       <Reveal delayMs={80}>
-        <ul className="mt-10">
+        <ul className="mt-7">
           {growthRows.map((row, i) => (
-            <li key={row.dimension.zh} className="border-b border-rule py-8 first:pt-2 last:border-b-0">
+            <li key={row.dimension.zh} className="border-b border-rule py-5 first:pt-1 last:border-b-0">
               <div className="flex items-baseline gap-3">
                 <span className="font-mono text-[11px] text-muted-dim">{String(i + 1).padStart(2, '0')}</span>
                 <h3 className="font-serif text-[18px] font-semibold leading-snug text-ink sm:text-[19px]">{t(row.dimension)}</h3>
@@ -161,7 +161,7 @@ export function GrowthCompare() {
                 <ArrowSubtitle text={t(row.subtitle)} />
               </p>
 
-              <div className="mt-5 flex flex-col gap-4 sm:flex-row sm:items-stretch sm:gap-0">
+              <div className="mt-3.5 flex flex-col gap-3 sm:flex-row sm:items-stretch sm:gap-0">
                 <div className="sm:flex-1">
                   <SideLabel tone="plain">{t({ zh: '和泰產品助理', en: 'Hotai · Product Assistant' })}</SideLabel>
                   <p className="mt-1.5 text-[14.5px] leading-[1.8] text-muted">{t(row.before)}</p>
