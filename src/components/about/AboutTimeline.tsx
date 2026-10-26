@@ -105,6 +105,17 @@ function TimelineItem({ chapter }: { chapter: AboutChapter }) {
         {/* When: years + stage name. Left column on desktop, above the title on mobile. */}
         <div className="col-start-2 row-start-1 pt-1 pb-2 sm:col-start-1 sm:pb-0 sm:text-right">
           <span className="block font-mono text-[12.5px] text-muted font-mono-num">{t(chapter.years)}</span>
+          {chapter.stage && (
+            <span className="mt-1.5 block font-serif text-[15px] font-semibold leading-[1.4] text-accent">
+              {t(chapter.stage)
+                .split('｜')
+                .map((line, i) => (
+                  <span key={i} className="block">
+                    {line}
+                  </span>
+                ))}
+            </span>
+          )}
         </div>
 
         {/* Line + node. The last node is filled and the line stops there. */}

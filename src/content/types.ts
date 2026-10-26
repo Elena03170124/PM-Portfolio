@@ -93,6 +93,8 @@ export interface AboutChapter {
   id: string
   /** Display string, e.g. "2022 – 2023" */
   years: Bilingual
+  /** Where I was in this period, shown under the years; a "｜" starts a new line. Left out when not yet known. */
+  stage?: Bilingual
   /** Headline summarising the stage, shown above `title`. */
   heading: Bilingual
   /** Shown as the subtitle under `heading`. A "|" marks the only place it may wrap (it is not shown). */

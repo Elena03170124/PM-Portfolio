@@ -12,6 +12,7 @@ export const aboutChapters: AboutChapter[] = [
   {
     id: 'direction',
     years: { zh: '2022 – 2023', en: '2022 – 2023' },
+    stage: { zh: '入職前', en: 'Before my first job' },
     heading: {
       zh: '盤點技能專長，確立PM職涯方向',
       en: 'Taking stock of my skills and strengths, and setting my PM career direction',
@@ -50,6 +51,7 @@ export const aboutChapters: AboutChapter[] = [
   {
     id: 'breakout',
     years: { zh: '2023 – 2024', en: '2023 – 2024' },
+    stage: { zh: '和泰聯網｜APP PM助理', en: 'Hotai Connected｜App Product Assistant' },
     heading: {
       zh: '以工作表現爭取由APM轉任PM，最終為校準職涯道路果斷轉換跑道',
       en: 'Pushing, through strong performance, to move from APM to PM — and ultimately switching tracks decisively to recalibrate my career path',
@@ -81,6 +83,7 @@ export const aboutChapters: AboutChapter[] = [
   {
     id: 'adversity',
     years: { zh: '2024 – 2026', en: '2024 – 2026' },
+    stage: { zh: '南一教育集團｜系統 PM', en: 'Nani Education Group｜Systems PM' },
     heading: {
       zh: '承接複雜系統專案，專業能力躍進',
       en: 'Taking on complex system projects and leaping forward professionally',
