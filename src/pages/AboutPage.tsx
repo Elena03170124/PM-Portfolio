@@ -41,11 +41,24 @@ export function AboutPage() {
           </section>
 
           <GrowthCompare />
+
+          {/* Placeholder until the content is written: grey card, no links. */}
+          <section id="traits" className="scroll-mt-24 pt-12 sm:pt-14">
+            <Reveal>
+              <div className="rounded-md bg-disabled px-6 py-8 sm:px-8 sm:py-10">
+                <h2 className="font-serif text-[24px] font-semibold leading-[1.35] text-muted sm:text-[30px]">
+                  {t({ zh: '個人特質與成長', en: 'Personal traits and growth' })}
+                </h2>
+                <p className="mt-3 font-mono text-[13px] text-muted-dim">{t({ zh: '內容整理中', en: 'Content in progress' })}</p>
+              </div>
+            </Reveal>
+          </section>
         </div>
         <PageToc
           items={[
             { id: 'career', label: t({ zh: '職涯發展', en: 'Career' }) },
             { id: 'growth', label: t({ zh: '專業能力演進', en: 'Professional growth' }) },
+            { id: 'traits', label: t({ zh: '個人特質與成長', en: 'Personal traits' }) },
           ]}
         />
       </div>
