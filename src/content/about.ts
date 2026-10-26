@@ -93,17 +93,25 @@ export const aboutChapters: AboutChapter[] = [
       en: 'Taking on complex system projects and leaping forward professionally',
     },
     title: {
-      zh: '越是混亂，越要鋪出一條|讓專案平穩落地的路',
-      en: 'The more chaotic it gets, the more I lay a path for projects to land smoothly',
+      zh: '入職不到半年承接核心系統合併專案、入職一年主責會員系統從0到1的建構',
+      en: 'Took on a core system merger within my first six months, and led the zero-to-one rebuild of the member system within my first year',
     },
     paras: [
       {
-        zh: '進入南一教育集團任職產品經理後，我承接了多個系統重構與跨服務整合專案。',
-        en: 'After joining Nani as a Product Manager, I took on several system-rebuild and cross-service integration projects.',
+        zh: '進入南一教育集團任職產品經理後，我承接了多個系統重構與串接整合專案。',
+        en: 'After joining Nani Education Group as a Product Manager, I took on several system-rebuild and integration projects.',
       },
       {
-        zh: '面對陌生知識的吸收轉譯、資料結構的相依性釐清、多方利害關係人的需求平衡，以及在資訊模糊下推進專案落地等多重挑戰。',
-        en: 'The challenges came together: absorbing and translating unfamiliar knowledge, untangling data-structure dependencies, balancing the needs of many stakeholders, and pushing projects to landing under ambiguous information.',
+        zh: '**入職不滿半年，便主責子公司的補教 × 家教兩大系統合併的高複雜度專案**；達成階段性上線，0重大系統異常的成果。',
+        en: '**Less than six months in, I was already leading the highly complex merger of the subsidiary’s tutoring and one-on-one systems**; the first phase launched with zero major system incidents.',
+      },
+      {
+        zh: '**而後到了母公司，主導南一會員中心系統從0到1的重新建構**，因此累積了教育部API串接、教用服務資安升級、跨系統會員身份識別統一化、教師身份驗證機制重構等多個牽扯權限、資安、身份、資料欄位比對的專案。',
+        en: '**Afterwards, at the parent company, I led the zero-to-one rebuild of the Nani member center system**, which led to a string of projects touching permissions, security, identity and data-field matching — Ministry of Education API integration, security upgrades for the teaching services, unifying member identity across systems, and rebuilding teacher verification.',
+      },
+      {
+        zh: '要面對陌生技術知識的吸收與商業轉譯、資料結構的相依性釐清、多方利害關係人的需求平衡，以及在資訊模糊下推進專案落地等多重挑戰。',
+        en: 'The challenges: absorbing unfamiliar technical knowledge and translating it for the business, untangling data-structure dependencies, balancing the needs of many stakeholders, and pushing projects to landing under ambiguous information.',
       },
       {
         zh: '憑著一貫不服輸的韌性，我除了累積多個複雜專案經驗，更磨練出需求整合梳理、資料規格釐清、跨域溝通轉譯與風險識別管理等可複用的進階專業能力。',
