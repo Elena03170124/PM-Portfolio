@@ -118,8 +118,8 @@ const growthRows: GrowthRow[] = [
       en: 'Flagged loosely defined specs and filled in acceptance-test items that had been missed.',
     },
     after: {
-      zh: '考量跨部門資訊同步落實方法、上線作業流程可能風險與備援處理方案。',
-      en: 'Weighed how information stays in sync across departments, and the process risks — with a fallback — of going live.',
+      zh: '透過幾十頁自製教學手冊，嚴謹落實跨部門資訊同步；並主動訂定上線作業流程與風險備援處理方案，達成階段上線0客訴0系統異常的成果。',
+      en: 'Rigorously carried out cross-department information sync through a self-made training manual dozens of pages long, and proactively set go-live procedures and a risk-fallback plan — achieving a phased launch with zero complaints and zero system incidents.',
     },
     citation: {
       projectId: 'dual-system-merge',
