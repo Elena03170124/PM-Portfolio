@@ -66,8 +66,8 @@ export const aboutChapters: AboutChapter[] = [
         en: 'My first job was as a product assistant at Hotai Connected.',
       },
       {
-        zh: '我將先前吸收的方法論應用於測試驗收流程優化、QA 標準定義、規格盤點與需求訪談梳理等任務。**並以入職前建立的 PM 專業能力框架，審視個人實務能力與進步幅度是否達標。**',
-        en: 'I applied the methods I had absorbed to improving test-and-acceptance processes, defining QA standards, taking inventory of specs and organizing requirement interviews. **I also used the PM competency framework I had built before joining to check whether my practical skills and progress measured up.**',
+        zh: '我將先前吸收的方法論應用於測試驗收流程優化、QA 標準定義、規格盤點與需求訪談梳理等任務。\n**並以入職前建立的 PM 專業能力框架，審視個人實務能力與進步幅度是否達標。**',
+        en: 'I applied the methods I had absorbed to improving test-and-acceptance processes, defining QA standards, taking inventory of specs and organizing requirement interviews.\n**I also used the PM competency framework I had built before joining to check whether my practical skills and progress measured up.**',
       },
       {
         zh: '曾多次與公司協商，以工作表現爭取轉職為PM，但公司仍期望APM以執行品保測試為主，支援PM庶務工作為輔。',
