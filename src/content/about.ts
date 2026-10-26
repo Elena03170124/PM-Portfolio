@@ -53,25 +53,29 @@ export const aboutChapters: AboutChapter[] = [
     years: { zh: '2023 – 2024', en: '2023 – 2024' },
     stage: { zh: '和泰聯網｜APP PM助理', en: 'Hotai Connected｜App Product Assistant' },
     heading: {
-      zh: '以工作表現爭取由APM轉任PM，最終為校準職涯道路果斷轉換跑道',
-      en: 'Pushing, through strong performance, to move from APM to PM — and ultimately switching tracks decisively to recalibrate my career path',
+      zh: '為校準職涯道路，果斷轉換跑道',
+      en: 'Recalibrating my career path — and decisively switching tracks',
     },
     title: {
-      zh: '主動破局，追求真正具影響力的舞台',
-      en: 'Breaking out on my own to find a stage with real influence',
+      zh: '以工作表現爭取由APM轉任PM，最終仍需離開追求能有所發揮的環境',
+      en: 'Pushing, through performance, to move from APM to PM — yet in the end I still had to leave to find an environment where I could make a difference',
     },
     paras: [
       {
-        zh: '第一份工作，在和泰聯網擔任產品助理，我迅速將方法論落地於測試驗收流程優化、QA 文件標準化與需求訪談梳理等任務。',
-        en: 'My first job was as a product assistant at Hotai Motor’s digital division, where I quickly put these methods to work — improving test-and-acceptance processes, standardizing QA documents, and organizing requirements interviews.',
+        zh: '第一份工作，在和泰聯網擔任產品助理。',
+        en: 'My first job was as a product assistant at Hotai Connected.',
       },
       {
-        zh: '並以入職前建立的 PM 專業標準框架，審視個人實務能力與進步幅度是否達標。',
-        en: 'I also used the PM standards framework I had built before joining to check whether my practical skills and my progress measured up.',
+        zh: '我將先前吸收的方法論應用落地於測試驗收流程優化、QA 標準定義、規格盤點與需求訪談梳理等任務。並以入職前建立的 PM 專業能力框架，審視個人實務能力與進步幅度是否達標。',
+        en: 'I applied the methods I had absorbed to improving test-and-acceptance processes, defining QA standards, taking inventory of specs and organizing requirement interviews. I also used the PM competency framework I had built before joining to check whether my practical skills and progress measured up.',
       },
       {
-        zh: '在意識到這份職務的專業天花板與成長速度，難以達成我對卓越的追求後，我在 2024 年選擇主動離開。',
-        en: 'After realizing that the ceiling on expertise and the pace of growth in this role could not meet my pursuit of excellence, I chose to leave in 2024.',
+        zh: '曾多次與公司協商，以工作表現爭取轉職為PM，但公司仍期望APM以執行品保測試為主，支援PM庶務工作為輔。',
+        en: 'I negotiated with the company many times to move into a PM role on the strength of my performance, but it still expected an APM to focus on QA testing, with supporting PM administrative work as secondary.',
+      },
+      {
+        zh: '意識到這份職務的專業天花板與成長速度，難以達成我對卓越的追求，且很可能偏離個人職涯規劃後，我在 2024 年選擇主動離開。',
+        en: 'After realizing that the ceiling on expertise and the pace of growth in this role could not meet my pursuit of excellence — and would likely pull me away from my career plan — I chose to leave on my own in 2024.',
       },
       {
         zh: '我清楚自己要的是能真正深入決策、充滿多重挑戰且能一展長才的實戰舞台。',
