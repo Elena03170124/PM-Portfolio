@@ -9,7 +9,7 @@ interface HeroStatProps {
   prefix?: string
   value: ReactNode
   /** Small text after the figure, e.g. "年". */
-  suffix?: string
+  suffix?: ReactNode
   label: string
 }
 
@@ -65,7 +65,16 @@ export function Hero() {
   })
 
   const stats: HeroStatProps[] = [
-    { value: '2.5', suffix: t({ zh: '年', en: 'yrs' }), label: t({ zh: 'PM經驗', en: 'PM experience' }) },
+    {
+      value: '2.5',
+      suffix: (
+        <>
+          {t({ zh: '年', en: 'yrs' })}
+          <span className="ml-0.5 text-[10px] font-medium sm:text-[13px]">{t({ zh: '以上', en: '+' })}</span>
+        </>
+      ),
+      label: t({ zh: 'PM經驗', en: 'PM experience' }),
+    },
     { value: '6', suffix: t({ zh: '個', en: '' }), label: t({ zh: '複雜專案經驗', en: 'complex projects' }) },
     {
       prefix: t({ zh: '省', en: '' }),
