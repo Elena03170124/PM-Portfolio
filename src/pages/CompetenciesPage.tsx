@@ -3,8 +3,7 @@ import { SiteShell } from '../components/layout/SiteShell'
 import { Reveal } from '../components/common/Reveal'
 import { CompetencyGrid } from '../components/competency/CompetencyGrid'
 
-/** Landing page of the competency framework: the nine-cell grid, then a
- *  placeholder for the note on how the less-practised competencies are being built. */
+/** Landing page of the competency framework: the nine-cell grid. */
 export function CompetenciesPage() {
   const { t, strings } = useLocale()
 
@@ -24,13 +23,6 @@ export function CompetenciesPage() {
         <Reveal delayMs={80}>
           <div className="mt-10">
             <CompetencyGrid />
-          </div>
-        </Reveal>
-
-        {/* Placeholder until the write-up is ready. */}
-        <Reveal delayMs={120}>
-          <div className="mt-8 rounded-md bg-disabled px-6 py-8 sm:px-8 sm:py-10">
-            <p className="font-mono text-[13px] text-muted-dim">{t({ zh: '內容整理中', en: 'Content in progress' })}</p>
           </div>
         </Reveal>
       </section>
