@@ -15,7 +15,7 @@ export function ProjectTimeline() {
   const { t, strings } = useLocale()
 
   return (
-    <section id="projects" className="py-20 sm:py-28 scroll-mt-16">
+    <section id="projects" className="pt-10 pb-20 sm:pb-28 scroll-mt-16">
       <Reveal>
         <SectionHeading eyebrow={t({ zh: '01 / 專案經驗 · project experience', en: '01 / project experience' })} title={strings.projects.title} subtitle={strings.projects.subtitle} />
       </Reveal>
