@@ -15,9 +15,9 @@ function EntryCard({ entry }: { entry: CompetencyEntry }) {
   const hasDetail = entry.projectId !== undefined && detailSlugs.has(entry.projectId)
 
   return (
-    <article className="grid gap-4 border-t border-rule py-7 sm:grid-cols-[minmax(0,265px)_1fr] sm:gap-9">
+    <article className="grid gap-4 border-t border-rule py-4 sm:grid-cols-[minmax(0,265px)_1fr] sm:gap-9">
       <div>
-        <h3 className="font-serif text-[18px] font-semibold leading-[1.5] text-ink sm:text-[19px]">
+        <h3 className="font-serif text-[16.5px] font-semibold leading-[1.5] text-ink sm:text-[17px]">
           {hasDetail ? (
             <a href={`${BASE}projects/${entry.projectId}/`} className="transition-colors hover:text-accent">
               {title}
@@ -40,13 +40,13 @@ function EntryCard({ entry }: { entry: CompetencyEntry }) {
           {t(entry.points).map((point) => (
             <li
               key={point}
-              className="relative mb-2 pl-[18px] text-[15px] leading-[1.8] text-ink/90 before:absolute before:left-0 before:top-[0.95em] before:h-px before:w-1.5 before:bg-accent"
+              className="relative mb-1.5 pl-[18px] text-[15.5px] leading-[1.75] text-ink/90 before:absolute before:left-0 before:top-[0.95em] before:h-px before:w-1.5 before:bg-accent"
             >
               {point}
             </li>
           ))}
         </ul>
-        <div className="mt-2.5 flex flex-wrap gap-1.5">
+        <div className="mt-2 flex flex-wrap gap-1.5">
           {t(entry.tags).map((tag) => (
             <span key={tag} className="rounded-full border border-accent-dim/50 px-2 py-0.5 text-[11px] leading-snug text-accent">
               {tag}
@@ -73,7 +73,7 @@ export function CompetencyPage({ slug }: { slug: string }) {
       className="inline-flex items-center gap-2 rounded-full border border-accent-dim/70 px-4 py-2 font-sans text-[14px] font-semibold tracking-wide text-accent transition-colors hover:bg-accent hover:text-on-accent"
     >
       <span aria-hidden="true">←</span>
-      {t({ zh: '回到能力框架', en: 'Back to Competency Framework' })}
+      {t({ zh: '回到PM能力框架', en: 'Back to PM Competency Framework' })}
     </a>
   )
 
