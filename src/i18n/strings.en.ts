@@ -12,7 +12,7 @@ const strings: AppStrings = {
     srAnnounce: 'Switch to Traditional Chinese',
   },
   hero: {
-    eyebrow: 'PM · SYSTEMS & INFRASTRUCTURE · 2.5 YRS',
+    eyebrow: 'PM · SYSTEMS & INFRASTRUCTURE',
     ctaProjects: 'See project experience',
     ctaAbout: 'More about me',
   },

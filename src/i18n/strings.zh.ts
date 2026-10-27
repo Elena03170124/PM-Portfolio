@@ -12,7 +12,7 @@ const strings: AppStrings = {
     srAnnounce: '切換為英文',
   },
   hero: {
-    eyebrow: 'PM・系統與架構・2.5 年經驗',
+    eyebrow: 'PM・系統與架構',
     ctaProjects: '看專案經驗',
     ctaAbout: '更多關於我',
   },
