@@ -12,12 +12,12 @@ const strings: AppStrings = {
     srAnnounce: 'Switch to Traditional Chinese',
   },
   hero: {
-    eyebrow: 'PM · SYSTEMS & INFRASTRUCTURE',
+    eyebrow: 'SYSTEMS-INTEGRATION PM · GROWING TOWARD STRATEGY TPM',
     ctaProjects: 'See project experience',
     ctaAbout: 'More about me',
   },
   competencyMatrix: {
-    title: 'The Nine-Competency Framework',
+    title: 'Competency framework and the work behind it',
     subtitle: 'Nine areas core to the PM role — still being filled in.',
     emptyState: "No shipped project here yet — this is a direction I'm actively self-studying and building toward.",
     projectCount: (n: number) => `${n} project${n === 1 ? '' : 's'}`,

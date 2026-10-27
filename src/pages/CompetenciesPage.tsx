@@ -18,6 +18,12 @@ export function CompetenciesPage() {
           <h1 className="max-w-4xl font-serif text-[28px] font-semibold leading-[1.35] text-ink sm:text-[36px] md:text-[44px]">
             {strings.competencyMatrix.title}
           </h1>
+          <p className="mt-5 max-w-3xl whitespace-pre-line text-[15.5px] leading-[1.85] text-muted sm:text-[16.5px]">
+            {t({
+              zh: '根據個人研究後認定的PM應具備能力，整理出共9大項目。\n每項目會收錄對應工作專案經驗，或是透過選課、社團、線上課程自學、考取證照、進修實作，這些個人主動精進、累積能力的成果。',
+              en: 'Nine competencies a PM should have, based on my own research.\nEach one gathers the related work-project experience, or what I built through self-driven growth: courses, clubs, online self-study, certifications and hands-on practice.',
+            })}
+          </p>
         </Reveal>
 
         <Reveal delayMs={80}>

@@ -12,12 +12,12 @@ const strings: AppStrings = {
     srAnnounce: '切換為英文',
   },
   hero: {
-    eyebrow: 'PM・系統與架構',
+    eyebrow: '系統整合型PM・朝Strategy TPM邁進',
     ctaProjects: '看專案經驗',
     ctaAbout: '更多關於我',
   },
   competencyMatrix: {
-    title: '九大能力框架',
+    title: '能力框架與對應成果實錄',
     subtitle: '涵蓋 PM 核心職能的九個面向，內容整理中。',
     emptyState: '目前尚無對應的已交付專案——這是我近期主動自學、正在累積實作經驗的方向。',
     projectCount: (n: number) => `${n} 個專案`,

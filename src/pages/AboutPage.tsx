@@ -26,6 +26,12 @@ export function AboutPage() {
               </span>
             ))}
           </h1>
+          <p className="mt-5 max-w-3xl text-[15.5px] leading-[1.85] text-muted sm:text-[16.5px]">
+            {t({
+              zh: '回顧每階段的轉職動機與PM專業能力成長幅度、訂定長遠職涯目標，並簡述個人的專長優勢、劣勢調整與失敗經驗省思。',
+              en: 'A look back at the motivation behind each career move and how far my PM skills have grown, the long-term career goal I have set, and a short overview of my strengths, how I adjust for weaknesses, and what I have taken from setbacks.',
+            })}
+          </p>
         </Reveal>
       </section>
 

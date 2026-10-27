@@ -151,6 +151,20 @@ export function ProjectsPage() {
               </span>
             ))}
           </h1>
+          <div className="mt-5 max-w-3xl space-y-3 text-[15.5px] leading-[1.85] text-muted sm:text-[16.5px]">
+            {t({
+              zh: [
+                '每個專案都完整呈現背景、困難點與挑戰、解法行動、成果與省思，以及在專案中應用或累積的PM專業能力、創造的價值；',
+                '附錄則詳細收錄技術知識吸收與轉譯、跨組織或部門協商過程，或是技術流程圖、風險檢核盤點表、教育訓練手冊等，對專案平穩落地上線有關鍵作用的原始文件。',
+              ],
+              en: [
+                'Each project lays out the background, difficulties and challenges, the actions taken, the results and reflections, plus the PM skills applied or built and the value created.',
+                'The appendix collects the original documents that were key to a smooth launch, such as notes on absorbing and translating technical knowledge, records of negotiation across organizations or departments, technical flow charts, risk-check inventories and training manuals.',
+              ],
+            }).map((para, i) => (
+              <p key={i}>{para}</p>
+            ))}
+          </div>
         </Reveal>
       </section>
 

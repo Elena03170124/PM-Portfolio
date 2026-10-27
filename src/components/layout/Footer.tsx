@@ -20,7 +20,7 @@ export function Footer() {
         </div>
         <div className="flex flex-col gap-1 sm:items-end sm:whitespace-nowrap">
           <p className="font-mono text-[11px] text-muted-dim">© {new Date().getFullYear()} Elena Zhuang ｜ 莊詒安</p>
-          <p className="font-mono text-[10px] text-muted-dim/50">
+          <p className="font-mono text-[10px] text-muted">
             {strings.footer.lastUpdated}
             {import.meta.env.VITE_BUILD_DATE}
           </p>
