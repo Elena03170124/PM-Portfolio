@@ -31,7 +31,7 @@ function EntryCard({ entry }: { entry: CompetencyEntry }) {
             href={`${BASE}projects/${entry.projectId}/`}
             className="mt-1.5 inline-block font-mono text-[12.5px] text-accent underline-offset-4 hover:underline"
           >
-            {t({ zh: '查看完整說明 →', en: 'Read the full write-up →' })}
+            {t({ zh: '查看完整專案經驗 →', en: 'See the full project experience →' })}
           </a>
         )}
       </div>
