@@ -20,6 +20,13 @@ const projectDetailPages = Object.fromEntries(
     .map((entry) => [`project-${entry.name}`, fromRoot(`./projects/${entry.name}/index.html`)]),
 )
 
+// Competency pages (competencies/<slug>/index.html) are picked up automatically too.
+const competencyPages = Object.fromEntries(
+  readdirSync(fromRoot('./competencies'), { withFileTypes: true })
+    .filter((entry) => entry.isDirectory())
+    .map((entry) => [`competency-${entry.name}`, fromRoot(`./competencies/${entry.name}/index.html`)]),
+)
+
 // Footer "最近更新" date: the day this build ran, in Taiwan time (CI runs in UTC).
 const buildDate = new Intl.DateTimeFormat('en-CA', {
   timeZone: 'Asia/Taipei',
@@ -43,6 +50,7 @@ export default defineConfig({
         about: fromRoot('./about/index.html'),
         projects: fromRoot('./projects/index.html'),
         ...projectDetailPages,
+        ...competencyPages,
       },
     },
   },

@@ -85,7 +85,7 @@ export const southoneProjects: Project[] = [
       { value: { zh: '98%', en: '98%' }, label: { zh: '資料收斂降低超載風險', en: 'data consolidated, overload risk cut' } },
       { value: { zh: '7個月', en: '7 months' }, label: { zh: '第一階段整合順利上線', en: 'clean phase-one launch' } },
     ],
-    competencyIds: ['requirements', 'tech', 'risk', 'project-mgmt', 'ux'],
+    competencyIds: ['requirements', 'tech', 'risk', 'project-mgmt', 'ux', 'product-strategy'],
     highlights: [
       { zh: '首個大型跨系統整合專案', en: 'my first large cross-system integration' },
       { zh: '資料重構與來源統一化', en: 'data restructuring & source unification' },
