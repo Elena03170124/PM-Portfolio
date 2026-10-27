@@ -69,7 +69,7 @@ export function CompetencyPage({ slug }: { slug: string }) {
 
   const back = (
     <a
-      href={`${BASE}#competencies`}
+      href={`${BASE}competencies/`}
       className="inline-flex items-center gap-2 rounded-full border border-accent-dim/70 px-4 py-2 font-sans text-[14px] font-semibold tracking-wide text-accent transition-colors hover:bg-accent hover:text-on-accent"
     >
       <span aria-hidden="true">←</span>
@@ -79,7 +79,7 @@ export function CompetencyPage({ slug }: { slug: string }) {
 
   if (!data) {
     return (
-      <SiteShell>
+      <SiteShell current="competencies">
         <div className="py-24">
           {back}
           <p className="mt-6 text-[16px] text-muted">{t({ zh: '找不到這個頁面。', en: "Couldn't find this page." })}</p>
@@ -112,7 +112,7 @@ export function CompetencyPage({ slug }: { slug: string }) {
   )
 
   return (
-    <SiteShell>
+    <SiteShell current="competencies">
       <article className="pb-16 pt-10 sm:pt-14">
         {back}
 

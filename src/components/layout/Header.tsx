@@ -5,17 +5,17 @@ import { LanguageToggle } from './LanguageToggle'
 
 const BASE = import.meta.env.BASE_URL
 
-export type PageId = 'home' | 'about' | 'projects'
+export type PageId = 'home' | 'about' | 'projects' | 'competencies'
 
 type NavKey = 'about' | 'projects' | 'competencies' | 'honors'
 
 // Sections live on the home page, so their links go through BASE + hash:
 // clicking one on the home page just scrolls, on another page it navigates home first.
-// competencies/honors are placeholders with no content yet — disabled, not linked.
+// honors is a placeholder with no content yet — disabled, not linked.
 const nav: { key: NavKey; href: string; page?: PageId; disabled?: boolean }[] = [
   { key: 'about', href: `${BASE}about/`, page: 'about' },
   { key: 'projects', href: `${BASE}projects/`, page: 'projects' },
-  { key: 'competencies', href: `${BASE}#competencies`, disabled: true },
+  { key: 'competencies', href: `${BASE}competencies/`, page: 'competencies' },
   { key: 'honors', href: '', disabled: true },
 ]
 

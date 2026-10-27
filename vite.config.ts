@@ -49,6 +49,7 @@ export default defineConfig({
         main: fromRoot('./index.html'),
         about: fromRoot('./about/index.html'),
         projects: fromRoot('./projects/index.html'),
+        competencies: fromRoot('./competencies/index.html'),
         ...projectDetailPages,
         ...competencyPages,
       },
