@@ -16,18 +16,25 @@ function EntryCard({ entry }: { entry: CompetencyEntry }) {
 
   return (
     <article className="grid gap-4 border-t border-rule py-7 sm:grid-cols-[minmax(0,265px)_1fr] sm:gap-9">
-      <h3 className="font-serif text-[18px] font-semibold leading-[1.5] text-ink sm:text-[19px]">
-        {hasDetail ? (
+      <div>
+        <h3 className="font-serif text-[18px] font-semibold leading-[1.5] text-ink sm:text-[19px]">
+          {hasDetail ? (
+            <a href={`${BASE}projects/${entry.projectId}/`} className="transition-colors hover:text-accent">
+              {title}
+            </a>
+          ) : (
+            title
+          )}
+        </h3>
+        {hasDetail && (
           <a
             href={`${BASE}projects/${entry.projectId}/`}
-            className="underline decoration-accent-dim/60 underline-offset-4 transition-colors hover:text-accent"
+            className="mt-1.5 inline-block font-mono text-[12.5px] text-accent underline-offset-4 hover:underline"
           >
-            {title}
+            {t({ zh: '查看完整說明 →', en: 'Read the full write-up →' })}
           </a>
-        ) : (
-          title
         )}
-      </h3>
+      </div>
       <div>
         <ul>
           {t(entry.points).map((point) => (
