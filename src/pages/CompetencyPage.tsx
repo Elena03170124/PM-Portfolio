@@ -39,10 +39,9 @@ function EntryCard({ entry }: { entry: CompetencyEntry }) {
             </li>
           ))}
         </ul>
-        <div className="mt-3 flex flex-wrap items-center gap-2">
-          <span className="mr-1 font-mono text-[11px] tracking-[0.04em] text-muted-dim">{t({ zh: '子標籤', en: 'Tags' })}</span>
+        <div className="mt-2.5 flex flex-wrap gap-1.5">
           {t(entry.tags).map((tag) => (
-            <span key={tag} className="rounded-full border border-accent-dim/60 px-3 py-1 text-[12.5px] leading-snug text-accent">
+            <span key={tag} className="rounded-full border border-accent-dim/50 px-2 py-0.5 text-[11px] leading-snug text-accent">
               {tag}
             </span>
           ))}
