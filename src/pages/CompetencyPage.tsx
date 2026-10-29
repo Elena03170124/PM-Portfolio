@@ -35,24 +35,24 @@ function EntryCard({ entry }: { entry: CompetencyEntry }) {
           </a>
         )}
       </div>
-      <div>
-        <ul>
-          {t(entry.points).map((point) => (
-            <li
-              key={point}
-              className="relative mb-1.5 pl-[18px] text-[15.5px] leading-[1.75] text-ink/90 before:absolute before:left-0 before:top-[0.95em] before:h-px before:w-1.5 before:bg-accent"
-            >
-              {point}
-            </li>
-          ))}
-        </ul>
-        <div className="mt-2 flex flex-wrap gap-1.5">
-          {t(entry.tags).map((tag) => (
-            <span key={tag} className="rounded-full border border-accent-dim/50 px-2 py-0.5 text-[11px] leading-snug text-accent">
-              {tag}
+      <div className="space-y-4">
+        {entry.sections.map((section) => (
+          <div key={section.heading.zh}>
+            <span className="inline-block rounded-full border border-accent-dim/50 px-2.5 py-0.5 font-sans text-[12.5px] font-medium leading-snug text-accent">
+              {t(section.heading)}
             </span>
-          ))}
-        </div>
+            <ul className="mt-2">
+              {t(section.points).map((point) => (
+                <li
+                  key={point}
+                  className="relative mb-1.5 pl-[18px] text-[15.5px] leading-[1.75] text-ink/90 before:absolute before:left-0 before:top-[0.95em] before:h-px before:w-1.5 before:bg-accent"
+                >
+                  {point}
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
       </div>
     </article>
   )
