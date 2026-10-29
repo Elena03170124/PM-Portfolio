@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import { useEffect, type ReactNode } from 'react'
 import { competencies } from '../content/competencies'
 import { competencyPages, type CompetencyEntry } from '../content/competencyPages'
 import { detailSlugs } from '../content/detailSlugs'
@@ -9,8 +9,31 @@ import { PageToc } from '../components/common/PageToc'
 
 const BASE = import.meta.env.BASE_URL
 
+function TagPill({ children }: { children: ReactNode }) {
+  return (
+    <span className="inline-block rounded-full border border-accent-dim/50 px-2.5 py-0.5 font-sans text-[12.5px] font-medium leading-snug text-accent">
+      {children}
+    </span>
+  )
+}
+
+function PointList({ points }: { points: string[] }) {
+  return (
+    <ul className="mt-2">
+      {points.map((point) => (
+        <li
+          key={point}
+          className="relative mb-1.5 pl-[18px] text-[15.5px] leading-[1.75] text-ink/90 before:absolute before:left-0 before:top-[0.95em] before:h-px before:w-1.5 before:bg-accent"
+        >
+          {point}
+        </li>
+      ))}
+    </ul>
+  )
+}
+
 function EntryCard({ entry }: { entry: CompetencyEntry }) {
-  const { t } = useLocale()
+  const { t, locale } = useLocale()
   const title = t(entry.title)
   const hasDetail = entry.projectId !== undefined && detailSlugs.has(entry.projectId)
 
@@ -35,25 +58,26 @@ function EntryCard({ entry }: { entry: CompetencyEntry }) {
           </a>
         )}
       </div>
-      <div className="space-y-4">
-        {entry.sections.map((section) => (
-          <div key={section.heading.zh}>
-            <span className="inline-block rounded-full border border-accent-dim/50 px-2.5 py-0.5 font-sans text-[12.5px] font-medium leading-snug text-accent">
-              {t(section.heading)}
-            </span>
-            <ul className="mt-2">
-              {t(section.points).map((point) => (
-                <li
-                  key={point}
-                  className="relative mb-1.5 pl-[18px] text-[15.5px] leading-[1.75] text-ink/90 before:absolute before:left-0 before:top-[0.95em] before:h-px before:w-1.5 before:bg-accent"
-                >
-                  {point}
-                </li>
-              ))}
-            </ul>
+      {entry.sections.every((s) => s.points[locale].length === 1) ? (
+        // One sentence per tag: gather the tags up top, then list the sentences.
+        <div>
+          <div className="flex flex-wrap gap-1.5">
+            {entry.sections.map((section) => (
+              <TagPill key={section.heading.zh}>{t(section.heading)}</TagPill>
+            ))}
           </div>
-        ))}
-      </div>
+          <PointList points={entry.sections.flatMap((section) => t(section.points))} />
+        </div>
+      ) : (
+        <div className="space-y-4">
+          {entry.sections.map((section) => (
+            <div key={section.heading.zh}>
+              <TagPill>{t(section.heading)}</TagPill>
+              <PointList points={t(section.points)} />
+            </div>
+          ))}
+        </div>
+      )}
     </article>
   )
 }
