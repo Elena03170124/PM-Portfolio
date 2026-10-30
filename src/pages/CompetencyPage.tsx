@@ -148,11 +148,12 @@ export function CompetencyPage({ slug }: { slug: string }) {
 
   // A block with nothing in it is simply left out.
   const blocks = [
-    { id: 'work', title: t({ zh: '職場實戰', en: 'On the job' }), intro: undefined, entries: data.work },
+    { id: 'work', title: t({ zh: '職場實戰', en: 'On the job' }), intro: undefined, note: undefined, entries: data.work },
     {
       id: 'self',
       title: t({ zh: '自我精進', en: 'Self-driven growth' }),
       intro: data.selfStudyIntro ? t(data.selfStudyIntro) : undefined,
+      note: data.selfStudyNote ? t(data.selfStudyNote) : undefined,
       entries: data.selfStudy,
     },
   ].filter((b) => b.entries.length > 0)
@@ -171,6 +172,7 @@ export function CompetencyPage({ slug }: { slug: string }) {
                 <EntryCard key={entry.title.zh} entry={entry} />
               ))}
             </div>
+            {block.note && <p className="border-t border-rule pt-4 text-[15.5px] font-medium text-accent">{block.note}</p>}
           </section>
         </Reveal>
       ))}

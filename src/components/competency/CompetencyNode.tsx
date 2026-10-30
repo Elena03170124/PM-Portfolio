@@ -4,7 +4,7 @@ import { getCompetencyProjectCount } from '../../content'
 
 // Nodes whose page exists link to it; the rest stay flat and grey so they don't
 // read as clickable.
-export function CompetencyNode({ competency, href }: { competency: Competency; href?: string }) {
+export function CompetencyNode({ competency, href, updating }: { competency: Competency; href?: string; updating?: boolean }) {
   const { t, strings } = useLocale()
   const count = getCompetencyProjectCount(competency.id)
 
@@ -28,6 +28,9 @@ export function CompetencyNode({ competency, href }: { competency: Competency; h
       <p className={`mt-2 text-[12.5px] leading-relaxed line-clamp-3 ${href ? 'text-muted' : 'text-muted-dim'}`}>
         {t(competency.definition)}
       </p>
+      {updating && (
+        <p className="mt-3 font-mono text-[11px] text-accent">{t({ zh: '持續更新中', en: 'Updating' })}</p>
+      )}
     </>
   )
 

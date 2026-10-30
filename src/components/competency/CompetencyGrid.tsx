@@ -9,7 +9,12 @@ export function CompetencyGrid() {
   return (
     <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4">
       {competencies.map((c) => (
-        <CompetencyNode key={c.id} competency={c} href={c.id in competencyPages ? `${BASE}competencies/${c.id}/` : undefined} />
+        <CompetencyNode
+          key={c.id}
+          competency={c}
+          href={c.id in competencyPages ? `${BASE}competencies/${c.id}/` : undefined}
+          updating={competencyPages[c.id]?.updating}
+        />
       ))}
     </div>
   )

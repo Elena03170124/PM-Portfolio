@@ -34,6 +34,10 @@ export interface CompetencyPageData {
   selfStudy: CompetencyEntry[]
   /** Optional line under the 自我精進 heading, tying the entries together. */
   selfStudyIntro?: Bilingual
+  /** Optional line after the last 自我精進 entry, e.g. "more on the way". */
+  selfStudyNote?: Bilingual
+  /** Marks the page as still being filled in; the grid cell says so. */
+  updating?: boolean
 }
 
 /** Keyed by the same slug as the page folder (competencies/<slug>/). */
@@ -133,6 +137,8 @@ export const competencyPages: Record<string, CompetencyPageData> = {
       zh: '需求管理分析 / 整合梳理 / 優先序 / 變動 / 規格',
       en: 'Requirements analysis / Synthesis / Prioritization / Change / Specs',
     },
+    updating: true,
+    selfStudyNote: { zh: '更多經驗持續整理更新中', en: 'More experiences are being added.' },
     work: [
       {
         title: { zh: '補教 × 家教雙系統合併', en: 'Tutoring × Home-Tutoring System Merge' },
