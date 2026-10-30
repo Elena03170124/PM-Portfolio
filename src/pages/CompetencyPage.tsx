@@ -1,17 +1,18 @@
 import { useEffect, type ReactNode } from 'react'
 import { competencies } from '../content/competencies'
-import { competencyPages, type CompetencyEntry } from '../content/competencyPages'
+import { competencyPages, type CompetencyEntry, type CompetencySection } from '../content/competencyPages'
 import { detailSlugs } from '../content/detailSlugs'
 import { useLocale } from '../i18n/LocaleContext'
 import { SiteShell } from '../components/layout/SiteShell'
 import { Reveal } from '../components/common/Reveal'
 import { PageToc } from '../components/common/PageToc'
+import { keepTail } from '../components/common/keepTail'
 
 const BASE = import.meta.env.BASE_URL
 
 function TagPill({ children }: { children: ReactNode }) {
   return (
-    <span className="inline-block rounded-full border border-accent-dim/50 px-2.5 py-0.5 font-sans text-[12.5px] font-medium leading-snug text-accent">
+    <span className="inline-block rounded-3xl border border-accent-dim/50 px-2.5 py-0.5 font-sans text-[12.5px] font-medium leading-snug text-accent">
       {children}
     </span>
   )
@@ -25,10 +26,40 @@ function PointList({ points }: { points: string[] }) {
           key={point}
           className="relative mb-1.5 pl-[18px] text-[15.5px] leading-[1.75] text-ink/90 before:absolute before:left-0 before:top-[0.95em] before:h-px before:w-1.5 before:bg-accent"
         >
-          {point}
+          {keepTail(point)}
         </li>
       ))}
     </ul>
+  )
+}
+
+/** Source screenshots for a section, folded away so the bullets stay the focus. */
+function SourceImages({ section }: { section: CompetencySection }) {
+  const { t } = useLocale()
+  if (!section.images?.length) return null
+  return (
+    <details className="group mt-3">
+      <summary className="cursor-pointer list-none font-mono text-[12.5px] text-accent underline-offset-4 hover:underline [&::-webkit-details-marker]:hidden">
+        <span className="inline-block transition-transform group-open:rotate-90" aria-hidden="true">
+          ›
+        </span>{' '}
+        {section.imagesLabel ? t(section.imagesLabel) : t({ zh: '查看素材', en: 'View source material' })}
+      </summary>
+      <div className="mt-3 space-y-3">
+        {section.images.map((img) => (
+          <img
+            key={img.src}
+            src={`${BASE}${img.src}`}
+            alt={t(img.alt)}
+            loading="lazy"
+            className="w-full rounded-[3px] border border-rule bg-surface"
+          />
+        ))}
+        <p className="font-mono text-[11.5px] text-muted-dim">
+          {t({ zh: '個案名稱已遮蔽。', en: 'The case name is masked.' })}
+        </p>
+      </div>
+    </details>
   )
 }
 
@@ -49,6 +80,8 @@ function EntryCard({ entry }: { entry: CompetencyEntry }) {
             title
           )}
         </h3>
+        {entry.period && <p className="mt-1 font-mono text-[12.5px] text-muted">{t(entry.period)}</p>}
+        {entry.lead && <p className="mt-2 text-[14px] leading-[1.7] text-muted">{keepTail(t(entry.lead))}</p>}
         {hasDetail && (
           <a
             href={`${BASE}projects/${entry.projectId}/`}
@@ -74,6 +107,7 @@ function EntryCard({ entry }: { entry: CompetencyEntry }) {
             <div key={section.heading.zh}>
               <TagPill>{t(section.heading)}</TagPill>
               <PointList points={t(section.points)} />
+              <SourceImages section={section} />
             </div>
           ))}
         </div>
@@ -114,8 +148,13 @@ export function CompetencyPage({ slug }: { slug: string }) {
 
   // A block with nothing in it is simply left out.
   const blocks = [
-    { id: 'work', title: t({ zh: '職場實戰', en: 'On the job' }), entries: data.work },
-    { id: 'self', title: t({ zh: '自我精進', en: 'Self-driven growth' }), entries: data.selfStudy },
+    { id: 'work', title: t({ zh: '職場實戰', en: 'On the job' }), intro: undefined, entries: data.work },
+    {
+      id: 'self',
+      title: t({ zh: '自我精進', en: 'Self-driven growth' }),
+      intro: data.selfStudyIntro ? t(data.selfStudyIntro) : undefined,
+      entries: data.selfStudy,
+    },
   ].filter((b) => b.entries.length > 0)
 
   const content = (
@@ -123,7 +162,10 @@ export function CompetencyPage({ slug }: { slug: string }) {
       {blocks.map((block) => (
         <Reveal key={block.id}>
           <section id={block.id} className="scroll-mt-24">
-            <h2 className="mb-5 font-serif text-[22px] font-semibold leading-snug text-ink sm:text-[26px]">{block.title}</h2>
+            <h2 className={`font-serif text-[22px] font-semibold leading-snug text-ink sm:text-[26px] ${block.intro ? 'mb-3' : 'mb-5'}`}>
+              {block.title}
+            </h2>
+            {block.intro && <p className="mb-5 max-w-3xl text-[15px] leading-[1.8] text-muted">{keepTail(block.intro)}</p>}
             <div>
               {block.entries.map((entry) => (
                 <EntryCard key={entry.title.zh} entry={entry} />

@@ -5,12 +5,20 @@ import type { Bilingual } from './types'
 export interface CompetencySection {
   heading: Bilingual
   points: Bilingual<string[]>
+  /** Source material for this section, shown folded away under the bullets.
+   *  `src` is relative to the site base (public/). */
+  images?: { src: string; alt: Bilingual }[]
+  imagesLabel?: Bilingual
 }
 
 /** One piece of evidence on a competency page: what I did on a project (or in
  *  self-study) that answers the competency, grouped under small headings. */
 export interface CompetencyEntry {
   title: Bilingual
+  /** Small line under the title, e.g. "2021.06". */
+  period?: Bilingual
+  /** One line saying what the experience built, under the title. */
+  lead?: Bilingual
   /** When set and the project has a full write-up, the title links to it. */
   projectId?: string
   sections: CompetencySection[]
@@ -24,6 +32,8 @@ export interface CompetencyPageData {
   work: CompetencyEntry[]
   /** 自我精進 — a block with no entries is not rendered at all. */
   selfStudy: CompetencyEntry[]
+  /** Optional line under the 自我精進 heading, tying the entries together. */
+  selfStudyIntro?: Bilingual
 }
 
 /** Keyed by the same slug as the page folder (competencies/<slug>/). */
@@ -116,5 +126,146 @@ export const competencyPages: Record<string, CompetencyPageData> = {
       },
     ],
     selfStudy: [],
+  },
+  requirements: {
+    label: { zh: '第②類', en: 'Category 2' },
+    heading: {
+      zh: '需求管理分析 / 整合梳理 / 優先序 / 變動 / 規格',
+      en: 'Requirements analysis / Synthesis / Prioritization / Change / Specs',
+    },
+    work: [
+      {
+        title: { zh: '補教 × 家教雙系統合併', en: 'Tutoring × Home-Tutoring System Merge' },
+        projectId: 'dual-system-merge',
+        sections: [
+          {
+            heading: {
+              zh: '需求管理分析｜以系統架構為切角拆解模糊需求',
+              en: 'Requirements analysis | Breaking down vague needs through system architecture',
+            },
+            points: {
+              zh: [
+                '核對兩大系統SiteMap，盤點整合項目，將龐大且模糊的需求拆解成對資料欄位、營運管理、前端流程等面向的具體工項，使專案有更明確的執行路徑與階段目標。',
+              ],
+              en: [
+                'Cross-checked the sitemaps of both systems and inventoried what had to be integrated, breaking a huge, vague requirement into concrete work items across data fields, operations management and front-end flows, giving the project a clearer path and clear phase goals.',
+              ],
+            },
+          },
+        ],
+      },
+      {
+        title: { zh: '教師身份驗證機制建構', en: 'Teacher Identity Verification System' },
+        projectId: 'teacher-auth',
+        sections: [
+          {
+            heading: {
+              zh: '需求管理分析｜技術實作資料需求確認、使用體驗平衡管理',
+              en: 'Requirements analysis | Confirming data needs for implementation, balancing user experience',
+            },
+            points: {
+              zh: [
+                '釐清「資料取得」與「系統實作需求」的落差，與工程對齊建立白名單所需的最小必要欄位。',
+                '代表研發團隊與外部單位溝通，釐清白名單必要資料欄位，對齊 JSON 交換格式。',
+                '與UX設計共同商議資料驗證需求與註冊易用性之間的平衡。',
+              ],
+              en: [
+                'Closed the gap between the data that could actually be obtained and what the system needed, and agreed with engineering on the minimum required fields for the whitelist.',
+                'Spoke for the engineering team with external units to confirm the whitelist fields and align on the JSON exchange format.',
+                'Worked with UX design to balance data-verification needs against ease of sign-up.',
+              ],
+            },
+          },
+          {
+            heading: {
+              zh: '需求變動管理｜簡化跨平台作業流程，降低內勤學習成本',
+              en: 'Change management | Simplifying the cross-platform flow, lowering the learning cost for back-office staff',
+            },
+            points: {
+              zh: [
+                '主管提出流程跨多個系統、維運負擔高，重新討論後從 3 種方案中選定極簡化流程。',
+                '把原先橫跨會員中心、Zendesk、Teams 三個服務的人工驗證流程，收攏重構至單\u2060一\u00A0Microsoft\u00A0Teams 平台運作。',
+              ],
+              en: [
+                'When the manager pointed out that the flow spanned several systems and was costly to maintain, we reopened the discussion and chose the simplest of 3 options.',
+                'Consolidated the manual verification flow, which used to span the member center, Zendesk and Teams, into a single Microsoft Teams workflow.',
+              ],
+            },
+          },
+        ],
+      },
+    ],
+    selfStudyIntro: {
+      zh: '聚焦在需求分析中的「業主與使用者訪談」進修，其中幾段經驗看似各自獨立，實則有明確因果影響關係。',
+      en: 'My study here focuses on client and user interviews within requirements analysis. These experiences look separate, but each one clearly led to the next.',
+    },
+    selfStudy: [
+      {
+        title: {
+          zh: '臺科大碩士商學院「個案研究」：茶館創辦人訪談',
+          en: 'NTUST MBA "Case Study" course: interviewing a tea-house founder',
+        },
+        period: { zh: '2021.06', en: 'June 2021' },
+        lead: {
+          zh: '建立「商業理論融合實務」的訪談專業基礎',
+          en: 'Building the interviewing foundation of applying business theory to practice',
+        },
+        sections: [
+          {
+            heading: {
+              zh: '訪綱設計｜依學術框架反推訪談題目，理論融合實務',
+              en: 'Interview guide | Working back from academic frameworks to interview questions',
+            },
+            points: {
+              zh: [
+                '針對個案資訊推演適用理論框架→由框架拆解訪談綱要→透過訪談反推蒐集原始資料。',
+                '訪談前先蒐集粉專、活動與公益參與等次級資料，建立個案資訊背景。',
+                '根據背景資訊選定 8 個適用框架：兩難困境、Enactment 制定、資源拼湊、資源活化、組織敏捷性、組織雙元性、商業模式、資源基礎理論。',
+                '依據框架反推出逾 30 題的完整訪綱，並安排訪談題目優先序。',
+              ],
+              en: [
+                'Worked out which theoretical frameworks fit the case, broke each into interview outlines, then used the interviews to collect first-hand data.',
+                'Before interviewing, gathered secondary material (social posts, events, community involvement) to build background on the case.',
+                'Chose 8 frameworks from that background: dilemmas, Enactment, bricolage, resource revitalization, organizational agility, ambidexterity, business model and the resource-based view.',
+                'Derived a full guide of 30+ questions from the frameworks and ranked them by priority.',
+              ],
+            },
+            imagesLabel: { zh: '查看訪綱截圖', en: 'View the interview guide' },
+            images: [
+              {
+                src: 'competencies/requirements/interview-guide-1.png',
+                alt: { zh: '訪綱截圖：衝突性、兩難的困境與故事性', en: 'Interview guide: conflict and dilemmas' },
+              },
+              {
+                src: 'competencies/requirements/interview-guide-2.png',
+                alt: { zh: '訪綱截圖：資源拼湊理論與資源活化', en: 'Interview guide: bricolage and resource revitalization' },
+              },
+              {
+                src: 'competencies/requirements/interview-guide-3.png',
+                alt: { zh: '訪綱截圖：外部環境應對與組織雙元性', en: 'Interview guide: external shocks and ambidexterity' },
+              },
+            ],
+          },
+          {
+            heading: {
+              zh: '訪談執行歸納｜依營運階段整理訪談結果',
+              en: 'Interview synthesis | Organizing findings by operating stage',
+            },
+            points: {
+              zh: [
+                '訪談內容依茶館營運階段歸納對環境的認知、行動與結果。',
+                '以 Enactment 制定與資源基礎理論，分析茶館如何調整策略、憑何資源建立獨特競爭力。',
+                '結論給管理者：不一味追求資源豐富，而是把現有資源運用到極致。',
+              ],
+              en: [
+                "Grouped the interview content by the tea house's operating stages: how it read its environment, what it did, and what resulted.",
+                'Used Enactment and the resource-based view to analyze how the tea house adjusted its strategy and which resources built its distinctive edge.',
+                'Takeaway for managers: rather than chasing ever more resources, get the most out of the ones you already have.',
+              ],
+            },
+          },
+        ],
+      },
+    ],
   },
 }

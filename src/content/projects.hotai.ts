@@ -26,7 +26,7 @@ export const hotaiProjects: Project[] = [
       reflection: { zh: '', en: '' },
     },
     metrics: [],
-    competencyIds: ['requirements', 'tech'],
+    competencyIds: ['tech'],
     highlights: [
       { zh: '產品繪圖軟體應用', en: 'product diagramming (Figma)' },
       { zh: '組織邏輯力', en: 'structured logical thinking' },

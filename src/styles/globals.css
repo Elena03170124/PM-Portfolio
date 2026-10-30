@@ -41,6 +41,10 @@
     background: color-mix(in srgb, var(--color-accent) 22%, var(--color-paper));
     color: var(--color-ink);
   }
+  /* Keep a paragraph's last line from being a single stray character. */
+  p, li, dd {
+    text-wrap: pretty;
+  }
 }
 
 @layer utilities {
